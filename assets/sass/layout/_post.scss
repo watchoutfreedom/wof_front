@@ -1,0 +1,200 @@
+.citations {
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 24px;
+    line-height: 1.5rem;
+}
+
+.duration {
+
+    color: #333;
+    padding: 0.2rem 0.4rem;
+    background-color: rgb(234, 234, 234);
+
+}
+
+.location {
+
+    color: #333;
+    padding: 0.2rem 0.4rem;
+    background-color: rgb(234, 234, 234);
+
+}
+
+.price {
+
+    color: #333;
+    padding: 0.2rem 0.4rem;
+    background-color: rgb(234, 234, 234);
+
+}
+
+.date {
+
+    color: #333;
+    padding: 0.2rem 0.4rem;
+    background-color: rgb(234, 234, 234);
+
+}
+
+.users {
+
+    color: #333;
+    padding: 0.2rem 0.4rem;
+    background-color: rgb(234, 234, 234);
+
+}
+
+.author {
+
+    color: #9f9f9f;
+    padding: 0.2rem 0 0.2rem 0;
+    font-size: $font-size-02;
+
+}
+
+.type {
+
+    color: #333;
+    padding: 0.2rem 0.4rem;
+    background-color: #ffd000;
+
+}
+
+
+.excerp {
+
+    font-family: "PT Serif",serif;
+    background-color: transparent;
+    font-size:  $font-size-03;
+    font-weight: 200;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    color: rgb(72, 72, 72);
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: rgb(243, 243, 243);
+    border-radius: 3px;
+
+}
+
+.excerp::before {
+
+    content: '';
+    font-size: 1.8rem;
+    color: red; /* revise */
+    line-height: 0.1rem;
+
+}
+  
+.excerp::after {
+
+    content: '';
+
+}
+
+.post-type-archive-product .post_type{
+    display:none;
+}
+
+.featured__title   {
+
+    font-size: 1rem;
+    color: $color-first;
+    font-weight: lighter;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    line-height: 0.95;
+    text-decoration: none;
+
+}
+
+.subtitle, .post_type   {
+
+    font-size: 1.1rem;
+      color: $color-first;
+      font-weight: bolder;
+      margin: 1rem 0;
+      padding: 0;
+      line-height: 0.95;
+      text-decoration: none;
+  
+  }
+  
+  .featured {
+  
+    padding: 1rem;
+    border-radius: 3px;
+    background: $color-white; //variable
+    border: 1px dashed $color-first;
+  
+  }
+
+  .feature:before {
+    content:'featured';
+  }
+  
+  .author {
+  
+    color: $color-first; //variable
+    // font-size: $font-size-02;
+
+  
+  }
+  
+  // Reset
+  
+  
+  
+  
+  .price {
+  
+    font-size: $font-size-04;
+
+
+  }
+
+  .answer__to {
+
+    text-decoration: underline;
+    color: #333;
+    padding: 0.2rem 0.4rem;    
+
+  }
+
+  .single-product,
+  .single-activity,
+  .single-post {
+
+    // display: none;
+
+    a {
+
+        text-decoration: underline;
+
+    }
+
+    a:hover{
+
+        text-decoration: underline;
+
+    }
+
+    blockquote {
+
+        padding: 10px 20px;
+
+        em {
+
+            margin: 0 20px;
+            font-size: 1.1rem;
+            color: #9f9f9f;
+            hyphens: auto;
+
+        }
+
+    }
+
+  }

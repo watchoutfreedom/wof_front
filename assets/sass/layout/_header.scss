@@ -1,0 +1,233 @@
+.header {  
+  left: 0;
+  position: fixed;
+  background: $color-white;
+  top: 0;
+  width: 100%;
+  padding: 12px; // Variables
+  z-index: 1; // variables
+  overflow: hidden;
+}
+
+
+.header-nav{
+
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-title;
+  height: auto;
+  justify-content: space-between;
+  overflow: auto;
+  width: 100%;
+
+} 
+
+// .header-nav:hover {
+
+//   transition: transform .4s, opacity .4s;
+//   height: auto;
+
+// }
+
+.nav-under {
+
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+
+  li {
+    display: inline-flex;
+    margin-right: 16px;
+
+    a {
+      display: inline-block;
+      padding: 5px 8px;
+      font-size: .85rem;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+     }
+
+     [aria-current]:not([aria-current="false"]) {
+      color: red;
+    }
+  }
+  
+  li.login {
+    a {
+      color: white;
+      background: black;
+      padding: 5px 8px;
+      width: 100%;
+
+    }
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    content: "wof!";
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    content: "wof!";
+  }
+}
+
+#myList li:first-child {
+  position: relative;
+}
+
+.nav-under li:first-child::before {
+  content: attr(data-text);
+  left: 1.3rem;
+  bottom: 1.8rem;
+  animation: fade-out 2s linear infinite;
+}
+
+.nav-under {
+
+  width: 100%;
+
+}
+
+
+.header-top {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+.header-right {
+
+  overflow: auto;
+  width: auto;
+  
+  ul {
+
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    overflow-x: scroll;
+
+    li {
+
+      margin: auto 0;
+
+      a {
+        font-size: .85rem;
+        display: inline-block;
+        padding: 8px 10px;
+      }
+    }
+
+    li.is-active{
+      order: -1;
+
+      a{
+        color:red;
+      }
+    }
+    
+  }
+}
+
+.header-right.vertical-layout {
+  height: 100vh; /* adjust the height to fill the viewport */
+}
+
+.header-right.vertical-layout ul {
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.header__menu {
+
+
+    border: none;
+    cursor: pointer;
+    background-color: $color-white;
+
+    
+    i {
+      color: $color-first;
+    }
+
+
+
+}
+// Sidebar
+
+// .header-right {
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   padding: 48px;
+  
+//   ul {
+//     li {
+//       a {
+//         font-size: .85rem;
+//         display: inline-block;
+//         padding: 12px 0;
+//       }
+//     }
+//   }
+// }
+
+// brand
+
+.header-brand {
+
+  // img {
+
+  //   height: 30px !important;
+  //   width: auto;
+  //   right: 0;
+  // }
+
+  display: NONE;
+
+}
+
+.header-nav {
+
+  overflow-x: hidden;
+
+}
+
+.header-nav::before,
+.header-nav::after {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+width: 20px;
+pointer-events: none;
+}
+
+.header-nav::before {
+  left: 10px;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.header-nav::after {
+right: 10px;
+background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px black;
+}

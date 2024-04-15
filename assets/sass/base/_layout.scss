@@ -1,0 +1,216 @@
+.post-item {
+    position: relative;
+}
+
+.content {
+
+    ul,
+    li {
+    /* white-space: nowrap; */
+        hyphens: auto;
+        color: #333;
+        font-family: "PT Serif",serif;
+        font-weight: 500;
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+        letter-spacing: 0;
+        margin: 1rem 0rem .85rem 1rem;
+
+    }
+
+}
+
+.answers {
+
+    ul,
+    li {
+    /* white-space: nowrap; */
+        hyphens: auto;
+        color: #333;
+        font-family: "PT Serif",serif;
+        font-weight: 500;
+        font-size: 1rem !important;
+        line-height: 1.5rem !important;
+        letter-spacing: 0;
+        margin: 1rem 0rem .85rem 1rem;
+
+    }
+
+}
+
+.bibliography {
+
+    ul,
+    li {
+    /* white-space: nowrap; */
+        hyphens: auto;
+        color: #333;
+        font-style: italic;
+        font-family: "PT Serif",serif;
+        font-weight: 500;
+        font-size: 1rem !important;
+        line-height: 1.2rem !important;
+        letter-spacing: 0;
+        list-style-type: decimal;
+        margin-bottom: 5px;
+        padding-left: 20px; /* Añade un espaciado a la izquierda para dar espacio al número */
+        position: relative;
+
+    }
+
+}
+
+.bibliography::before {
+
+    content: "";
+    display: block;
+    border-top: 1px solid #000;
+    margin-bottom: 10px;
+
+}
+  
+.button__links {
+    display: block;
+    font-size: small;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+
+.button {
+
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-family: $font-family-title;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1rem auto;
+    display: block;
+    border: 2px solid black;
+
+}
+
+.button:hover {
+
+    background-color: white;
+    color: blue;
+    border: 2px dashed blue;
+
+}
+
+
+.bottom-action {
+
+    // position: fixed;
+    bottom: 20px; /* Add some space from the bottom */
+    right: 20px; /* Add some space from the right */
+    position: fixed;
+    width: 100%;
+    margin: auto;
+
+
+}
+
+.link {
+
+    text-decoration: underline;
+
+}
+
+// Test format template (comunidad)
+
+.page-template-page-templatespage-comunidad-php {
+    .page {
+      display: flex;
+      flex-flow: row wrap;
+  
+      .section {
+        flex: 0 1 50%;
+      }
+    }
+  }
+
+
+.login__container {
+
+    padding: 10px;
+
+}
+ 
+  
+.brand-text {
+
+    font-family: 'Coco Goose', sans-serif;
+
+}
+
+
+.main-container {
+
+    margin: auto;
+    max-width: 890px; // Variable breakpoints
+
+
+}
+
+.contrib__list {
+
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-wrap: inherit;
+    justify-content: center;
+    background-color: red;
+    background: red;
+
+
+}
+
+.contributor {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    // max-height: 200px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: ellipsis;
+    margin: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+            line-clamp: 1; 
+    -webkit-box-orient: vertical;
+
+    h2 {
+
+        font-size: $font-size-03;
+        text-align: center;
+        text-overflow: ellipsis;
+
+    }
+
+    .avatar {
+
+        border-radius: 300px;
+        overflow: hidden;
+        width: 150px;
+        height: 150px;
+
+    }
+
+    img {
+
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        margin: auto;
+
+    }
+
+}
