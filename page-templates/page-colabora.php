@@ -8,7 +8,7 @@ get_header(); ?>
 
 <div class="page main-container">
     <section>
-        <div class="excerp">¡Gracias por interesarte en colaborar! </div>
+        <div class="excerp">¡Gracias por interesarte en colaborar   ! </div>
         <p>
             <strong>Wof! </strong> es una asociación sin animo de lucro dedicada a fomentar la cooperación social, el debate y la formación en materias afectadas por la desinformación o el desinterés del statu quo.          
             Si te interesa nuestra labor puedes seguirnos en <strong><a class="link" href="https://twitter.com/watchout_f">Twitter</a>, <a class="link" href="https://github.com/watchoutfreedom">Github</a>, <a class="link" href="https://www.youtube.com/channel/UC-LIrt0uGQR7dyn-wVb72fQ">Youtube</a> e <a class="link" href="https://www.instagram.com/watchoutfreedom/?hl=es  ">Instagram</a> </strong>. O si prefieres ser parte o ayudar en algún proyecto puedes hacerlo de las siguientes maneras:
