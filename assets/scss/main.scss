@@ -1,0 +1,62 @@
+// import
+@import 'imports/font';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&display=swap');
+
+// Base
+
+@import 'variables/colors';
+@import 'base/tags';
+@import 'base/form';
+@import 'base/common';
+
+// Variables
+
+@import 'variables/size';
+@import 'variables/typography';
+@import 'variables/breakpoints';
+@import 'variables/grid';
+@import 'variables/colors';
+@import 'variables/animations';
+
+// Mixins
+
+@import 'mixins/aspect-ratio';
+@import 'mixins/flex-grid';
+
+// Layout
+
+@import 'layout/header';
+@import 'layout/footer';
+
+// Atoms
+
+@import 'atoms/ads';
+@import 'atoms/picture';
+@import 'atoms/category-link';
+@import 'atoms/meta';
+
+// Components
+
+@import 'components/wrap';
+@import 'components/hero';
+@import 'components/main';
+@import 'components/404';
+@import 'components/article-list';
+@import 'components/section';
+@import 'components/home/destacado';
+@import 'components/category-nav';
+@import 'components/restaurantes-list';
+@import 'components/last-news';
+@import 'components/page-search';
+
+// Views
+
+@import 'views/single-default';
+@import 'views/single-opinion';
+@import 'views/single-noticias';
+@import 'views/single-restaurantes';
+@import 'views/page-sidebar';
+@import 'views/about';
+@import 'views/page';
+

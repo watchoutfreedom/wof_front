@@ -1,0 +1,128 @@
+$about-content-max-width: $row-min;
+$about-title-size-mobile: 2.75rem;
+$about-title-size-medium: 3.5rem;
+$about-title-size-large: 4rem;
+$about-title-size-xlarge: 5rem;
+
+.about {
+  @extend .layout-grid;
+  
+  padding: 5rem 0;
+  position: relative;
+  z-index: 15;
+}
+
+.about__bck {
+  background: transparent url('assets/img/about/plaza-mayor-madrid.jpg') top center no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &:after,
+  &:before {
+    width: 100%;
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    background: linear-gradient(rgba(255,255,255, 1), rgba(255,255,255, 0));
+    z-index: 10;
+  }
+
+  &:before {
+    height: 500px;
+    top: 0;
+  }
+
+  &:after {
+    height: 100%;
+    bottom: 0;
+  }
+}
+
+.about__title {
+  font-family: $font-body;
+  font-size: $about-title-size-mobile;
+  line-height: $about-title-size-mobile;
+  margin: 2rem auto 4rem auto;
+  max-width: 600px;
+  text-align: center;
+  width: 90%;
+}
+
+.about__content {
+  @extend .layout-content;
+}
+
+.about__subtitle {
+  color: $color-black;
+  font-family: $font-body;
+  font-size: 1rem;
+  padding: 4rem 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about__list-of-box {
+  justify-content: space-between;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
+.about__box {
+  flex: 0 1 30%;
+  padding: 2rem 0
+}
+
+.about__number {
+  font-family: $font-body;
+  font-size: 4rem;
+  letter-spacing: -2px;
+  color: $color-black;
+}
+
+.about__desc {
+  opacity: .5;
+  color: $color-dark-gray;
+  font-family: $font-body;
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+@media #{$breakpoints-medium} {
+  .about__title {
+    font-size: $about-title-size-medium;
+    line-height: $about-title-size-medium;
+  }
+
+
+  .about__list-of-box {
+    flex-flow: row wrap;
+  }
+
+  .about__box {
+    flex: 0 1 40%;}
+}
+
+@media #{$breakpoints-large} {
+  .about__title {
+    font-size: $about-title-size-large;
+    line-height: $about-title-size-large;
+  }
+
+  .about__number {
+    font-size: 5rem;
+  }
+
+  .about__box {
+    flex: 0 1 30%;
+  }
+}
+
+@media #{$breakpoints-xlarge} {
+  .about__title {
+    font-size: $about-title-size-xlarge;
+    line-height: $about-title-size-xlarge;
+    max-width: 800px;
+  }
+}

@@ -1,0 +1,55 @@
+// Part of the pitcher github.com/gruncho/stylestree
+//
+// For the full copyright and license information, please view the LICENSE
+// file that was distributed with this source code.
+//
+// @author Alex M. Gorgal (@gruncho) <alex@worldx3.com>
+
+@import 'breakpoints';
+
+$breakpoints-medium: "only screen and (min-width: #{$size-medium})";
+$breakpoints-large: "only screen and (min-width: #{$size-large})";
+$breakpoints-xlarge: "only screen and (min-width: #{$size-xlarge})";
+$breakpoints-xxlarge: "only screen and (min-width: #{$size-xxlarge})";
+$breakpoints-xxxlarge: "only screen and (min-width: #{$size-xxxlarge})";
+
+// @media #{$breakpoints-large} {}
+
+// Two rows.
+
+$row-max: 1080px;
+$row-min: 680px;
+
+// mobile first
+
+$grid-mobile: 20px;
+
+// flex-grid
+
+$gutter: 1rem;
+
+// Revise variables
+
+$width-mobile: 95%;
+$width-desktop: 90%;
+
+.layout-grid,
+.layout-content {
+  padding-left: $grid-mobile;
+  padding-right: $grid-mobile;
+}
+
+@media #{$breakpoints-large} {
+  .layout-grid,
+  .layout-content {
+    margin: auto;
+  }
+
+  .layout-grid {
+    max-width: $row-max;
+  }
+
+  .layout-content {
+    max-width: $row-min;
+  }
+}

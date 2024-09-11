@@ -1,0 +1,42 @@
+.hero {
+  max-width: 1280px;
+  margin: 2rem auto;
+  background: $color-black;
+  padding: 8rem 4rem;
+  text-align: center;
+  color: white;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero__description {
+  font-size: 20px;
+  line-height: 32px;
+  padding: 24px 0;
+  max-width: 720px;
+  margin: auto;
+  opacity: .8;
+}
+
+
+@media #{$breakpoints-medium} {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+
+
+@media #{$breakpoints-large} {
+  .hero__title {
+    font-size: 5rem;
+  }
+}
+
+@media #{$breakpoints-large} {
+  .hero__title {
+    font-size: 6rem;
+  }
+}

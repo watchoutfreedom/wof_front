@@ -1,0 +1,33 @@
+$section-background: $color-white;
+$section-row-max-width: $row-max;
+$section-large-margin-left: calc( 50% - #{$row-max} / 2 );
+$section-large-width-mobile: 100%;
+$section-large-width-desktop: calc( 100% - #{$section-large-margin-left} );
+
+.section {
+  background: $section-background;
+}
+
+.section--row {
+  margin: auto;
+  width: 100%;
+}
+
+.section--large {
+  width: $section-large-width-mobile;
+}
+
+.section--related {
+  margin-top: 2rem;
+}
+
+@media #{$breakpoints-large} {
+  .section--row {
+    max-width: $section-row-max-width;
+  }
+
+  .section--large {
+    margin-left: $section-large-margin-left;
+    width: $section-large-width-desktop;
+  }
+}

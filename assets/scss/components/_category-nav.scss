@@ -1,0 +1,32 @@
+.category-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 1rem;
+  margin: auto;
+  flex-flow: row-reverse nowrap;
+  width: 100%;
+  max-width: $row-max;
+}
+
+.category-nav__back,
+.category-nav__next {
+  a {
+    background: $color-white;
+    display: inline-block;
+    font-family: $font-body;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight:bold;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+
+  a:hover {
+    background: $color-corporative;
+    color: $color-white;
+  }
+}
+
+.category-nav__next {
+  text-align: right;
+}

@@ -1,0 +1,125 @@
+$single-restaurantes-background: $color-white;
+$single-restaurantes-max-width: $row-max;
+$single-restaurantes-meta-color: $color-white;
+$single-restaurantes-meta-font-family: $font-heading;
+
+.single-restaurantes {
+  background: $single-restaurantes-background;
+  margin: auto;
+  max-width: $single-restaurantes-max-width;
+  width: 100%;
+}
+
+.single-restaurantes__thumb {
+  @include aspect-ratio(3,3);
+}
+
+.single-restaurantes__thumb:after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba($color-black, .4), rgba($color-white, 0));
+}
+
+.single-restaurantes__main,
+.single-restaurantes__credits-photo {
+  padding: 1rem;
+}
+
+.single-restaurantes__credits-photo {
+  color: $color-dark-gray;
+  font-family: $font-heading;
+  font-style: italic;
+  font-size: .75rem;
+  text-align: right;
+}
+
+.single-restaurantes__content--sidebar {
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .single-restaurantes__main {
+    flex: 0 1 60%;
+    max-width: $row-min;
+  }
+
+  .last-news {
+    flex: 0 1 20%;
+    margin-left: 4rem;
+  }
+}
+
+.single-restaurantes__img-content {
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 500px;
+  position: absolute;
+  width: 90%;
+  z-index: 10;  
+}
+
+.single-restaurantes__category {
+  a {
+    color: $color-white;
+    background: $color-corporative;
+    padding: .25rem;
+  }
+}
+
+.single-restaurantes__meta {
+  display: none;
+  color: $single-restaurantes-meta-color;
+  font-family: $single-restaurantes-meta-font-family;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+.single-restaurantes__title {
+  color: $color-white;
+  font-family: $font-body;
+  font-size: 2rem;
+  padding: .5rem 0;
+}
+
+@media #{$breakpoints-medium} {
+  .single-restaurantes__thumb {
+    @include aspect-ratio(4,2);
+  }
+}
+
+@media #{$breakpoints-large} {
+  .single-restaurantes__content {
+    padding: 1rem 3rem 2rem 3rem;
+  }
+
+  .single-restaurantes__img-content {
+    bottom: 2rem;
+    left: 4rem;
+  }
+
+  .single-restaurantes__credits-photo {
+    padding: 1rem 2rem 0 2rem;
+  }
+
+  .single-restaurantes__title {
+    font-size: 2rem;
+  }
+
+  .single-restaurantes__intro {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media #{$breakpoints-xlarge} {
+  .single-restaurantes__title {
+    font-size: 3rem;
+  }
+}

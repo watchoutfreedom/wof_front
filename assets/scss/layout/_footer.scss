@@ -1,0 +1,28 @@
+$footer-margin: 5rem auto 0 auto;
+$footer-padding-mobile: 2rem 16px;
+$footer-padding-desktop: 2rem 16px;
+$footer-max-width: $row-max;
+
+.footer {
+  font-family: $font-heading;
+  color: $color-dark-gray;
+  margin: $footer-margin;
+  max-width: $footer-max-width;
+  padding: $footer-padding-mobile;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+
+  span {
+    display: inline-block;
+    transform: translateY(-2px) rotate(-180deg);
+  }
+}
+
+
+@media #{$breakpoints-large} {
+  .footer {
+    padding: $footer-padding-desktop;
+  }
+
+}
