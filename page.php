@@ -1,28 +1,18 @@
-<?php
-/**
- * The template for displaying pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
-*/
+<?php get_header(); ?>
 
-get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<article class="page">
+	<section class="page-title">
+		<h1>
+			<?php the_title(); ?>
+		</h1>
+	</section>
+	<section class="page-text">
+		<?php the_content("Sigue leyendo"); ?>     
+	</section>
+</article>
+<?php endwhile; else: ?> 
+	<?php include (TEMPLATEPATH . '/404.php'); ?>		
+<?php endif; ?>
 
-<div class="page">
-<?php   get_template_part( 'template-parts/content', get_post_type() ); ?>
-    <section class="section">
-        <div class="content">
-            <div class="row">
-                <div class="col-sm-12">
-                    <?php the_content(); ?>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php  get_template_part( 'template-parts/content', get_post_type() ); ?>
-</div>
-<?php get_footer();
-
-
+<?php get_footer(); ?>

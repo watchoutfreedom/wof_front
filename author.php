@@ -3,7 +3,7 @@
 <section class="section page-sidebar">
   <div class="page-sidebar__content">
     <h1 class="page-sidebar__title">
-      Has buscado '<?php printf(get_search_query()); ?>'
+      <?php the_author(); ?> (<?php the_author_posts(); ?> posts)
     </h1>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <?php get_template_part('components/article-list'); ?>
