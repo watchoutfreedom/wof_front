@@ -299,8 +299,7 @@ function change_role_name() {
   $wp_roles->roles['contributor']['name'] = 'Conversador';
   $wp_roles->role_names['contributor'] = 'Conversador';           
 }
-add_action('init', 'change
-_role_name');
+add_action('init', 'change_role_name');
 
 // fix for navbar not showing up when logged in
 add_action('wp_head', 'mbe_wp_head');
