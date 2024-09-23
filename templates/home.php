@@ -10,7 +10,7 @@ get_header();
 </div>
 <div class="wrap">
   <div class="wrap__box">
-    <h3 class="wrap__title">Debate</h3>
+    <h3 class="wrap__title">Debate + test</h3>
     <?php $the_query = new WP_Query('showposts=2&category_name=debate'); while ($the_query->have_posts()) : $the_query->the_post();?>
       <?php get_template_part('components/article-list'); ?>
     <?php endwhile; ?>
