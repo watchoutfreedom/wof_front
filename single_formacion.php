@@ -26,7 +26,6 @@
                   <?php the_title(); ?>
                 </h1>
                 <div class="single-default__intro">
-                  Un repaso al impacto que ha generado el uso de herramientas nocode, o lo que es lo mismo, herramientas que permiten a un usuario lanzar una web sin saber código
                 </div>
               </div>
           </div>
@@ -35,9 +34,6 @@
           </div>
           <div class="main single-default__main">
             <?php the_content("Sigue leyendo"); ?>
-          </div>
-          <div class="single__tags">
-            <?php the_tags('<span>Palabras clave</span>', '', ''); ?>
           </div>
         </div>
       <?php endwhile; else: ?>

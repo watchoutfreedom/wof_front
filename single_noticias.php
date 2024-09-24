@@ -35,9 +35,6 @@
           <div class="main single-default__main">
             <?php the_content("Sigue leyendo"); ?>
           </div>
-          <div class="single__tags">
-            <?php the_tags('<span>Palabras clave</span>', '', ''); ?>
-          </div>
         </div>
       <?php endwhile; else: ?>
         <?php include (TEMPLATEPATH . '/404.php'); ?>
