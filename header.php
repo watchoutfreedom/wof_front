@@ -11,7 +11,7 @@
     <ul><?php wp_list_pages('title_li= '); ?></ul>
     </nav>
     <div class="header__btn">
-      <a href="">Colabora con WOF</a>
+      <a href="/colabora">Colabora con WOF</a>
     </div>
   </div>
 </header>
