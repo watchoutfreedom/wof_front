@@ -26,7 +26,6 @@
                   <?php the_title(); ?>
                 </h1>
                 <div class="single-default__intro">
-                  Un repaso al impacto que ha generado el uso de herramientas nocode, o lo que es lo mismo, herramientas que permiten a un usuario lanzar una web sin saber código
                 </div>
               </div>
           </div>

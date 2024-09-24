@@ -9,7 +9,7 @@
   <div class="article-list__content">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
       <h3 class="article-list__title">
-          <?php the_title(); ?>
+          <span><?php the_title(); ?></span>
       </h3>
     </a>
   </div>
