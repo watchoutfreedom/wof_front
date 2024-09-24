@@ -5,7 +5,6 @@ function clean_header(){
 }
 add_action('init','clean_header');
 
-
 foreach (glob( get_template_directory() . "/functions/*.php") as $filename) {
   include $filename;
 }
@@ -22,44 +21,6 @@ function validate_gravatar($email) {
 	}
 	return $has_valid_avatar;
 }
-
-function move_acf_metabox_to_sidebar() {
-    // Get the ACF field group
-    $acf_field_group_id = '6377e402074f0';
-
-    // Remove ACF box from normal editor area
-    remove_meta_box("acf-group_{$acf_field_group_id}", 'post', 'normal');
-
-    // Add ACF box to the sidebar
-    add_meta_box(
-        "acf-group_{$acf_field_group_id}",
-        __('Custom Fields', 'acf'),
-        'acf_render_meta_box',
-        'post',
-        'side', // Move to the sidebar
-        'high'
-    );
-}
-add_action('add_meta_boxes', 'move_acf_metabox_to_sidebar', 20);
-
-function move_acf_metabox_to_sidebar() {
-    // Field Group ID or Name. Replace this with your actual ACF group key (ID).
-    $acf_field_group_id = '6377e402074f0'; // Replace with your ACF group key
-
-    // Remove ACF box from normal editor area
-    remove_meta_box("acf-group_{$acf_field_group_id}", 'post', 'normal');
-
-    // Add ACF box to the sidebar
-    add_meta_box(
-        "acf-group_{$acf_field_group_id}",
-        __('Products Fields', 'acf'),
-        'acf_render_meta_box',
-        'post',
-        'side', // This moves it to the sidebar
-        'high'
-    );
-}
-add_action('add_meta_boxes', 'move_acf_metabox_to_sidebar', 20);
 
 // Enable user registration
 function enable_registration() {
