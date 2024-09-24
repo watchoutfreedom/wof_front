@@ -1519,6 +1519,7 @@ header {
 .single-default__intro {
   color: white;
   font-size: 20px;
+  font-family: "Satoshi-Medium";
   padding: 24px 0 48px 0;
   line-height: 32px;
 }
