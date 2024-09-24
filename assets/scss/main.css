@@ -605,7 +605,7 @@ header {
 }
 
 .product__intro {
-  font-family: "Satoshi-Regular";
+  font-family: "Satoshi-Medium";
   padding-top: 1rem;
   font-size: 1rem;
   line-height: 1.7rem;
@@ -679,7 +679,7 @@ header {
 }
 .main {
   color: #555555;
-  font-family: "Roboto Serif", serif;
+  font-family: "Satoshi-Regular";
   font-size: 15px;
   line-height: 25px;
 }
