@@ -6,7 +6,7 @@ $main-blockquote-font-family: $font-heading;
 
 .main {
   color: $main-color;
-  font-family: 'Satoshi-Regular';
+  font-family: $font-main;
   font-size: 15px;
   line-height: 25px;
 
@@ -51,7 +51,7 @@ $main-blockquote-font-family: $font-heading;
   h5,
   h6 {
     color: $color-black;
-    font-family: $main-title-font-family;
+    font-family: 'Satoshi-Bold';
     padding: 1.5rem 0 1.25rem 0;
   }
 

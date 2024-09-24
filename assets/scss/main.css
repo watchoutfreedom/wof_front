@@ -679,7 +679,7 @@ header {
 }
 .main {
   color: #555555;
-  font-family: "Satoshi-Regular";
+  font-family: "Roboto Serif", serif;
   font-size: 15px;
   line-height: 25px;
 }
@@ -716,7 +716,7 @@ header {
 .main h5,
 .main h6 {
   color: #191919;
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Bold";
   padding: 1.5rem 0 1.25rem 0;
 }
 .main h2 {
