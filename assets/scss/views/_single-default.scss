@@ -76,7 +76,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
       position: absolute;
       z-index: 1;
      
-      opacity: .6;
+      opacity: .4;
       right: 0;
       bottom: 0;
       top: 0;
@@ -113,7 +113,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
   color: white;
   font-size: 20px;
   font-family: 'Satoshi-Medium';
-  padding: 24px 0 48px 0;
+  padding: 0 0 48px 0;
   line-height: 32px;
 }
 
