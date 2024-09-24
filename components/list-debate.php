@@ -1,8 +1,12 @@
-<div class="wrap">
-    <div class="wrap__box">
-      <h3 class="wrap__title">Más debates</h3>
-      <?php $the_query = new WP_Query('showposts=4&category_name=debate'); while ($the_query->have_posts()) : $the_query->the_post();?>
-          <?php get_template_part('components/article-list'); ?>
-        </div>
-      <?php endwhile; ?>
-</div>
+
+<section class="section page-sidebar section--related page-sidebar--reverse">
+  <div class="page-sidebar__content">
+    <h3 class="page-sidebar__title">
+      Últimos artículos publicados
+    </h3>
+    <?php $the_query = new WP_Query('showposts=4&category_name=debate'); while ($the_query->have_posts()) : $the_query->the_post();?>
+    <?php get_template_part('components/article-list'); ?>
+    <?php endwhile; ?>
+  </div>
+</section>
+
