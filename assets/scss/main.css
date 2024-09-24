@@ -1361,47 +1361,47 @@ header {
   fill: #0F4BF1;
 }
 
-.post-template-default .header {
+.debate .header {
   display: none;
 }
-.post-template-default .single-default__intro,
-.post-template-default .single-default__category,
-.post-template-default .single-default__title {
+.debate .single-default__intro,
+.debate .single-default__category,
+.debate .single-default__title {
   margin: auto;
   max-width: 752px;
   text-align: left;
 }
-.post-template-default .single-default__intro,
-.post-template-default .single-default__title {
+.debate .single-default__intro,
+.debate .single-default__title {
   color: white;
 }
-.post-template-default .single-default,
-.post-template-default .single-default__content {
+.debate .single-default,
+.debate .single-default__content {
   padding: 0;
   margin: 0;
   margin: 0;
   max-width: 100%;
 }
-.post-template-default .header__logo-link {
+.debate .header__logo-link {
   background: transparent url("../img/logo/white.svg") center no-repeat;
   background-size: 100% auto;
 }
-.post-template-default .header__nav {
+.debate .header__nav {
   display: none;
 }
-.post-template-default .header__btn a {
+.debate .header__btn a {
   font-size: 14px;
   background: white;
   color: #191919;
 }
-.post-template-default .single-hero {
+.debate .single-hero {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   height: 70vh;
   background: #191919;
 }
-.post-template-default .single-hero .header {
+.debate .single-hero .header {
   display: flex;
   background: transparent;
   border: 0;
