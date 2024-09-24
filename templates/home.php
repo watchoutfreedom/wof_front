@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="home">
 <div class="hero">
-    <h1 class="hero__title">Wof! es una asociación sin animo de lucro</h1>
+    <h1 class="hero__title">WOF! es una asociación sin animo de lucro</h1>
     <div class="hero__description">Dedicada a fomentar la cooperación social, el debate y la formación en materias afectadas por la desinformación o el desinterés del statu quo.</div>
   </div>
   <div class="wrap">
