@@ -1,10 +1,12 @@
-<div class="wrap wrap--list">
-    <div class="wrap__box">
-      <h3 class="wrap__title">Más formación</h3>
-      <?php $the_query = new WP_Query('showposts=4&category_name=formacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <div class="home__post">
-          <?php get_template_part('components/article-list'); ?>
-        </div>
-      <?php endwhile; ?>
-    </div>
-</div>
+
+<section class="section page-sidebar section--related page-sidebar--reverse">
+  <div class="page-sidebar__content">
+    <h3 class="page-sidebar__title">
+      Formaciones
+    </h3>
+    <?php $the_query = new WP_Query('showposts=4&category_name=formacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
+    <?php get_template_part('components/article-list'); ?>
+    <?php endwhile; ?>
+  </div>
+</section>
+
