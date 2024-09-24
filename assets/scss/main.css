@@ -308,6 +308,11 @@ a {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.header__nav .page-item-335,
+.header__nav .page-item-1073,
+.header__nav .page-item-232 {
+  display: none;
+}
 .header__nav ul {
   display: flex;
   justify-content: flex-start;
