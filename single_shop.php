@@ -13,8 +13,8 @@
 					<h1 class="single-noticias__title">
 						<?php the_title(); ?>
 					</h1>
-					<div>40,00 €</div>
-					<a href="" class="product__btn">Comprar</a>
+					<div><?php the_field('field_6377e4a80ad0d'); ?></div>
+					<a href="<?php the_field('field_6377e4fc0ad0f'); ?>" class="product__btn">Comprar</a>
 				</div>
 			</div>
 	
