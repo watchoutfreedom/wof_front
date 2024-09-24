@@ -14,10 +14,11 @@
                     </a>
                   </div>
                   <div class="header__btn">
-                    <a href="">Colabora con WOF</a>
+                    <a href="/colabora">Colabora con WOF</a>
                   </div>
                 </div>
               </header>
+              <div class="single-thumb"><?php the_post_thumbnail('fotogrande'); ?></div>
               <div class="single-default__presentation">
                 <div class="single-default__category">
                   <?php get_template_part('atoms/category-link'); ?>
@@ -34,7 +35,6 @@
           </div>
           <div class="main single-default__main">
             <?php the_content("Sigue leyendo"); ?>
-          </div>
         </div>
       <?php endwhile; else: ?>
         <?php include (TEMPLATEPATH . '/404.php'); ?>
