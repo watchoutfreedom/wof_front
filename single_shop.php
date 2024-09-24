@@ -4,7 +4,7 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="product__content">
 				<?php the_post_thumbnail('fotogrande'); ?>
-				<div class="main single-noticias__main">
+				<div class="main single-noticias__main product__main">
 					<?php the_content("Sigue leyendo"); ?>
 				</div>
 			</div>
