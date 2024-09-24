@@ -25,7 +25,7 @@ function validate_gravatar($email) {
 
 function move_acf_metabox_to_sidebar() {
     // Get the ACF field group
-    $acf_field_group_id = '6377e402074f0'; // Replace with the actual field group ID
+    $acf_field_group_id = '6377e402074f0';
 
     // Remove ACF box from normal editor area
     remove_meta_box("acf-group_{$acf_field_group_id}", 'post', 'normal');
@@ -37,6 +37,25 @@ function move_acf_metabox_to_sidebar() {
         'acf_render_meta_box',
         'post',
         'side', // Move to the sidebar
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'move_acf_metabox_to_sidebar', 20);
+
+function move_acf_metabox_to_sidebar() {
+    // Field Group ID or Name. Replace this with your actual ACF group key (ID).
+    $acf_field_group_id = '6377e402074f0'; // Replace with your ACF group key
+
+    // Remove ACF box from normal editor area
+    remove_meta_box("acf-group_{$acf_field_group_id}", 'post', 'normal');
+
+    // Add ACF box to the sidebar
+    add_meta_box(
+        "acf-group_{$acf_field_group_id}",
+        __('Products Fields', 'acf'),
+        'acf_render_meta_box',
+        'post',
+        'side', // This moves it to the sidebar
         'high'
     );
 }
