@@ -649,12 +649,16 @@ header {
 }
 
 .hero__title {
+  font-family: "Satoshi-Bold";
+  width: 80%;
+  margin: auto;
   font-size: 3rem;
   font-weight: bold;
 }
 
 .hero__description {
-  font-size: 20px;
+  font-family: "Satoshi-Medium";
+  font-size: 24px;
   line-height: 32px;
   padding: 24px 0;
   max-width: 720px;
@@ -665,11 +669,6 @@ header {
 @media only screen and (min-width: 768px) {
   .hero__title {
     font-size: 4rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .hero__title {
-    font-size: 5rem;
   }
 }
 .main {

@@ -8,12 +8,16 @@
 }
 
 .hero__title {
+  font-family: 'Satoshi-Bold';
+  width: 80%;
+  margin: auto;
   font-size: 3rem;
   font-weight: bold;
 }
 
 .hero__description {
-  font-size: 20px;
+  font-family: 'Satoshi-Medium';
+  font-size: 24px;
   line-height: 32px;
   padding: 24px 0;
   max-width: 720px;
@@ -25,12 +29,5 @@
 @media #{$breakpoints-medium} {
   .hero__title {
     font-size: 4rem;
-  }
-}
-
-
-@media #{$breakpoints-large} {
-  .hero__title {
-    font-size: 5rem;
   }
 }
