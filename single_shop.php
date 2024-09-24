@@ -24,6 +24,6 @@
   <?php endif; ?>
 </article>
 
-<?php get_template_part('components/last-posts'); ?>
+<?php get_template_part('components/list-shop'); ?>
 
 <?php get_footer(); ?>

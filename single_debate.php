@@ -43,7 +43,7 @@
     </article>
   </main>
 
-  <?php get_template_part('components/last-posts'); ?>
-</div>
+  <?php get_template_part('components/list-debate'); ?>
+  </div>
 
 <?php get_footer(); ?>
