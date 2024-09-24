@@ -27,6 +27,7 @@
                   <?php the_title(); ?>
                 </h1>
                 <div class="single-default__intro">
+                  <?php the_field('field_6375315c72e9d'); ?>
                 </div>
               </div>
           </div>
