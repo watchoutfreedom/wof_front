@@ -14,6 +14,7 @@
 						<?php the_title(); ?>
 					</h1>
 					<div class="product__precio"><?php the_field('field_6377e4e40ad0e'); ?> €</div>
+					<div class="product__intro"><?php the_field('field_6375315c72e9d'); ?></div>
 					<a href="<?php the_field('field_6377e4fc0ad0f'); ?>" class="product__btn">Comprar</a>
 				</div>
 			</div>
