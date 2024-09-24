@@ -5,6 +5,7 @@
 			<div class="product__content">
 				<?php the_post_thumbnail('fotogrande'); ?>
 				<div class="main single-noticias__main product__main">
+					<div class="maincontent"><?php the_field('field_63752e3ee91da'); ?></div>
 					<?php the_content("Sigue leyendo"); ?>
 				</div>
 			</div>
