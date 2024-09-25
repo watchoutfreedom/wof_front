@@ -22,6 +22,10 @@ $header-nav-ul-before-top: $header-nav-ul-before-bottom;
 .header__logo {
   flex: 0 1 10%;
   min-width: 40px;
+
+  a {
+    height: 40px;
+  }
 }
 
 .header__nav {

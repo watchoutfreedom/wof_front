@@ -300,6 +300,9 @@ a {
   flex: 0 1 10%;
   min-width: 40px;
 }
+.header__logo a {
+  height: 40px;
+}
 
 .header__nav {
   overflow-y: hidden;
@@ -537,7 +540,6 @@ header {
 }
 
 .wrap__box {
-  flex: 0 1 50%;
   padding: 0;
 }
 .wrap__box img {
@@ -587,6 +589,11 @@ header {
   width: 90%;
 }
 
+@media only screen and (min-width: 768px) {
+  .wrap__box {
+    flex: 0 1 50%;
+  }
+}
 .product {
   max-width: 1280px;
   margin: 4rem auto;
