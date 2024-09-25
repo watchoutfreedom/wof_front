@@ -36,9 +36,9 @@ get_header();
     </div>
   </div>
   <div class="wrap">
-    <div class="wrap__box wrap__box--shop">
+    <div class="wrap__box wrap__box--news">
       <h3 class="wrap__title">Novedades WOF</h3>
-      <?php $the_query = new WP_Query('showposts=8&category_name=noticias'); while ($the_query->have_posts()) : $the_query->the_post();?>
+      <?php $the_query = new WP_Query('showposts=6&category_name=noticias'); while ($the_query->have_posts()) : $the_query->the_post();?>
       <?php get_template_part('components/article-list'); ?>
       <?php endwhile; ?>
     </div>

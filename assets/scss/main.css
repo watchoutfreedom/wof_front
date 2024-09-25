@@ -555,18 +555,23 @@ header {
   font-size: 1.5rem;
 }
 
+.wrap__box--news,
 .wrap__box--debate {
   flex: 0 1 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
+.wrap__box--news .wrap__title,
 .wrap__box--debate .wrap__title {
   flex: 0 1 100%;
 }
+.wrap__box--news .article-list,
 .wrap__box--debate .article-list {
   flex: 0 1 50%;
 }
+.wrap__box--news .article-list .article-list__thumb,
+.wrap__box--news .article-list .article-list__content,
 .wrap__box--debate .article-list .article-list__thumb,
 .wrap__box--debate .article-list .article-list__content {
   width: 90%;
@@ -592,6 +597,15 @@ header {
 @media only screen and (min-width: 768px) {
   .wrap__box {
     flex: 0 1 50%;
+  }
+  .wrap__box--news {
+    display: flex;
+    flex: 0 1 100%;
+    flex-flow: row wrap;
+  }
+  .wrap__box--news .article-list {
+    width: 90%;
+    flex: 0 1 33.3333333333%;
   }
   .wrap__box--debate,
   .wrap__box--shop {
