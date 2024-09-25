@@ -4,7 +4,7 @@
   <div class="page-sidebar__content cat-cat">
     <div class="page-sidebar__cat">
       <h1 class="page-sidebar__cat-title">
-        <?php single_cat_title(); ?> Madrid
+        <?php single_cat_title(); ?> 
       </h1>
     </div>
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
