@@ -453,7 +453,7 @@ header {
   }
 }
 .footer {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   color: #555555;
   margin: 5rem auto 0 auto;
   max-width: 1080px;
@@ -827,7 +827,7 @@ header {
   text-decoration: underline;
 }
 .main blockquote {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
   padding: 2rem;
@@ -842,7 +842,7 @@ header {
   width: 200px;
 }
 .main .wp-caption-text {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 0.85rem;
   font-style: italic;
   line-height: 1.3rem;
@@ -1140,7 +1140,7 @@ header {
 }
 
 .last-news__title {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 0.85rem;
   line-height: 1.15rem;
 }
@@ -1577,7 +1577,7 @@ header {
 }
 
 .page-sidebar__cat-title {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 24px;
   padding: 48px 0 24px 0;
 }
