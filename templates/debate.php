@@ -6,6 +6,7 @@ get_header();
 ?>
 <div class="hero">
   <h1 class="hero__title">Debate</h1>
+  <div class="hero__description">Bote de este mes: 500 €</div>
 </div>
 
 <div class="wrap">
