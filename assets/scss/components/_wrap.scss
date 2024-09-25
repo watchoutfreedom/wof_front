@@ -67,7 +67,7 @@
   }
   
   .article-list {
-    flex: 0 1 25%;
+    flex: 0 1 50%;
 
     .article-list__thumb,
     .article-list__content {
@@ -80,4 +80,13 @@
   .wrap__box {
     flex: 0 1 50%;
   }
+
+  .wrap__box--shop {   
+    flex: 0 1 100%;
+
+    .article-list {
+      flex: 0 1 25%;
+    }
+  }
+
 }

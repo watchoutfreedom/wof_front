@@ -582,7 +582,7 @@ header {
   flex: 0 1 100%;
 }
 .wrap__box--shop .article-list {
-  flex: 0 1 25%;
+  flex: 0 1 50%;
 }
 .wrap__box--shop .article-list .article-list__thumb,
 .wrap__box--shop .article-list .article-list__content {
@@ -592,6 +592,12 @@ header {
 @media only screen and (min-width: 768px) {
   .wrap__box {
     flex: 0 1 50%;
+  }
+  .wrap__box--shop {
+    flex: 0 1 100%;
+  }
+  .wrap__box--shop .article-list {
+    flex: 0 1 25%;
   }
 }
 .product {
