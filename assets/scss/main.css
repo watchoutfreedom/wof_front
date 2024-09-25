@@ -2246,6 +2246,10 @@ header {
   display: none;
 }
 
+.page-sidebar__cat {
+  flex: 0 1 100%;
+}
+
 .page-sidebar__link--btn {
   display: inline-block;
   margin: 12px;
