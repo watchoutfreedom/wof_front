@@ -13,6 +13,10 @@ $article-list-paragraph-color: $color-dark-gray;
   transition: transform .4s;
 }
 
+.article-list__date {
+  display: none;
+}
+
 .article-list:hover {
   transform: translateY(-10px);
 
