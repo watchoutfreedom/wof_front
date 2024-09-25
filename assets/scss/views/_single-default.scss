@@ -258,6 +258,12 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
   }
 } 
 
+.single-noticias__title {
+  font-size: 2rem;
+  font-family: 'Satoshi-Bold';
+  margin-bottom: 1rem;
+}
+
 @media #{$breakpoints-medium} {
   .single-default {
     padding: 2rem;

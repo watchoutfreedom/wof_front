@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&display=swap");
 @font-face {
-  font-family: "Gambarino-Regular";
-  src: url("../fonts/Gambarino-Regular.woff2") format("woff2"), url("../fonts/Gambarino-Regular.woff") format("woff"), url("../fonts/Gambarino-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
   font-family: "Satoshi-Regular";
   src: url("../fonts/Satoshi-Regular.woff2") format("woff2"), url("../fonts/Satoshi-Regular.woff") format("woff"), url("../fonts/Satoshi-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -1469,6 +1462,12 @@ header {
 }
 .single__tags a:hover:after {
   width: 100%;
+}
+
+.single-noticias__title {
+  font-size: 2rem;
+  font-family: "Satoshi-Bold";
+  margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
