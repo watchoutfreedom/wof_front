@@ -5,7 +5,7 @@ Template Name: home
 get_header();
 ?>
 <div class="home">
-<div class="hero">
+  <div class="hero">
     <h1 class="hero__title">WOF! es una asociación</h1>
     <div class="hero__description">Dedicada a fomentar la cooperación social, el debate y la formación en materias afectadas por la desinformación o el desinterés del statu quo.</div>
   </div>
@@ -35,6 +35,15 @@ get_header();
       <?php endwhile; ?>
     </div>
   </div>
+  <div class="wrap">
+    <div class="wrap__box wrap__box--shop">
+      <h3 class="wrap__title">Novedades WOF</h3>
+      <?php $the_query = new WP_Query('showposts=8&category_name=noticias'); while ($the_query->have_posts()) : $the_query->the_post();?>
+      <?php get_template_part('components/article-list'); ?>
+      <?php endwhile; ?>
+    </div>
+  </div>
+
 </div>
 
 
