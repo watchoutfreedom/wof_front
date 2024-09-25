@@ -593,9 +593,11 @@ header {
   .wrap__box {
     flex: 0 1 50%;
   }
+  .wrap__box--debate,
   .wrap__box--shop {
     flex: 0 1 100%;
   }
+  .wrap__box--debate .article-list,
   .wrap__box--shop .article-list {
     flex: 0 1 25%;
   }
