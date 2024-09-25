@@ -29,6 +29,7 @@ $header-nav-ul-before-top: $header-nav-ul-before-bottom;
 }
 
 .header__nav {
+  width: 70%;
   overflow-y: hidden;
   overflow-x: scroll;
   -ms-overflow-style: none;
@@ -155,6 +156,8 @@ header {
 }
 
 .header__btn {
+  display: none;
+
   a {
     background: #191919;
     color: white;
@@ -168,6 +171,10 @@ header {
 }
 
 @media #{$breakpoints-medium} {
+  .header__nav {
+    width: auto;
+  }
+  
   .header__nav-link {
     font-size: .85rem;
     padding: 1.25rem;
@@ -182,5 +189,9 @@ header {
 
   .header__logo-link {
     height: 40px;
+  }
+
+  .header__btn {
+    display: block;
   }
 }
