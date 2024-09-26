@@ -41,8 +41,11 @@ function populate_answer_to($field) {
   }
   
   add_filter('acf/prepare_field/key=field_6375339e513ad', 'populate_answer_to');
-
+// disable gutenberg editor
+add_filter('use_block_editor_for_post', '__return_false', 10);
 
 
 
 ?>
+
+
