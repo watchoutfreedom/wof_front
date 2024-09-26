@@ -53,7 +53,7 @@ get_header(); ?>
             'submit_value' => __("Publicar", 'acf'),
             'new_post'      => array(
                 'post_type'     => 'post',
-                'post_category' => [28],
+                'post_category' => 28,
                 'post_status'   => 'publish'
             )
         ));
