@@ -29,4 +29,20 @@ function enable_registration() {
 add_filter('registration_errors', 'enable_registration');
 add_filter('wp_signup_location', 'enable_registration');
 
+function populate_answer_to($field) {
+	// only on front end
+	if (is_admin()) {
+	  return $field;
+	}
+	if (isset($_GET['id']) && $_GET['action'] == 'create') {
+	  $field['value'] = $_GET['id'];
+	}
+	return $field;
+  }
+  
+  add_filter('acf/prepare_field/key=field_6375339e513ad', 'populate_answer_to');
+
+
+
+
 ?>
