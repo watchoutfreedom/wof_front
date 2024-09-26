@@ -1,0 +1,13 @@
+$ads-background: $color-ads;
+$ads-whitespace: 1rem;
+$ads-margin: $ads-whitespace auto;
+$ads-margin-centered: $ads-whitespace auto;
+
+.ads {
+  display: block;
+  margin: auto;
+  padding: .5rem 1rem;
+  text-align: center;
+  width: 90%;
+}
+

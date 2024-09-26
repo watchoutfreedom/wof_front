@@ -1,0 +1,40 @@
+// Part of the pitcher github.com/gruncho/stylestree
+//
+// For the full copyright and license information, please view the LICENSE
+// file that was distributed with this source code.
+//
+// @author Alex M. Gorgal (@gruncho) <alex@worldx3.com>
+
+@import '../variables/colors';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: $color-black;
+  background-color: white;
+  font-family: 'Satoshi-Regular';
+
+  // font-family: $first-font-family;
+  // font-weight: $first-font-weight-regular; 
+  min-height: 100%;
+
+  // revise
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+strong {
+  // font-weight: $first-font-weight-bold;
+}
+
+a {
+  color: inherit;
+}

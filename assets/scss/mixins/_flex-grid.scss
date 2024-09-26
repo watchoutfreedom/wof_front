@@ -1,0 +1,35 @@
+$grid-row-max-width: $row-max;
+$row-padding-left: $gutter;
+$row-padding-right: $gutter;
+
+@mixin column($column) {
+  flex: 0 1 calc( #{$column}00%/12 );
+  padding: 0 $gutter;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: $grid-row-max-width;
+  padding-left: $row-padding-left ;
+  padding-right: $row-padding-right;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grid-row {
+  @extend .grid;
+  @extend .row;
+}
+
+@media #{$breakpoints-large} {
+  .row {
+    width: 90%;
+  }
+}

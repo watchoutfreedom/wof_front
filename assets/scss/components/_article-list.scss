@@ -1,0 +1,139 @@
+$article-list-title-font-family: $font-heading;
+$article-list-paragraph-font-family: $font-body;
+$article-list-paragraph-color: $color-dark-gray;
+
+
+.article-list__content {
+  padding-top: 16px;
+}
+
+.article-list {
+  padding-top: 0;
+  margin-top: 0;
+  transition: transform .4s;
+}
+
+.article-list__author,
+.article-list__response,
+.article-list__date {
+  display: none;
+}
+
+.article-list:hover {
+  transform: translateY(-10px);
+
+  .article-list__title {
+    opacity: .6;
+  }
+
+  .article-list__thumb {
+    img {
+      box-shadow: $box-shadow-thumbnail
+    }
+  }
+}
+
+.article-list__link {
+  display: block;
+  text-decoration: none;
+}
+
+.article-list__thumb {
+  flex: 0 1 30%;
+  transition: box-shadow .4s;
+}
+
+.article-list__picture {
+  @include aspect-ratio(2,1.5);
+
+  margin-top: 2.2rem;
+}
+
+.home__post {
+  .article-list__title {
+    width: 80%;
+    color: white;
+    transform: translate(100px, -120px);
+    font-size: 32px;
+    line-height: 40px;
+
+    span {
+      background: rgba(25,25,25,.9);
+    }
+  }
+}
+
+.article-list__title {
+  font-family: 'Satoshi-Bold';
+  font-size: 20px;
+  line-height: 26px;
+  padding: .5rem 0 1rem 0;
+  transition: opacity .2s;
+
+  a {
+    text-decoration: none;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+$pgs-mobile: 16px;
+$pgs-desktop: 32px;
+
+.page-sidebar__content {
+  width: calc( 100% + #{$pgs-mobile} );
+  display: flex;
+  flex-flow: row wrap;
+
+  .article-list {
+    transition: .4s;
+    flex: 0 1 calc( 100%/2 );
+    padding-right: $pgs-mobile;
+  }
+}
+
+@media #{$breakpoints-medium} {
+  .page-sidebar__content {  
+    width: calc( 100% + #{$pgs-desktop} );
+
+    .article-list {
+      flex: 0 1 calc( 100%/3 );
+      padding-right: $pgs-desktop;
+    }
+  }
+}
+
+@media #{$breakpoints-large} {
+  .home__post {
+    .article-list__title {
+      font-size: 54px;
+      line-height: 58px;
+    }
+  }
+  .article-list__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .article-list__thumb {
+    flex: 0 1 25%;
+  }
+
+  .article-list__picture {
+    @include aspect-ratio(3,2);
+  }
+}
+
+
+@media #{$breakpoints-xlarge} {
+  .page-sidebar__content {  
+    .article-list {
+      flex: 0 1 calc( 100%/4 );
+      padding-right: 32px;
+    }
+  }
+}
+

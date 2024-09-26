@@ -1,0 +1,26 @@
+$category-link-color: $color-corporative;
+$category-link-font-family: $font-body;
+$category-margin: 8px 0;
+
+.category-link {  
+  a {
+    font-size: 14px;
+    color: $category-link-color;
+    display: inline-block;
+    font-family: $category-link-font-family;
+    text-decoration: none;
+    padding: $category-margin;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media #{$breakpoints-xlarge} {
+  .category-link {
+    a {
+      font-size: 15px;
+    }
+  }
+}
