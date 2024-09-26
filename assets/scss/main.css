@@ -563,6 +563,10 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
 }
+.wrap__box--news .article-list__response,
+.wrap__box--debate .article-list__response {
+  display: block;
+}
 .wrap__box--news .wrap__title,
 .wrap__box--debate .wrap__title {
   flex: 0 1 100%;
@@ -922,6 +926,7 @@ header {
   transition: transform 0.4s;
 }
 
+.list__responses,
 .article-list__date {
   display: none;
 }
