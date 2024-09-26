@@ -35,6 +35,7 @@ get_header(); ?>
             'post_id'       => $_GET['id'],
             'post_title'    => true,
             'post_content'  => false,
+            'post_category' => array(28),
             'return' => '%post_url%',
             'submit_value' => __("Publicar", 'acf')
         )); 
@@ -48,12 +49,11 @@ get_header(); ?>
             'post_id'       => 'new_post',
             'post_title'    => true,
             'post_content'  => false,
-            'post_category' => 'debate',
             'return' => '%post_url%',
             'submit_value' => __("Publicar", 'acf'),
             'new_post'      => array(
                 'post_type'     => 'post',
-                'post_category' => [28],
+                'post_category' => array(28),
                 'post_status'   => 'publish'
             )
         ));
