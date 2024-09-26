@@ -25,6 +25,10 @@ $page-sidebar-padding-mobile: 12px;
   }
 }
 
+.page-sidebar__cat {
+  flex: 0 1 100%;
+}
+
 .page-sidebar__link--btn {
   display: inline-block;
   margin: $page-sidebar-padding-mobile;

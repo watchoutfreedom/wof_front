@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&display=swap");
 @font-face {
-  font-family: "Gambarino-Regular";
-  src: url("../fonts/Gambarino-Regular.woff2") format("woff2"), url("../fonts/Gambarino-Regular.woff") format("woff"), url("../fonts/Gambarino-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
   font-family: "Satoshi-Regular";
   src: url("../fonts/Satoshi-Regular.woff2") format("woff2"), url("../fonts/Satoshi-Regular.woff") format("woff"), url("../fonts/Satoshi-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -229,23 +222,21 @@ a {
   color: inherit;
 }
 
-.layout-grid, .about,
-.layout-content,
-.about__content {
+.layout-grid,
+.layout-content {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 @media only screen and (min-width: 1024px) {
-  .layout-grid, .about,
-  .layout-content,
-  .about__content {
+  .layout-grid,
+  .layout-content {
     margin: auto;
   }
-  .layout-grid, .about {
+  .layout-grid {
     max-width: 1080px;
   }
-  .layout-content, .about__content {
+  .layout-content {
     max-width: 680px;
   }
 }
@@ -300,8 +291,12 @@ a {
   flex: 0 1 10%;
   min-width: 40px;
 }
+.header__logo a {
+  height: 40px;
+}
 
 .header__nav {
+  width: 70%;
   overflow-y: hidden;
   overflow-x: scroll;
   -ms-overflow-style: none;
@@ -418,6 +413,9 @@ header {
   top: 30px;
 }
 
+.header__btn {
+  display: none;
+}
 .header__btn a {
   background: #191919;
   color: white;
@@ -430,6 +428,9 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
+  .header__nav {
+    width: auto;
+  }
   .header__nav-link {
     font-size: 0.85rem;
     padding: 1.25rem;
@@ -440,9 +441,12 @@ header {
   .header__logo-link {
     height: 40px;
   }
+  .header__btn {
+    display: block;
+  }
 }
 .footer {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   color: #555555;
   margin: 5rem auto 0 auto;
   max-width: 1080px;
@@ -536,8 +540,20 @@ header {
   flex: 0 1 50%;
 }
 
+.wrap__box--author .article-list__author {
+  transform: translate(100px, -120px);
+  display: block;
+  font-size: 1.15rem;
+  font-family: "Satoshi-Medium";
+  opacity: 0.5;
+  padding-top: 0.5rem;
+}
+.wrap__box--author .article-list__author a {
+  color: white;
+  text-decoration: none;
+}
+
 .wrap__box {
-  flex: 0 1 50%;
   padding: 0;
 }
 .wrap__box img {
@@ -553,18 +569,27 @@ header {
   font-size: 1.5rem;
 }
 
+.wrap__box--news,
 .wrap__box--debate {
   flex: 0 1 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
+.wrap__box--news .article-list__response,
+.wrap__box--debate .article-list__response {
+  display: block;
+}
+.wrap__box--news .wrap__title,
 .wrap__box--debate .wrap__title {
   flex: 0 1 100%;
 }
+.wrap__box--news .article-list,
 .wrap__box--debate .article-list {
   flex: 0 1 50%;
 }
+.wrap__box--news .article-list .article-list__thumb,
+.wrap__box--news .article-list .article-list__content,
 .wrap__box--debate .article-list .article-list__thumb,
 .wrap__box--debate .article-list .article-list__content {
   width: 90%;
@@ -580,13 +605,62 @@ header {
   flex: 0 1 100%;
 }
 .wrap__box--shop .article-list {
-  flex: 0 1 25%;
+  flex: 0 1 50%;
 }
 .wrap__box--shop .article-list .article-list__thumb,
 .wrap__box--shop .article-list .article-list__content {
   width: 90%;
 }
 
+.wrap__box--news .article-list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.wrap__box--news .article-list .article-list__thumb {
+  flex: 0 1 180px;
+  margin-right: 24px;
+}
+.wrap__box--news .article-list .article-list__content {
+  max-width: 60%;
+}
+.wrap__box--news .article-list__date {
+  display: block;
+  opacity: 0.4;
+}
+
+.wrap__box--news {
+  display: flex;
+  flex: 0 1 100%;
+  flex-flow: row wrap;
+}
+.wrap__box--news .article-list {
+  flex: 0 1 100%;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrap__box {
+    flex: 0 1 50%;
+  }
+  .wrap__box--news {
+    flex: 0 1 100%;
+  }
+  .wrap__box--news .article-list {
+    flex: 0 1 50%;
+  }
+  .wrap__box--debate,
+  .wrap__box--shop {
+    flex: 0 1 100%;
+  }
+  .wrap__box--debate .article-list,
+  .wrap__box--shop .article-list {
+    flex: 0 1 25%;
+  }
+  .wrap__box--news {
+    margin-top: 4rem;
+  }
+}
 .product {
   max-width: 1280px;
   margin: 4rem auto;
@@ -763,7 +837,7 @@ header {
   text-decoration: underline;
 }
 .main blockquote {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
   padding: 2rem;
@@ -778,7 +852,7 @@ header {
   width: 200px;
 }
 .main .wp-caption-text {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 0.85rem;
   font-style: italic;
   line-height: 1.3rem;
@@ -863,6 +937,12 @@ header {
   padding-top: 0;
   margin-top: 0;
   transition: transform 0.4s;
+}
+
+.article-list__author,
+.article-list__response,
+.article-list__date {
+  display: none;
 }
 
 .article-list:hover {
@@ -1014,143 +1094,6 @@ header {
     width: calc(100% - calc(50% - 1080px / 2));
   }
 }
-.destacado {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.destacado__thumb {
-  background: #fff;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: background 0.8s;
-  width: 100%;
-  z-index: 5;
-}
-.destacado__thumb img {
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  position: absolute;
-  width: 100%;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-
-.destacado__content {
-  margin: auto;
-  max-width: 680px;
-  position: relative;
-  width: 90%;
-  z-index: 10;
-}
-
-.destacado__content:hover + .destacado__thumb {
-  background: #191919;
-}
-.destacado__content:hover + .destacado__thumb img {
-  opacity: 0.4;
-}
-
-.destacado__content:hover .destacado__big-title,
-.destacado__content:hover .destacado__minipost-title {
-  color: #fff;
-}
-
-.destacado__sms {
-  background: #0F4BF1;
-  color: #fff;
-  display: inline-block;
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.85rem;
-  padding: 0.5rem;
-}
-
-.destacado__big-title {
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-size: 2rem;
-  line-height: 2.5rem;
-  padding: 1rem 0;
-}
-.destacado__big-title a {
-  display: block;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.destacado__big-title a:hover {
-  opacity: 0.9;
-}
-
-.destacado__minipost {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem 0 0 0;
-  justify-content: space-between;
-  transition: opacity 0.5s;
-}
-
-.destacado__big-title:hover + .destacado__minipost {
-  opacity: 0;
-}
-
-.destacado__minipost-box {
-  flex: 0 1 30%;
-  margin-bottom: 2rem;
-}
-
-.destacado__minipost-cat {
-  font-size: 0.85rem;
-  padding-bottom: 0.5rem;
-}
-
-.destacado__minipost-title {
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-size: 1.25rem;
-  line-height: 1.7rem;
-}
-.destacado__minipost-title a {
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.destacado__minipost-title a:hover {
-  opacity: 0.6;
-}
-
-@media only screen and (min-width: 768px) {
-  .destacado__big-title {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-  .destacado__minipost {
-    flex-flow: row wrap;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .destacado {
-    height: 90vh;
-  }
-  .destacado__big-title {
-    font-size: 4rem;
-    line-height: 4.35rem;
-  }
-  .destacado__minipost-box {
-    margin-bottom: 0;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .destacado__big-title {
-    font-size: 4.25rem;
-    line-height: 4.5rem;
-  }
-}
 .category-nav {
   display: flex;
   justify-content: space-between;
@@ -1182,136 +1125,6 @@ header {
   text-align: right;
 }
 
-.restaurantes-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding-top: 24px;
-}
-
-.restaurantes-list__link {
-  display: block;
-  text-decoration: none;
-  transition: transform 0.4s;
-}
-
-.restaurantes-list__article {
-  flex: 0 1 50%;
-  padding: 12px;
-  transition: transform 0.4s;
-}
-
-.restaurantes-list__title {
-  font-family: "Gambarino-Regular", Georgia, serif;
-}
-
-.restaurantes-list__picture {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 0.75rem;
-  transition: box-shadow 0.2s;
-}
-.restaurantes-list__picture:before {
-  padding-top: calc(2 / 3 * 100%);
-  content: "";
-  display: block;
-  width: 100%;
-}
-.restaurantes-list__picture > img {
-  object-fit: cover;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
-}
-
-.restaurantes-list__title {
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-size: 1rem;
-  padding-bottom: 1rem;
-}
-.restaurantes-list__title a {
-  color: #191919;
-  text-decoration: none;
-}
-
-.restaurantes-list__icons {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
-}
-
-.restaurnates-list__icon--01 {
-  background: transparent url("assets/svg/covered.svg") center no-repeat;
-  background-size: 100%;
-}
-
-.restaurantes-list-li {
-  color: rgba(0, 0, 0, 0.4);
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.75rem;
-  flex: 0 1 50%;
-}
-
-.restaurantes-list-li--price {
-  font-family: "Work Sans", sans-serif;
-  text-align: right;
-}
-
-.restaurantes-list__article:hover {
-  transform: translateY(-10px);
-}
-.restaurantes-list__article:hover .restaurantes-list__title {
-  opacity: 0.6;
-}
-.restaurantes-list__article:hover .restaurantes-list__thumb img {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-@media only screen and (min-width: 1024px) {
-  .restaurantes-list__article {
-    flex: 0 1 25%;
-    padding: 24px;
-  }
-  .restaurantes-list__title {
-    font-size: 1.5rem;
-  }
-  .restaurantes-list .restaurantes-list__article:nth-child(1),
-  .restaurantes-list .restaurantes-list__article:nth-child(6),
-  .restaurantes-list .restaurantes-list__article:nth-child(7),
-  .restaurantes-list .restaurantes-list__article:nth-child(12) {
-    flex: 0 1 50%;
-  }
-  .restaurantes-list .restaurantes-list__article:nth-child(1) .restaurantes-list__picture,
-  .restaurantes-list .restaurantes-list__article:nth-child(6) .restaurantes-list__picture,
-  .restaurantes-list .restaurantes-list__article:nth-child(7) .restaurantes-list__picture,
-  .restaurantes-list .restaurantes-list__article:nth-child(12) .restaurantes-list__picture {
-    position: relative;
-    overflow: hidden;
-  }
-  .restaurantes-list .restaurantes-list__article:nth-child(1) .restaurantes-list__picture:before,
-  .restaurantes-list .restaurantes-list__article:nth-child(6) .restaurantes-list__picture:before,
-  .restaurantes-list .restaurantes-list__article:nth-child(7) .restaurantes-list__picture:before,
-  .restaurantes-list .restaurantes-list__article:nth-child(12) .restaurantes-list__picture:before {
-    padding-top: calc(2 / 4 * 100%);
-    content: "";
-    display: block;
-    width: 100%;
-  }
-  .restaurantes-list .restaurantes-list__article:nth-child(1) .restaurantes-list__picture > img,
-  .restaurantes-list .restaurantes-list__article:nth-child(6) .restaurantes-list__picture > img,
-  .restaurantes-list .restaurantes-list__article:nth-child(7) .restaurantes-list__picture > img,
-  .restaurantes-list .restaurantes-list__article:nth-child(12) .restaurantes-list__picture > img {
-    object-fit: cover;
-    height: 100%;
-    top: 0;
-    position: absolute;
-    left: 0;
-    width: 100%;
-  }
-}
 .last-news {
   border-left: 1px solid #f0f0f0;
   margin-top: 10%;
@@ -1339,7 +1152,7 @@ header {
 }
 
 .last-news__title {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 0.85rem;
   line-height: 1.15rem;
 }
@@ -1533,6 +1346,38 @@ header {
   padding: 4px 8px;
 }
 
+.debate__meta {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.debate__meta span {
+  color: white;
+  background: #0F4BF1;
+  padding: 2px 4px;
+  margin: 0 2px;
+}
+
+.debate__col {
+  font-size: 1rem;
+  font-family: "Satoshi-Medium";
+}
+.debate__col a {
+  margin-top: 1rem;
+  background: #191919;
+  color: white;
+  text-decoration: none;
+  padding: 12px 32px;
+  font-family: "Satoshi-Bold";
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
 .single-default {
   background: #fff;
   display: flex;
@@ -1546,7 +1391,7 @@ header {
   color: white;
   font-size: 20px;
   font-family: "Satoshi-Medium";
-  padding: 0 0 48px 0;
+  padding: 0 0 32px 0;
   line-height: 32px;
 }
 
@@ -1638,6 +1483,12 @@ header {
   width: 100%;
 }
 
+.single-noticias__title {
+  font-size: 2rem;
+  font-family: "Satoshi-Bold";
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
   .single-default {
     padding: 2rem;
@@ -1646,6 +1497,9 @@ header {
     font-size: 2.75rem;
     line-height: 3.25rem;
   }
+  .debate__col a {
+    margin-top: 0;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .single-default {
@@ -1654,344 +1508,6 @@ header {
   .single-default__title {
     font-size: 3rem;
     line-height: 3.5rem;
-  }
-}
-.single-opinion {
-  background: #fff;
-  margin: auto;
-  max-width: 1080px;
-  width: 100%;
-}
-
-.single-opinion__category,
-.single-opinion__title,
-.single-opinion__meta {
-  padding-bottom: 1rem;
-  text-align: center;
-}
-
-.single-opinion__category {
-  font-size: 1.25rem;
-  font-style: italic;
-  font-weight: bold;
-}
-
-.single-opinion__category:before {
-  background: #191919;
-  content: "";
-  display: block;
-  height: 2px;
-  margin: 0 auto 0.5rem auto;
-  width: 20px;
-}
-
-.single-opinion__title {
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-style: italic;
-  font-size: 1.8rem;
-  letter-spacing: -1px;
-  line-height: 2.25rem;
-  margin: auto;
-  width: 90%;
-}
-
-.single-opinion__content {
-  padding: 1rem;
-}
-
-.single-opinion__meta {
-  color: rgba(0, 0, 0, 0.4);
-  font-family: "Work Sans", sans-serif;
-  padding: 1rem 0 2rem 0;
-}
-
-.single-opinion__main {
-  margin: auto;
-  max-width: 680px;
-}
-
-.single-opinion__date {
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-style: italic;
-  color: #191919;
-  margin: auto;
-  max-width: 680px;
-  padding-top: 2rem;
-  width: auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .single-opinion__title {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .single-opinion__content {
-    padding: 3rem;
-  }
-  .single-opinion__title {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
-}
-.single-noticias {
-  background: #fff;
-  margin: auto;
-  max-width: 1080px;
-  width: 100%;
-}
-
-.single-noticias__thumb {
-  position: relative;
-  overflow: hidden;
-}
-.single-noticias__thumb:before {
-  padding-top: calc(2 / 4 * 100%);
-  content: "";
-  display: block;
-  width: 100%;
-}
-.single-noticias__thumb > img {
-  object-fit: cover;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
-}
-
-.single-noticias__credits-photo {
-  padding: 1rem;
-}
-
-.single-noticias__credits-photo {
-  color: #555555;
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-style: italic;
-  font-size: 0.75rem;
-  text-align: right;
-}
-
-.single-noticias__content {
-  padding: 1rem;
-}
-
-.single-noticias__title {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.75rem;
-  max-width: 600px;
-  padding: 0.5rem 0 1rem 0;
-}
-
-.single-noticias__intro {
-  color: #555555;
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-size: 1.05rem;
-  line-height: 1.55rem;
-}
-
-.single-noticias__intro:before {
-  border-left: 0.5rem solid #0F4BF1;
-  border-top: 0.35rem solid transparent;
-  border-bottom: 0.35rem solid transparent;
-  content: "";
-  display: inline-block;
-  height: 0;
-  margin-right: 0.25rem;
-  transform: translateY(-2px);
-  width: 0;
-}
-
-.single-noticias__meta {
-  color: rgba(0, 0, 0, 0.4);
-  font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
-  padding: 1rem 0;
-}
-
-.single-noticias__content--sidebar .last-news {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .single-noticias__title {
-    font-size: 1.85rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .single-noticias__content {
-    padding: 2rem 3rem;
-  }
-  .single-noticias__credits-photo {
-    padding: 1rem 2rem 0 2rem;
-  }
-  .single-noticias__title {
-    font-size: 2rem;
-  }
-  .single-noticias__intro {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-  .single-noticias__content--sidebar {
-    align-items: flex-start;
-    justify-content: center;
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  .single-noticias__content--sidebar .single-noticias__main {
-    flex: 0 1 60%;
-    max-width: 680px;
-  }
-  .single-noticias__content--sidebar .last-news {
-    display: block;
-    flex: 0 1 20%;
-    margin-left: 4rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .single-noticias__title {
-    font-size: 2.5rem;
-  }
-}
-.single-restaurantes {
-  background: #fff;
-  margin: auto;
-  max-width: 1080px;
-  width: 100%;
-}
-
-.single-restaurantes__thumb {
-  position: relative;
-  overflow: hidden;
-}
-.single-restaurantes__thumb:before {
-  padding-top: calc(3 / 3 * 100%);
-  content: "";
-  display: block;
-  width: 100%;
-}
-.single-restaurantes__thumb > img {
-  object-fit: cover;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
-}
-
-.single-restaurantes__thumb:after {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  left: 0;
-  right: 0;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  background: linear-gradient(0deg, rgba(25, 25, 25, 0.4), rgba(255, 255, 255, 0));
-}
-
-.single-restaurantes__main,
-.single-restaurantes__credits-photo {
-  padding: 1rem;
-}
-
-.single-restaurantes__credits-photo {
-  color: #555555;
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-style: italic;
-  font-size: 0.75rem;
-  text-align: right;
-}
-
-.single-restaurantes__content--sidebar {
-  align-items: flex-start;
-  justify-content: center;
-  display: flex;
-  flex-flow: row nowrap;
-}
-.single-restaurantes__content--sidebar .single-restaurantes__main {
-  flex: 0 1 60%;
-  max-width: 680px;
-}
-.single-restaurantes__content--sidebar .last-news {
-  flex: 0 1 20%;
-  margin-left: 4rem;
-}
-
-.single-restaurantes__img-content {
-  bottom: 1rem;
-  left: 1rem;
-  max-width: 500px;
-  position: absolute;
-  width: 90%;
-  z-index: 10;
-}
-
-.single-restaurantes__category a {
-  color: #fff;
-  background: #0F4BF1;
-  padding: 0.25rem;
-}
-
-.single-restaurantes__meta {
-  display: none;
-  color: #fff;
-  font-family: "Gambarino-Regular", Georgia, serif;
-  font-size: 1rem;
-  padding: 1rem 0;
-}
-
-.single-restaurantes__title {
-  color: #fff;
-  font-family: "Work Sans", sans-serif;
-  font-size: 2rem;
-  padding: 0.5rem 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .single-restaurantes__thumb {
-    position: relative;
-    overflow: hidden;
-  }
-  .single-restaurantes__thumb:before {
-    padding-top: calc(2 / 4 * 100%);
-    content: "";
-    display: block;
-    width: 100%;
-  }
-  .single-restaurantes__thumb > img {
-    object-fit: cover;
-    height: 100%;
-    top: 0;
-    position: absolute;
-    left: 0;
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .single-restaurantes__content {
-    padding: 1rem 3rem 2rem 3rem;
-  }
-  .single-restaurantes__img-content {
-    bottom: 2rem;
-    left: 4rem;
-  }
-  .single-restaurantes__credits-photo {
-    padding: 1rem 2rem 0 2rem;
-  }
-  .single-restaurantes__title {
-    font-size: 2rem;
-  }
-  .single-restaurantes__intro {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .single-restaurantes__title {
-    font-size: 3rem;
   }
 }
 .page-sidebar {
@@ -2027,112 +1543,6 @@ header {
     padding: 2rem 4rem;
   }
 }
-.about {
-  padding: 5rem 0;
-  position: relative;
-  z-index: 15;
-}
-
-.about__bck {
-  background: transparent url("assets/img/about/plaza-mayor-madrid.jpg") top center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.about__bck:after, .about__bck:before {
-  width: 100%;
-  position: absolute;
-  content: "";
-  display: block;
-  left: 0;
-  background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0));
-  z-index: 10;
-}
-.about__bck:before {
-  height: 500px;
-  top: 0;
-}
-.about__bck:after {
-  height: 100%;
-  bottom: 0;
-}
-
-.about__title {
-  font-family: "Work Sans", sans-serif;
-  font-size: 2.75rem;
-  line-height: 2.75rem;
-  margin: 2rem auto 4rem auto;
-  max-width: 600px;
-  text-align: center;
-  width: 90%;
-}
-
-.about__subtitle {
-  color: #191919;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
-  padding: 4rem 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.about__list-of-box {
-  justify-content: space-between;
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-}
-
-.about__box {
-  flex: 0 1 30%;
-  padding: 2rem 0;
-}
-
-.about__number {
-  font-family: "Work Sans", sans-serif;
-  font-size: 4rem;
-  letter-spacing: -2px;
-  color: #191919;
-}
-
-.about__desc {
-  opacity: 0.5;
-  color: #555555;
-  font-family: "Work Sans", sans-serif;
-  font-size: 1rem;
-  padding-top: 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .about__title {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-  }
-  .about__list-of-box {
-    flex-flow: row wrap;
-  }
-  .about__box {
-    flex: 0 1 40%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .about__title {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-  .about__number {
-    font-size: 5rem;
-  }
-  .about__box {
-    flex: 0 1 30%;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .about__title {
-    font-size: 5rem;
-    line-height: 5rem;
-    max-width: 800px;
-  }
-}
 .page-sidebar--box .page-sidebar__box {
   flex: 0 1 100%;
   padding-bottom: 48px;
@@ -2149,6 +1559,10 @@ header {
 }
 .page-sidebar--box .category-link {
   display: none;
+}
+
+.page-sidebar__cat {
+  flex: 0 1 100%;
 }
 
 .page-sidebar__link--btn {
@@ -2181,7 +1595,7 @@ header {
 }
 
 .page-sidebar__cat-title {
-  font-family: "Gambarino-Regular", Georgia, serif;
+  font-family: "Satoshi-Medium", sans-serif;
   font-size: 24px;
   padding: 48px 0 24px 0;
 }
