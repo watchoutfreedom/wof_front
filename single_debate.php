@@ -37,21 +37,22 @@
           <div class="main single-default__main">
             <?php the_field('field_63752e3ee91da'); ?>
             <?php the_content("Sigue leyendo"); ?>
+            <?php 
+              if(wp_get_current_user()->ID == $post->post_author 
+              //|| current_user_can( 'edit_others_posts', $post->ID)
+              ){
+                  echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
+              }
+              else{
+                  echo "<a class='button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
+              }
+            ?>
         </div>
       <?php endwhile; else: ?>
         <?php include (TEMPLATEPATH . '/404.php'); ?>
       <?php endif; ?>
     </article>
-    <?php 
-      if(wp_get_current_user()->ID == $post->post_author 
-      //|| current_user_can( 'edit_others_posts', $post->ID)
-      ){
-          echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
-      }
-      else{
-          echo "<a class='button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
-      }
-    ?>
+ 
   </main>
 
   <?php get_template_part('components/list-debate'); ?>
