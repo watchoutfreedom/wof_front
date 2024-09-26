@@ -48,6 +48,7 @@ get_header(); ?>
             'post_id'       => 'new_post',
             'post_title'    => true,
             'post_content'  => false,
+            'post_category' => 'debate',
             'return' => '%post_url%',
             'submit_value' => __("Publicar", 'acf'),
             'new_post'      => array(
