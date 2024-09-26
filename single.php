@@ -11,4 +11,4 @@ elseif (in_category('noticias')) {
   include (TEMPLATEPATH . '/single_noticias.php');
 }
 else {include (TEMPLATEPATH . '/single_default.php'); 
-}Public
+}
