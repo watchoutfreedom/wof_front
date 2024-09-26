@@ -10,7 +10,7 @@ get_header();
     <div class="hero__description">Wof es una asociación que fomenta la cooperación social, el debate y el conocimiento en materias afectadas por la desinformación o el desinterés del statu quo.</div>
   </div>
   <div class="wrap">
-    <div class="wrap__box">
+    <div class="wrap__box wrap__box--author">
       <h3 class="wrap__title">Debate</h3>
       <?php $the_query = new WP_Query('showposts=4&category_name=debate'); while ($the_query->have_posts()) : $the_query->the_post();?>
       <div class="home__post">

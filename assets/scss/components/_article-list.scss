@@ -13,7 +13,8 @@ $article-list-paragraph-color: $color-dark-gray;
   transition: transform .4s;
 }
 
-.list__responses,
+.article-list__author,
+.article-list__response,
 .article-list__date {
   display: none;
 }

@@ -540,6 +540,19 @@ header {
   flex: 0 1 50%;
 }
 
+.wrap__box--author .article-list__author {
+  transform: translate(100px, -120px);
+  display: block;
+  font-size: 1.15rem;
+  font-family: "Satoshi-Medium";
+  opacity: 0.5;
+  padding-top: 0.5rem;
+}
+.wrap__box--author .article-list__author a {
+  color: white;
+  text-decoration: none;
+}
+
 .wrap__box {
   padding: 0;
 }
@@ -926,7 +939,8 @@ header {
   transition: transform 0.4s;
 }
 
-.list__responses,
+.article-list__author,
+.article-list__response,
 .article-list__date {
   display: none;
 }
