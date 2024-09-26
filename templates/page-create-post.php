@@ -26,7 +26,7 @@ acf_form_head();
 
 get_header(); ?>
 
-<div class="page main-container">
+<div class="page wrap">
     <?php
 
     if( isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'edit' ){
