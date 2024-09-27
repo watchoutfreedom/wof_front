@@ -10,8 +10,8 @@ $post = get_post($_GET['id']);
 //add redirect if user can't edit this post
 if(!is_user_logged_in()){
     set_transient( 'originalRegisterRefererURL', $_SERVER['HTTP_REFERER'], 60 * 60 * 24 );
-    wp_redirect( wp_login_url() );
-    exit();
+    //wp_redirect( wp_login_url() );
+    //exit();
 }
 
 if(!(wp_get_current_user()->ID == $post->post_author) 
