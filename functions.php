@@ -75,7 +75,7 @@ function register_user($post_id,$form){
 	  if ( isset( $_POST['acf']['field_6382c10939765'], $_POST['acf']['field_599c480e8c0aa'] ) ) {
 		  $user_fields['display_name'] = sanitize_text_field( $_POST['acf']['field_6382c10939765']);
 	  }
-  
+	$user_fields['role'] = "contributor";
 	$user_id = wp_insert_user( $user_fields );
   
   
