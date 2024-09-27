@@ -19,9 +19,6 @@
         'meta_value'    => get_the_ID()
     ));
 
-
-    if(!empty($posts)):?>
-
       <div class="article-list__responses">
         <?php 
         if(!empty($posts)) echo count($posts)." respuestas";
