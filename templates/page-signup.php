@@ -11,7 +11,7 @@ acf_form_head();
 
 get_header();?>
 
-<div class="page main-container">
+<div class="wrap">
 
     <?php 
     
