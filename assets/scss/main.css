@@ -661,6 +661,33 @@ header {
     margin-top: 4rem;
   }
 }
+.colabora {
+  width: 90%;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 32px 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  color: black;
+  background: white;
+}
+.colabora a {
+  margin-top: 2rem;
+  background: #191919;
+  color: white;
+  text-decoration: none;
+  padding: 12px 32px;
+  font-family: "Satoshi-Bold";
+  font-size: 18px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.colaora__title {
+  text-align: center;
+}
+
 .product {
   max-width: 1280px;
   margin: 4rem auto;
@@ -1436,7 +1463,7 @@ header {
 }
 
 .single-default__main {
-  padding: 48px 0;
+  padding: 48px 12px;
   max-width: 752px;
   margin: auto;
 }

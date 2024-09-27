@@ -19,5 +19,6 @@ get_header();
     <?php endwhile; ?>
   </div>
 </div>
+<?php get_template_part('components/colabora'); ?>
 
 <?php get_footer(); ?>

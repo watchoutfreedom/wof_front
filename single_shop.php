@@ -27,5 +27,6 @@
 </article>
 
 <?php get_template_part('components/list-shop'); ?>
+<?php get_template_part('components/colabora'); ?>
 
 <?php get_footer(); ?>
