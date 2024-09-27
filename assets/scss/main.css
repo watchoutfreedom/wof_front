@@ -752,7 +752,7 @@ header {
 }
 .hero {
   max-width: 1280px;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
   background: #191919;
   padding: 8rem 4rem;
   text-align: center;
@@ -778,6 +778,9 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
+  .hero {
+    margin: 2rem auto;
+  }
   .hero__title {
     font-size: 4rem;
   }
