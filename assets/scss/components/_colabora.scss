@@ -25,3 +25,10 @@
 .colaora__title {
   text-align: center;
 }
+
+
+@media #{$breakpoints-large} {
+  .colabora {{
+    display: none;
+  }
+}
