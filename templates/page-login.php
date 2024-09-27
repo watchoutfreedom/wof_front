@@ -4,6 +4,13 @@
 */
 ?>
 
+<?php
+if ( ! is_user_logged_in() ) {
+    wp_redirect(home_url());
+    exit();
+
+}
+?>
 
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -83,10 +90,6 @@ if ( ! is_user_logged_in() ) {
     </div>
     ';
     
-}
-else{
-    wp_redirect(home_url());
-    exit();
 }
 
 
