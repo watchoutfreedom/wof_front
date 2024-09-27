@@ -35,6 +35,7 @@
             <?php get_template_part('atoms/meta'); ?>
           </div>
           <div class="main single-default__main">
+            <div><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
             <?php the_field('field_63752e3ee91da'); ?>
             <?php the_content("Sigue leyendo"); ?>
             <?php 
