@@ -206,7 +206,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
 }
 
 .single-default__main {  
-  padding: 48px 0;
+  padding: 48px 12px;
   max-width: 752px;
   margin: auto;
 }

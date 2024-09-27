@@ -42,6 +42,7 @@
       <?php endif; ?>
     </article>
   </main>
+  <?php get_template_part('components/colabora'); ?>
 
   <?php get_template_part('components/list-noticias'); ?>
 </div>

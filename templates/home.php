@@ -46,5 +46,6 @@ get_header();
 
 </div>
 
+<?php get_template_part('components/colabora'); ?>
 
 <?php get_footer(); ?>

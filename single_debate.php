@@ -54,6 +54,7 @@
     </article>
  
   </main>
+  <?php get_template_part('components/colabora'); ?>
 
   <?php get_template_part('components/list-debate'); ?>
   </div>
