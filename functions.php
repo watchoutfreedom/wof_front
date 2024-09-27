@@ -103,6 +103,67 @@ function register_user($post_id,$form){
   add_filter('acf/pre_save_post','register_user', 10, 2);
 
 
+  function my_acf_validate_email( $valid, $value, $field, $input_name ) {
+
+    // Bail early if value is already invalid.
+    if( $valid !== true )
+        return $valid;
+
+    if ( email_exists( $value ) ) { return 'Email already exists.'; }
+    
+    return $valid;
+}
+add_filter('acf/validate_value/key=field_6382c14839766', 'my_acf_validate_email', 10, 4);
+
+function my_acf_validate_password( $valid, $value, $field, $input_name ) {
+
+  // Bail early if value is already invalid.
+  if( $valid !== true )
+      return $valid;
+  if ( $value != $_POST['acf']['field_6382c1d439769']) { return 'Passwords don\'t match.'; }
+  
+  return $valid;
+}
+add_filter('acf/validate_value/key=field_6382c1b639768', 'my_acf_validate_password', 10, 4);
+
+
+function change_role_name() {
+	global $wp_roles;
+  
+	if ( ! isset( $wp_roles ) )
+		$wp_roles = new WP_Roles();
+  
+	$wp_roles->roles['contributor']['name'] = 'Conversador';
+	$wp_roles->role_names['contributor'] = 'Conversador';           
+  }
+  add_action('init', 'change_role_name');
+
+// disable email verification  
+  add_filter( 'admin_email_check_interval', '__return_false' );
+
+
+  add_filter( 'login_url', function( $login_url){
+	// Change here your login page url
+	$login_url = home_url('/login');
+	return $login_url;
+  }, 10, 3);
+  
+  add_action('wp_login_failed', '_login_failed_redirect');
+  
+  function _login_failed_redirect( $username ){
+  
+	$user = get_user_by('login', $username );
+  
+	if(!$user){
+	  //Username incorrect
+	  wp_redirect(home_url('/login') .'?login_error=1');
+  
+	}else{
+	 //Username Password combination incorrect
+	  wp_redirect(home_url('/login') .'?login_error=2');
+	}
+  
+  }
 
 ?>
 
