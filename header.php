@@ -8,6 +8,7 @@
       </a>
     </div>
     <nav class="header__nav">
+    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
     <ul><?php wp_list_pages('title_li= '); ?></ul>
     </nav>
     <div class="header__btn">
