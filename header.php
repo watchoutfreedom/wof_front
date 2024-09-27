@@ -11,7 +11,7 @@
     <ul>
       <?php 
        $args = array(
-        'exclude' => get_page_by_path("create-post").",".get_page_by_path("login").",".get_page_by_path("sign-up"), // Replace 5 with the parent page ID
+        'exclude' => get_page_by_path("create-post")->ID.",".get_page_by_path("login")->ID.",".get_page_by_path("sign-up")->ID, // Replace 5 with the parent page ID
         'title_li' => ''
         );
       wp_list_pages($args); 
