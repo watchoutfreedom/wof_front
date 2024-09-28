@@ -22,7 +22,7 @@ get_header();
 
 <div class="wrap">
   <div class="wrap__box wrap__box--debate">
-    <?php echo do_shortcode('[ajax_load_more id="5545649519" loading_style="infinite classic" post_type="post" posts_per_page="5"]')?>
+    <?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="4" transition_container_classes="wrap__box--debate"]')?>
   </div>
 </div>
 
