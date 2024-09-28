@@ -9,10 +9,14 @@ foreach (glob( get_template_directory() . "/functions/*.php") as $filename) {
   include $filename;
 }
 
-add_theme_support( 'infinite-scroll', array(
-	'container' => 'content',
-	'footer' => 'page',
-   ) );
+function mytheme_infinite_scroll_init() {
+    add_theme_support( 'infinite-scroll', array(
+        'container' => 'content',
+        'render'    => 'mytheme_infinite_scroll_render',
+        'footer'    => 'wrapper',
+    ) );
+}
+add_action( 'init', 'rootdip_infinite_scroll_init' );
 
 function validate_gravatar($email) {
 	// Craft a potential url and test its headers
