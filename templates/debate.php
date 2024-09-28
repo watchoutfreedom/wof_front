@@ -19,6 +19,9 @@ get_header();
     <?php endwhile; ?>
   </div>
 </div>
+<?php 
+do_shortcode('[ajax_load_more id="5545649519" loading_style="infinite classic" post_type="post" posts_per_page="5"]')
+?>
 <?php get_template_part('components/colabora'); ?>
 
 <?php get_footer(); ?>
