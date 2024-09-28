@@ -9,6 +9,11 @@ foreach (glob( get_template_directory() . "/functions/*.php") as $filename) {
   include $filename;
 }
 
+add_theme_support( 'infinite-scroll', array(
+	'container' => 'content',
+	'footer' => 'page',
+   ) );
+
 function validate_gravatar($email) {
 	// Craft a potential url and test its headers
 	$hash = md5(strtolower(trim($email)));
