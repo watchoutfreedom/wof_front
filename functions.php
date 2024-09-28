@@ -9,15 +9,20 @@ foreach (glob( get_template_directory() . "/functions/*.php") as $filename) {
   include $filename;
 }
 
-function mytheme_infinite_scroll_init() {
-    add_theme_support( 'infinite-scroll', array(
-        'container' => 'content',
-        'render'    => 'mytheme_infinite_scroll_render',
-        'footer'    => 'wrapper',
-    ) );
-}
-add_action( 'init', 'rootdip_infinite_scroll_init' );
+add_theme_support( 'infinite-scroll', array(
+    'type'           => 'scroll',
+    'footer_widgets' => false,
+    'container'      => 'feeder',
+    'wrapper'        => false,
+    'posts_per_page' => 4,
+    'footer' => false,
+    'render'         => 'news_infinite_scroll_render'
+) );
 
+function news_infinite_scroll_render() {
+    get_template_part( 'template-parts/news-posts-list', get_post_format() 
+);
+}
 function validate_gravatar($email) {
 	// Craft a potential url and test its headers
 	$hash = md5(strtolower(trim($email)));
