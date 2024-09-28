@@ -45,7 +45,7 @@
                   echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
               }
               else{
-                  echo "<a class='button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
+                  echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
               }
             ?>
              <div class="answers">

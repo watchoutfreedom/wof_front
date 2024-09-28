@@ -130,6 +130,13 @@
   }
 }
 
+// Fix
+
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body  {
+  max-width: 100%;
+  background: transparent;
+}
+
 @media #{$breakpoints-medium} {
   .wrap__box {
     flex: 0 1 50%;

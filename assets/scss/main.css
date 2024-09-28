@@ -523,6 +523,18 @@ header {
     display: block;
   }
 }
+.button, .debate__button {
+  background: #191919;
+  color: white !important;
+  text-decoration: none;
+  margin-top: 2rem;
+  padding: 12px 32px;
+  font-family: "Satoshi-Bold";
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
 .wrap {
   width: 90%;
   max-width: 1280px;
@@ -637,6 +649,11 @@ header {
 .wrap__box--news .article-list {
   flex: 0 1 100%;
   margin-bottom: 2rem;
+}
+
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+  max-width: 100%;
+  background: transparent;
 }
 
 @media only screen and (min-width: 768px) {
