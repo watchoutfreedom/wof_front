@@ -683,6 +683,14 @@ header {
   background: transparent !important;
 }
 
+.acf-label label {
+  font-size: 1rem;
+}
+.acf-label .description {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
 @media only screen and (min-width: 768px) {
   .wrap__box {
     flex: 0 1 50%;

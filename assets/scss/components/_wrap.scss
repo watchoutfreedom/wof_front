@@ -166,6 +166,17 @@
   background: transparent !important;
 }
 
+.acf-label {
+  label {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: .85rem;
+    opacity: .8;
+  }
+}
+
 @media #{$breakpoints-medium} {
   .wrap__box {
     flex: 0 1 50%;
