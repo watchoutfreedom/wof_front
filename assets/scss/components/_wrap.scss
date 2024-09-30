@@ -160,6 +160,12 @@
   background: transparent;
 }
 
+.mejs-container-keyboard-inactive {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: transparent !important;
+}
+
 @media #{$breakpoints-medium} {
   .wrap__box {
     flex: 0 1 50%;
