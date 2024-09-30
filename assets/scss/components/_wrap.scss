@@ -135,8 +135,11 @@
 .wrap--createpost {
   display: block;
 
-  input[type="text"] {
+  input[type="text"],
+  textarea {
+    border-radius: 4px;
     background: #f0f0f0;
+    padding: 1rem;
     font-size: 1rem;
   }
 }
