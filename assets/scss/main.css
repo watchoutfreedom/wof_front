@@ -657,7 +657,9 @@ header {
 .wrap--createpost input[type=text],
 .wrap--createpost textarea {
   border-radius: 4px;
-  background: #f0f0f0;
+  background: white;
+  border: 1px solid #ccc;
+  color: black;
   padding: 1rem;
   font-size: 1rem;
 }
