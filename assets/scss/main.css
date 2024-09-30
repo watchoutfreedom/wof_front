@@ -661,6 +661,9 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--createpost .add_media {
+  color: black !important;
+}
 
 .excerp--response {
   display: block;
