@@ -134,6 +134,11 @@
 
 .wrap--createpost {
   display: block;
+
+  input[type="text"] {
+    background: #f0f0f0;
+    font-size: 1rem;animation-iteration-count;
+  }
 }
 
 .excerp--response {
