@@ -26,7 +26,7 @@ acf_form_head();
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="wrap wrap--createpost">
     <?php
 
     if( isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == 'edit' ){
@@ -43,7 +43,7 @@ get_header(); ?>
     else{
 
         if($_GET['action'] == "create" && isset($_GET['id']))
-            echo "<div class='excerp'>Responder a <a class='answer__to' href='".get_permalink($_GET['id'])."'>".get_the_title($_GET['id'])."</a></div>";
+            echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='".get_permalink($_GET['id'])."'>".get_the_title($_GET['id'])."</a></div>";
 
         acf_form(array(
             'post_id'       => 'new_post',
