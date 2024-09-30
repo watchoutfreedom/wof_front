@@ -672,9 +672,9 @@ header {
   font-size: 1.2rem;
 }
 
-.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
-  max-width: 100%;
-  background: transparent;
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed {
+  max-width: 100% !important;
+  background: transparent !important;
 }
 
 .mejs-container-keyboard-inactive {
