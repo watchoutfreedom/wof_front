@@ -663,6 +663,10 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--createpost input[type=text]:focus,
+.wrap--createpost textarea:focus {
+  border-color: black;
+}
 .wrap--createpost .add_media {
   color: black !important;
 }

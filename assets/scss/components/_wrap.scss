@@ -143,6 +143,10 @@
     color: black;
     padding: 1rem;
     font-size: 1rem;
+
+    &:focus {
+      border-color: black;
+    }
   }
 
   .add_media {
