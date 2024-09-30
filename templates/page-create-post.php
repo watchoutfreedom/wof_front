@@ -74,4 +74,4 @@ get_header(); ?>
         });
 </script>
 
-<?php wp_footer() ?>
+<?php get_footer(); ?>
