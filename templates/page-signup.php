@@ -11,7 +11,7 @@ acf_form_head();
 
 get_header();?>
 
-<div class="wrap">
+<div class="wrap wrap--signup">
 
     <?php 
     

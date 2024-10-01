@@ -663,9 +663,12 @@ header {
   margin-bottom: 2rem;
 }
 
+.wrap--signup,
 .wrap--createpost {
   display: block;
 }
+.wrap--signup input[type=text],
+.wrap--signup textarea,
 .wrap--createpost input[type=text],
 .wrap--createpost textarea {
   border-radius: 4px;
@@ -675,10 +678,13 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--signup input[type=text]:focus,
+.wrap--signup textarea:focus,
 .wrap--createpost input[type=text]:focus,
 .wrap--createpost textarea:focus {
   border-color: black;
 }
+.wrap--signup .add_media,
 .wrap--createpost .add_media {
   color: black !important;
 }
