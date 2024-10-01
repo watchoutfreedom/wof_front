@@ -17,6 +17,15 @@ $footer-max-width: $row-max;
     display: inline-block;
     transform: translateY(-2px) rotate(-180deg);
   }
+
+  a {
+    font-family: $font-heading;
+    color: $color-dark-gray;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 
