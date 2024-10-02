@@ -43,6 +43,7 @@
 
 
             <div class="single-default__meta">
+            <h4 class="meta__title">Escrito por:</h4>
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
