@@ -553,7 +553,7 @@ header {
 
 .meta__title {
   font-family: "Satoshi-Medium";
-  font-size: 0.85rem;
+  font-size: 1rem !important;
   color: #191919;
   padding-top: 1rem;
 }
