@@ -60,7 +60,7 @@
             
 
             <div class="single-default__meta">
-              <?php get_template_part('atoms/meta'); ?>
+              <?php get_template_part('atoms/bio'); ?>
             </div>
 
               
