@@ -58,11 +58,6 @@
               }
             ?>
             
-
-            <div class="single-default__meta">
-              <?php get_template_part('atoms/bio'); ?>
-            </div>
-
               
              <div class="answers">
             <?php     
@@ -88,6 +83,11 @@
             <?php endif; ?>
             </div>
         </div>
+
+      <div class="single-default__meta">
+        <?php get_template_part('atoms/bio'); ?>
+      </div>
+
       <?php endwhile; else: ?>
         <?php include (TEMPLATEPATH . '/404.php'); ?>
       <?php endif; ?>
