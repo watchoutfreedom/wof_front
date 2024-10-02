@@ -467,6 +467,10 @@ header {
   text-decoration: none;
 }
 
+.mail {
+  padding-top: 4px;
+}
+
 @media only screen and (min-width: 1024px) {
   .footer {
     padding: 2rem 16px;

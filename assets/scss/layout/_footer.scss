@@ -28,6 +28,9 @@ $footer-max-width: $row-max;
   }
 }
 
+.mail {
+  padding-top: 4px;
+}
 
 @media #{$breakpoints-large} {
   .footer {
