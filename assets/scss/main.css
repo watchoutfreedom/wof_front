@@ -530,7 +530,7 @@ header {
   font-family: "Satoshi-Medium";
 }
 .meta__content p {
-  padding: 8px 0;
+  padding: 16px 0;
   font-size: 1rem;
   color: #191919;
   opacity: 0.75;
