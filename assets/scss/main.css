@@ -531,11 +531,17 @@ header {
 }
 .meta__content p {
   padding: 8px 0;
-  font-family: "Satoshi-Regular";
+  font-size: 0.85rem;
+  color: black;
+  opacity: 0.75;
 }
 .meta__content a {
   padding: 8px 0;
   text-decoration: underline;
+}
+.meta__content a:first-child {
+  color: black;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
