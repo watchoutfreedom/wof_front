@@ -15,7 +15,7 @@
   align-items: center;;
 
   img {
-    margin-right: 16px;
+    margin-right: 24px;
     display: none;
     border-radius: 100%;
   }
@@ -45,6 +45,37 @@
   a:last-child {
     color: #0F4BF1;
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.meta__title {
+  font-family: 'Satoshi-Medium';
+  font-size: .85rem
+  color: #191919;
+}
+
+.meta__valorate {
+  font-family: 'Satoshi-Medium';
+  display: flex;
+  flex-flow: row wrap;
+
+  a {
+    display: inline-block;
+    margin: 8px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #191919;
+    opacity: .85;
+    transition: .2s;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
