@@ -34,23 +34,25 @@
           <div class="single-default__meta">
             <?php get_template_part('atoms/meta'); ?>
           </div>
-          <div class="meta">
+          
+            <div class="main single-default__main">
+            <div class="answer_to"><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
+            <?php the_field('field_63752e3ee91da'); ?>
+            <?php the_content("Sigue leyendo"); ?>
+
+
+            <div class="meta">
             <div class="meta__author">
                 <?php echo get_avatar( get_the_author_meta('email'), '42' ); ?> 
                 <?php the_author_posts_link(); ?>
                 <div><?php the_field('field_63c0d44e9b300'); ?></div>
                 <div><?php the_field('field_6534082571f05'); ?></div>
-              </div>
-              <div class="meta__date">
-                <?php the_time('d F Y'); ?>
-              </div>
             </div>
-
-
-          <div class="main single-default__main">
-            <div class="answer_to"><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
-            <?php the_field('field_63752e3ee91da'); ?>
-            <?php the_content("Sigue leyendo"); ?>
+            <div class="meta__date">
+              <?php the_time('d F Y'); ?>
+            </div>
+          </div>
+          
             <?php 
               if(wp_get_current_user()->ID == $post->post_author 
               //|| current_user_can( 'edit_others_posts', $post->ID)
@@ -61,6 +63,7 @@
                   echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
               }
             ?>
+            
              <div class="answers">
             <?php     
               $posts = get_posts(array(
