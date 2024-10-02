@@ -30,6 +30,7 @@ $footer-max-width: $row-max;
 
 .mail {
   padding-top: 4px;
+  opacity: .5;
 }
 
 @media #{$breakpoints-large} {
