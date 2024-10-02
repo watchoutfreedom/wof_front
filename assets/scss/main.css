@@ -580,9 +580,12 @@ header {
   opacity: 0.65;
   transition: 0.2s;
 }
+.meta__valorate a span {
+  margin-right: 8px;
+}
 .meta__valorate a:hover {
   opacity: 1;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 @media only screen and (min-width: 768px) {

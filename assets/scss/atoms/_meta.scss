@@ -81,9 +81,13 @@
     opacity: .65;
     transition: .2s;
 
+    span {
+      margin-right: 8px;
+    }
+
     &:hover {
       opacity: 1;
-      text-decoration: none;
+      text-decoration: none !important; // Revise
     }
   }
 }

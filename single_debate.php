@@ -50,9 +50,9 @@
             <div class="main single-default__main">
             <h4 class="meta__title">Valorar artículo</h4>
             <div class="meta__valorate">
-              <a href="#">👍 He aprendido</a>
-              <a href="#">😐 Indiferente</a>
-              <a href="#">👎 Está equivocado</a>            
+              <a href="#"><span>👍</span> He aprendido</a>
+              <a href="#"><span>😐</span> Indiferente</a>
+              <a href="#"><span>👎</span> Está equivocado</a>            
             </div>
 
             <?php 
