@@ -565,18 +565,19 @@ header {
   padding-bottom: 2rem;
 }
 .meta__valorate a {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   display: inline-block;
   margin: 0 16px 0 0;
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   color: #191919 !important;
-  opacity: 0.85;
+  opacity: 0.65;
   transition: 0.2s;
 }
 .meta__valorate a:hover {
   opacity: 1;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
