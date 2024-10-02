@@ -54,14 +54,16 @@
 
 .meta__title {
   font-family: 'Satoshi-Medium';
-  font-size: .85rem
+  font-size: .85rem;
   color: #191919;
+  padding-top: 1rem;
 }
 
 .meta__valorate {
   font-family: 'Satoshi-Medium';
   display: flex;
   flex-flow: row wrap;
+  padding-bottom: 2rem;
 
   a {
     display: inline-block;
