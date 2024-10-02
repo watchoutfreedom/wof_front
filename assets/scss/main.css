@@ -556,6 +556,8 @@ header {
   font-size: 1rem !important;
   color: #191919;
   padding-top: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .meta__valorate {
