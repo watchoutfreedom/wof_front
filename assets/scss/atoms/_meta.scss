@@ -41,6 +41,11 @@
     color: black;
     font-size: 1rem;
   }
+
+  a:last-child {
+    color: #0F4BF1;
+    text-decoration: underline;
+  }
 }
 
 @media #{$breakpoints-medium} {

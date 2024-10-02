@@ -543,6 +543,10 @@ header {
   color: black;
   font-size: 1rem;
 }
+.meta__content a:last-child {
+  color: #0F4BF1;
+  text-decoration: underline;
+}
 
 @media only screen and (min-width: 768px) {
   .meta__author img {
