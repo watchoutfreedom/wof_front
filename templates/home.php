@@ -30,7 +30,7 @@ get_header();
   <div class="wrap">
     <div class="wrap__box wrap__box--news">
       <h3 class="wrap__title">Formaciones</h3>
-      <?php $the_query = new WP_Query('showposts=4&category_name=formacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
+      <?php $the_query = new WP_Query('showposts=8&category_name=formacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
       <?php get_template_part('components/article-list'); ?>
       <?php endwhile; ?>
     </div>
