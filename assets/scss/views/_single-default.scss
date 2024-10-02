@@ -165,8 +165,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
   line-height: 32px;
 }
 
-.single-default__content,
-.single-default__ads {
+.single-default__content {
   padding: 1rem;
 }
 

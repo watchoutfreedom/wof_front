@@ -146,17 +146,17 @@
     border-radius: 4px;
     background: white;
     border: 1px solid #ccc;
-    color: black;
+    color: $color-black;
     padding: 1rem;
     font-size: 1rem;
 
     &:focus {
-      border-color: black;
+      border-color: $color-black;
     }
   }
 
   .add_media {
-    color: black !important;
+    color: $color-black !important;
   }
 }
 

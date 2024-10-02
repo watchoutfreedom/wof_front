@@ -472,14 +472,6 @@ header {
     padding: 2rem 16px;
   }
 }
-.ads {
-  display: block;
-  margin: auto;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  width: 90%;
-}
-
 .picture {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.1);
@@ -737,7 +729,7 @@ header {
   border-radius: 4px;
   background: white;
   border: 1px solid #ccc;
-  color: black;
+  color: #191919;
   padding: 1rem;
   font-size: 1rem;
 }
@@ -745,11 +737,11 @@ header {
 .wrap--signup textarea:focus,
 .wrap--createpost input[type=text]:focus,
 .wrap--createpost textarea:focus {
-  border-color: black;
+  border-color: #191919;
 }
 .wrap--signup .add_media,
 .wrap--createpost .add_media {
-  color: black !important;
+  color: #191919 !important;
 }
 
 .excerp--response {
@@ -808,7 +800,7 @@ header {
   padding: 32px 16px;
   border: 1px solid #f0f0f0;
   border-radius: 4px;
-  color: black;
+  color: #191919;
   background: white;
 }
 .colabora a {
@@ -1569,8 +1561,7 @@ header {
   line-height: 32px;
 }
 
-.single-default__content,
-.single-default__ads {
+.single-default__content {
   padding: 1rem;
 }
 
