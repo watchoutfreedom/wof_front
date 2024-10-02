@@ -21,6 +21,21 @@
   }
 }
 
+.meta__content {
+  text-align: left;
+  font-family: 'Satoshi-Medium';
+
+  p {
+    padding: 8px 0;
+    font-family: 'Satoshi-Regular';
+  }
+
+  a {
+    padding: 8px 0;
+    text-decoration: underline;
+  }
+}
+
 @media #{$breakpoints-medium} {
   .meta__author {
     img {

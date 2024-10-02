@@ -525,6 +525,19 @@ header {
   border-radius: 100%;
 }
 
+.meta__content {
+  text-align: left;
+  font-family: "Satoshi-Medium";
+}
+.meta__content p {
+  padding: 8px 0;
+  font-family: "Satoshi-Regular";
+}
+.meta__content a {
+  padding: 8px 0;
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 768px) {
   .meta__author img {
     display: block;
