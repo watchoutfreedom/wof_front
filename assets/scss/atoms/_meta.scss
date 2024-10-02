@@ -66,12 +66,13 @@
   padding-bottom: 2rem;
 
   a {
+    font-size: .85rem;
     display: inline-block;
-    margin: 8px;
+    margin: 0 16px 0 0;
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    color: #191919;
+    color: #191919 !important;;
     opacity: .85;
     transition: .2s;
 

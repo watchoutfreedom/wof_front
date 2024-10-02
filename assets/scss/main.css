@@ -565,12 +565,13 @@ header {
   padding-bottom: 2rem;
 }
 .meta__valorate a {
+  font-size: 0.85rem;
   display: inline-block;
-  margin: 8px;
+  margin: 0 16px 0 0;
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: #191919;
+  color: #191919 !important;
   opacity: 0.85;
   transition: 0.2s;
 }
