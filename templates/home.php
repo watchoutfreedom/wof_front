@@ -19,7 +19,7 @@ get_header();
       <?php endwhile; ?>
     </div>
     <div class="wrap__box">
-      <?php $the_query = new WP_Query('showposts=4&category_name=debateoffset=3'); while ($the_query->have_posts()) : $the_query->the_post();?>
+      <?php $the_query = new WP_Query('showposts=3&category_name=debate&offset=3'); while ($the_query->have_posts()) : $the_query->the_post();?>
         <div class="home__post">
           <?php get_template_part('components/article-list'); ?>
         </div>
