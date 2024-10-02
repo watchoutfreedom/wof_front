@@ -58,6 +58,12 @@
               }
             ?>
             
+
+            <div class="single-default__meta">
+              <?php get_template_part('atoms/meta'); ?>
+            </div>
+
+              
              <div class="answers">
             <?php     
               $posts = get_posts(array(
@@ -68,6 +74,8 @@
               ));
 
               if(!empty($posts)):?>
+
+
               <section class="answers">
                   <h2>Respuestas</h2>
                   <ul>
