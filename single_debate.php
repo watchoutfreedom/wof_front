@@ -42,14 +42,13 @@
             </div>
 
 
-            <div class="single-default__meta">
             <h4 class="meta__title">Escrito por:</h4>
+            <div class="single-default__meta">
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
             
             <div class="main single-default__main">
-            <h4 class="meta__title">Valorar artículo</h4>
             <div class="meta__valorate">
               <a href="#"><span>👍</span> He aprendido</a>
               <a href="#"><span>😐</span> Indiferente</a>
