@@ -192,9 +192,6 @@ function change_role_name() {
   
 	$wp_roles->roles['contributor']['name'] = 'Conversador';
 	$wp_roles->role_names['contributor'] = 'Conversador';
-	$roles = get_option('user_roles'); 
-	$roles['contributor']['name'] = "Conversador"; 
-	update_option('user_roles', $roles); 
   }
   add_action('wp_roles_init', 'change_role_name');
 
