@@ -9,20 +9,17 @@ foreach (glob( get_template_directory() . "/functions/*.php") as $filename) {
   include $filename;
 }
 
-add_theme_support( 'infinite-scroll', array(
-    'type'           => 'scroll',
-    'footer_widgets' => false,
-    'container'      => 'feeder',
-    'wrapper'        => false,
-    'posts_per_page' => 4,
-    'footer' => false,
-    'render'         => 'news_infinite_scroll_render'
-) );
 
 function news_infinite_scroll_render() {
     get_template_part( 'template-parts/news-posts-list', get_post_format() 
 );
 }
+/**
+ * Validate a gravatar by checking if a 200 status code is returned.
+ * 
+ * @param string $email Email address to validate.
+ * @return boolean TRUE if the gravatar is valid, FALSE otherwise.
+ */
 function validate_gravatar($email) {
 	// Craft a potential url and test its headers
 	$hash = md5(strtolower(trim($email)));
@@ -43,6 +40,15 @@ function enable_registration() {
 add_filter('registration_errors', 'enable_registration');
 add_filter('wp_signup_location', 'enable_registration');
 
+/**
+ * Populate the "answer_to" acf field with the id of the post to be responded to,
+ * if we are on the frontend and the action is "create".
+ *
+ * @param array $field The acf field array.
+ *
+ * @return array The field array with the value set if we are on the frontend
+ *               and the action is "create".
+ */
 function populate_answer_to($field) {
 	// only on front end
 	if (is_admin()) {
@@ -59,6 +65,18 @@ function populate_answer_to($field) {
 // add_filter('use_block_editor_for_post', '__return_false', 10);
 
 
+/**
+ * Register a new user and log them in.
+ *
+ * This function is called via the acf/pre_save_post filter, and will only
+ * run if the acf_form ID is 'register_new_user'.
+ *
+ * @param int $post_id The post ID. This is not used in this function, but is
+ *                     required by the acf/pre_save_post filter.
+ * @param array $form The acf_form array.
+ *
+ * @return int|string The user ID, including the 'user_' prefix used by ACF.
+ */
 function register_user($post_id,$form){
 
 	// Check that we are targeting the right form. I do this by checking the acf_form ID.
@@ -117,6 +135,16 @@ function register_user($post_id,$form){
   add_filter('acf/pre_save_post','register_user', 10, 2);
 
 
+/**
+ * Validate ACF email field by checking if it already exists as a user.
+ *
+ * @param bool   $valid   Whether the value is valid or not.
+ * @param string $value   The value to be validated.
+ * @param array  $field   The field array.
+ * @param string $input_name The name of the input element.
+ *
+ * @return bool|string If invalid, returns an error message. Otherwise, returns true.
+ */
   function my_acf_validate_email( $valid, $value, $field, $input_name ) {
 
     // Bail early if value is already invalid.
@@ -129,6 +157,16 @@ function register_user($post_id,$form){
 }
 add_filter('acf/validate_value/key=field_6382c14839766', 'my_acf_validate_email', 10, 4);
 
+/**
+ * Validate ACF password field by checking if it matches the password confirm field
+ *
+ * @param bool   $valid   Whether the value is valid or not.
+ * @param string $value   The value to be validated.
+ * @param array  $field   The field array.
+ * @param string $input_name The name of the input element.
+ *
+ * @return bool|string If invalid, returns an error message. Otherwise, returns true.
+ */
 function my_acf_validate_password( $valid, $value, $field, $input_name ) {
 
   // Bail early if value is already invalid.
@@ -141,6 +179,11 @@ function my_acf_validate_password( $valid, $value, $field, $input_name ) {
 add_filter('acf/validate_value/key=field_6382c1b639768', 'my_acf_validate_password', 10, 4);
 
 
+/**
+ * Rename the contributor role to "Conversador".
+ *
+ * @since 1.0
+ */
 function change_role_name() {
 	global $wp_roles;
   
@@ -148,7 +191,10 @@ function change_role_name() {
 		$wp_roles = new WP_Roles();
   
 	$wp_roles->roles['contributor']['name'] = 'Conversador';
-	$wp_roles->role_names['contributor'] = 'Conversador';           
+	$wp_roles->role_names['contributor'] = 'Conversador';
+	$roles = get_option('user_roles'); 
+	$roles['contributor']['name'] = "Conversador"; 
+	update_option('user_roles', $roles); 
   }
   add_action('init', 'change_role_name');
 
@@ -164,6 +210,11 @@ function change_role_name() {
   
   add_action('wp_login_failed', '_login_failed_redirect');
   
+/**
+ * Redirect to login page with an error message after a failed login attempt
+ *
+ * @param string $username The username used in the login attempt
+ */
   function _login_failed_redirect( $username ){
   
 	$user = get_user_by('login', $username );
@@ -178,6 +229,27 @@ function change_role_name() {
 	}
   
   }
+
+
+/**
+ * Sends an email to the admin when a post is submitted and pending review.
+ *
+ * @param int $post_id The ID of the post that is pending review.
+ */
+  function send_pending_post_email($post_id) {
+	$post = get_post($post_id);
+	$status = $post->post_status;
+  
+	if ($status == 'pending') {
+	  $admin_email = get_option('admin_email');
+	  $subject = 'New Pending Post: ' . $post->post_title;
+	  $message = 'A new post is pending review: ' . $post->post_title . '. Please review and publish or reject the post.';
+  
+	  wp_mail($admin_email, $subject, $message);
+	}
+  }
+  
+  add_action('save_post', 'send_pending_post_email');
 
 ?>
 
