@@ -196,7 +196,7 @@ function change_role_name() {
 	$roles['contributor']['name'] = "Conversador"; 
 	update_option('user_roles', $roles); 
   }
-  add_action('init', 'change_role_name');
+  add_action('wp_roles_init', 'change_role_name');
 
 // disable email verification  
   add_filter( 'admin_email_check_interval', '__return_false' );
