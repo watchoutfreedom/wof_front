@@ -8,6 +8,9 @@
       </a>
     </div>
     <nav class="header__nav">
+      <?php echo global $template;
+echo $template;
+?>
     <ul>
       <?php 
        $args = array(
