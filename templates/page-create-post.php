@@ -45,6 +45,13 @@ get_header(); ?>
         if($_GET['action'] == "create" && isset($_GET['id']))
             echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='".get_permalink($_GET['id'])."'>".get_the_title($_GET['id'])."</a></div>";
 
+        $status = "pending";
+
+        if(wp_get_current_user()->ID == $post->post_author || in_array('administrator', wp_get_current_user()->roles))
+        $status = "publish";
+
+        
+
         acf_form(array(
             'post_id'       => 'new_post',
             'post_title'    => true,
@@ -54,7 +61,7 @@ get_header(); ?>
             'new_post'      => array(
                 'post_type'     => 'post',
                 'post_category' => array(28),
-                'post_status'   => 'publish'
+                'post_status'   => $status
             )
         ));
     }
