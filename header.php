@@ -10,9 +10,6 @@
     <nav class="header__nav">
     <ul>
       <?php 
-
-global $template;
-echo $template;
        $args = array(
         'exclude' => get_page_by_path("create-post")->ID.",".get_page_by_path("login")->ID.",".get_page_by_path("sign-up")->ID, // Replace 5 with the parent page ID
         'title_li' => ''
