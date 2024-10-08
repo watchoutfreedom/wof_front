@@ -178,6 +178,20 @@ function my_acf_validate_password( $valid, $value, $field, $input_name ) {
 }
 add_filter('acf/validate_value/key=field_6382c1b639768', 'my_acf_validate_password', 10, 4);
 
+/**
+ * Allow authors to publish pending posts, otherwise they can only submit for review.
+ *
+ * By default, authors can only submit posts for review, but not publish them. This
+ * function gives them the capability to publish them.
+ *
+ * @since 1.0
+ */
+function allow_authors_to_publish_pending_posts() {
+  $role = get_role('author');
+  $role->add_cap('publish_posts');
+}
+add_action('init', 'allow_authors_to_publish_pending_posts');
+
 
 /**
  * Rename the contributor role to "Conversador".

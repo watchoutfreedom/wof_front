@@ -47,7 +47,7 @@ get_header(); ?>
 
         $status = "pending";
 
-        if(wp_get_current_user()->ID == $post->post_author || in_array('administrator', wp_get_current_user()->roles))
+        if(wp_get_current_user()->ID == $post->post_author || in_array('administrator', wp_get_current_user()->roles) || in_array('author', wp_get_current_user()->roles))
         $status = "publish";
 
         
