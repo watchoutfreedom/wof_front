@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="hero">
   <h1 class="hero__title">Tienda online</h1>
-  <div class="hero__description">Impulsa nuestras iniciativas.</div>
+  <div class="hero__description">Impulsa las iniciativas.</div>
 </div>
 
 <div class="wrap">
