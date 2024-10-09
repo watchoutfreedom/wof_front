@@ -6,6 +6,7 @@ get_header();
 ?>
 <div class="hero">
   <h1 class="hero__title">Debate</h1>
+  <div class="hero__description">Responde con tu propio artículo a las publicaciones.</div>
 </div>
 <div class="debate__meta">
   <div class="debate__col">Participa del debate conviértete en<span> autor</span></div>
