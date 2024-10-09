@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="hero">
   <h1 class="hero__title">Tienda online</h1>
-  <div class="hero__description">100% de lo recaudado va a impulsar iniciativas por la libertad de pensamiento y la cooperación social.</div>
+  <div class="hero__description">100% de lo recaudado va a impulsar las iniciativas.</div>
 </div>
 
 <div class="wrap">
