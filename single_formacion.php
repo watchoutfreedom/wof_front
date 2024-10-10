@@ -35,6 +35,7 @@
             <?php get_template_part('atoms/meta'); ?>
           </div>
           <div class="main single-default__main">
+          <?php the_field('field_63752e3ee91da'); ?>
             <?php the_content("Sigue leyendo"); ?>
           </div>
       <?php endwhile; else: ?>
