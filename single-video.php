@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: formacion
+Template Name: video
 */
 get_header();
 ?>
