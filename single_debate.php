@@ -30,6 +30,11 @@
                   <?php the_field('field_6375315c72e9d'); ?>
                 </div>
               </div>
+              <?php if($post->status == 'pending'){ ?>
+              <div class="pending">
+              Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
+              </div>
+              <?php}?> 
           </div>
           <div class="single-default__meta">
             <?php get_template_part('atoms/meta'); ?>
