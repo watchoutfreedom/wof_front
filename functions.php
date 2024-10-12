@@ -219,6 +219,11 @@ function change_role_name() {
 		return $login_url;
   }
   add_filter( 'login_url', 'my_login_url' );
+
+  function passurl($lostpassword_url, $redirect ) {
+	return '/login?action=lostpassword';
+  }
+  add_filter('lostpassword_url', 'passurl', 10, 2);
   
   add_action('wp_login_failed', '_login_failed_redirect');
   
