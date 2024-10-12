@@ -269,32 +269,7 @@ function change_role_name() {
   
   add_action('save_post', 'send_pending_post_email');
 
-  function reset_password() {
-    if (isset($_GET['action']) && $_GET['action'] == 'rp') {
-        $key = $_GET['key'];
-        $login = $_GET['login'];
 
-        $user = get_user_by('login', $login);
-        if ($user) {
-            $reset_key = get_user_meta($user->ID, 'reset_key', true);
-            if ($reset_key == $key) {
-                // Update the user's password
-                $new_password = wp_generate_password(12, false);
-                wp_set_password($new_password, $user->ID);
-
-                // Remove the reset key
-                delete_user_meta($user->ID, 'reset_key');
-
-                echo '<p>Password reset successfully.</p>';
-            } else {
-                echo '<p>Invalid reset key.</p>';
-            }
-        } else {
-            echo '<p>User not found.</p>';
-        }
-    }
-}
-add_action('init', 'reset_password');
 
 
 ?>
