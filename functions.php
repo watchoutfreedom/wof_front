@@ -213,11 +213,12 @@ function change_role_name() {
   add_filter( 'admin_email_check_interval', '__return_false' );
 
 
-  add_filter( 'login_url', function( $login_url){
-	// Change here your login page url
-	$login_url = home_url('/login');
-	return $login_url;
-  }, 10, 3);
+  function my_login_url() {
+		// Change here your login page url
+		$login_url = home_url('/login');
+		return $login_url;
+  }
+  add_filter( 'login_url', 'my_login_url' );
   
   add_action('wp_login_failed', '_login_failed_redirect');
   

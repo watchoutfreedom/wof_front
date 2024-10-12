@@ -27,7 +27,10 @@ if ( is_user_logged_in() ) {
 
 if ( ! is_user_logged_in() ) {
 
-    if( isset($_GET['action']) && $_GET['action'] == 'lostpassword'){?>
+    if( isset($_GET['action']) && $_GET['action'] == 'lostpassword'){
+        
+        remove_filter( 'login_url', 'your_filter_function' );
+        ?>
     
 
         <div id="password-lost-form">
@@ -46,7 +49,10 @@ if ( ! is_user_logged_in() ) {
 
         </div>
 
-    <?php }
+    <?php 
+    
+    add_filter( 'login_url', 'your_filter_function' );
+    }
 
     else{
 
