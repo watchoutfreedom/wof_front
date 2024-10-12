@@ -48,7 +48,7 @@ if ( ! is_user_logged_in() ) {
 
     <?php
     if($_POST['submit']) {
-        $email = $_POST['user_login'];
+        $email = wp_validate_user_input($_POST['user_login'], 'email');
         $user = get_user_by('email', $email);
 
         if($user) {
