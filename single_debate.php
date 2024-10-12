@@ -30,7 +30,7 @@
                   <?php the_field('field_6375315c72e9d'); ?>
                 </div>
               </div>
-              <?php if($post->post_status == 'pending'){ ?>
+              <?php if(get_post_status() == 'pending'){ ?>
               <div class="pending">
               Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
               </div>
