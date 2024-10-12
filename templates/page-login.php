@@ -29,7 +29,7 @@ if ( ! is_user_logged_in() ) {
 
     if( isset($_GET['action']) && $_GET['action'] == 'lostpassword'){
         
-        remove_filter( 'login_url', 'your_filter_function' );
+        remove_filter( 'login_url', 'my_login_url' );
         ?>
     
 
@@ -51,7 +51,7 @@ if ( ! is_user_logged_in() ) {
 
     <?php 
     
-    add_filter( 'login_url', 'your_filter_function' );
+    add_filter( 'login_url', 'my_login_url' );
     }
 
     else{
