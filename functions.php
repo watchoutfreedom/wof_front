@@ -260,8 +260,7 @@ function change_role_name() {
 	if ($status == 'pending') {
 	  $admin_email = get_option('admin_email');
 	  $subject = 'New Pending Post: ' . $post->post_title;
-	  $permalink = get_permalink($post_id);
-	  $message = 'A new post is pending review: ' . $post->post_title . '. Please review and publish or reject the post. You can view the post here: ' . $permalink;
+	  $message = 'A new post is pending review: ' . $post->post_title . '. Please review and publish or reject the post.';
   
 	  wp_mail($admin_email, $subject, $message);
 	}
@@ -269,10 +268,6 @@ function change_role_name() {
   
   add_action('save_post', 'send_pending_post_email');
 
-
-
-
 ?>
-
 
 
