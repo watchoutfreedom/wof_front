@@ -19,7 +19,7 @@
       echo '<meta name="description" content="' . $post_description . '">';
     }
     else{
-      echo '<meta name="description" content='.bloginfo('description')'/>';
+      echo '<meta name="description" content="'.bloginfo('description').'">'; // corrected this line
     }
   ?>  
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -29,8 +29,14 @@
   <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/scss/main.css" as="styles">
-  <meta property="og:type" content="website" />
-
+  <?php
+    if ( is_single() ) {
+      echo '<meta property="og:type" content="article" />'; // corrected this line
+    }
+    else{
+      echo '<meta property="og:type" content="website" />';
+    }
+  ?>
   <?php
     $current_url = get_permalink(); // Get the URL of the current page
     echo '<meta property="og:url" content="' . $current_url . '">';
