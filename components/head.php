@@ -3,7 +3,15 @@
 <head>
   <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" type="image/png">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title><?php bloginfo('title'); ?></title>
+  <?php
+    if ( is_single() ) {
+      $post_title = get_the_title();
+      echo '<title>' . $post_title . ' - ' . get_bloginfo('name') . '</title>';
+    }
+    else{
+      echo "<title>".bloginfo('title')".</title>";
+    }
+  ?>
   <meta name="description" content="<?php bloginfo('description'); ?>"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
