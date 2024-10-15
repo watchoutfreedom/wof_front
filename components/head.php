@@ -7,6 +7,7 @@
     if ( is_single() ) {
       $post_title = get_the_title();
       echo '<title>' . $post_title . ' - ' . get_bloginfo('name') . '</title>';
+      echo '<meta property="og:title" content="'.$post_title . ' - ' . get_bloginfo('name').'" />';
     }
     else{
       echo "<title>".bloginfo('title')."</title>";
@@ -28,6 +29,23 @@
   <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/scss/main.css" as="styles">
+  <meta property="og:type" content="website" />
+
+  <?php
+    $current_url = get_permalink(); // Get the URL of the current page
+    echo '<meta property="og:url" content="' . $current_url . '">';
+
+    if ( is_single() ) {
+      $post_image = get_the_post_thumbnail_url(); // Get the URL of the featured image
+      if ( !empty($post_image) ) {
+        echo '<meta property="og:image" content="' . $post_image . '">';
+      } else {
+        $logo_image = get_template_directory_uri() . '/logo.png'; // Get the URL of the logo image
+        echo '<meta property="og:image" content="' . $logo_image . '">';
+      }
+    }
+  ?>
+
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
