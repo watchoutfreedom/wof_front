@@ -55,8 +55,7 @@
             
             <div class="main single-default__main">
             <div class="meta__valorate">
-              <a href="#"><span>👍</span> He aprendido</a>
-              ii              <a href="#"><span>👎</span> Está equivocado</a>            
+            <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
             </div>
 
             <?php 
