@@ -12,7 +12,15 @@
       echo "<title>".bloginfo('title')."</title>";
     }
   ?>
-  <meta name="description" content="<?php bloginfo('description'); ?>"/>
+  <?php
+    if ( is_single() ) {
+      $post_description = get_field('field_6375315c72e9d'); // Get the description from ACF field
+      echo '<meta name="description" content="' . $post_description . '">';
+    }
+    else{
+      echo '<meta name="description" content='.bloginfo('description')'/>';
+    }
+  ?>  
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
   <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
