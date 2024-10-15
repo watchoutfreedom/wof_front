@@ -9,7 +9,7 @@
       echo '<title>' . $post_title . ' - ' . get_bloginfo('name') . '</title>';
     }
     else{
-      echo "<title>".bloginfo('title')".</title>";
+      echo "<title>".bloginfo('title')."</title>";
     }
   ?>
   <meta name="description" content="<?php bloginfo('description'); ?>"/>
