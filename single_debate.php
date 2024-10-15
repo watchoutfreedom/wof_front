@@ -56,8 +56,7 @@
             <div class="main single-default__main">
             <div class="meta__valorate">
               <a href="#"><span>👍</span> He aprendido</a>
-              <a href="#"><span>😐</span> Indiferente</a>
-              <a href="#"><span>👎</span> Está equivocado</a>            
+              ii              <a href="#"><span>👎</span> Está equivocado</a>            
             </div>
 
             <?php 

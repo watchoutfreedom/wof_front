@@ -4,10 +4,9 @@ Template Name: debate
 */
 get_header();
 ?>
-<h1 class="hero__title">
-  <?php echo get_avatar(get_the_author_ID(), 64); ?>
-  <?php the_author(); ?> (<?php the_author_posts(); ?>)
-</h1>
+  <div class="single-default__meta">
+    <?php get_template_part('atoms/meta'); ?>
+  </div>
 
 <div class="wrap">
   <div class="wrap__box wrap__box--debate">
