@@ -4,8 +4,11 @@ Template Name: debate
 */
 get_header();
 ?>
-  <div class="single-default__meta">
-    <?php get_template_part('atoms/meta'); ?>
+  <div class="meta__author">
+    <?php echo get_avatar( get_the_author_meta('email'), '42' ); ?> 
+    <div class="meta__content">
+      <?php the_author_posts_link(); ?>
+    </div>
   </div>
 
 <div class="wrap">
