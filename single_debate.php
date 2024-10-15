@@ -53,7 +53,6 @@
             </div>
 
             
-            <div class="main single-default__main">
             <div class="meta__valorate">
             <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
             </div>
