@@ -75,6 +75,7 @@
   flex-flow: row wrap;
   padding-bottom: 2rem;
 
+  /*
   a {
     font-size: .95rem;
     display: inline-block;
@@ -95,6 +96,8 @@
       text-decoration: none !important; // Revise
     }
   }
+    */
+    
 }
 
 @media #{$breakpoints-medium} {

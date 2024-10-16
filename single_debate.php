@@ -56,12 +56,8 @@
 
             <div class="meta">
               <div class="meta__valorate">
-              <a href=""><span>icono</span> Texto</a>
-              <a href=""><span>icono</span> Texto</a>
-              <a href=""><span>icono</span> Texto</a>
-
-
-            </div>
+              <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+              </div>
 
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
