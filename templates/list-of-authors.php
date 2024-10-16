@@ -11,11 +11,17 @@ get_header();
 
 <div class="wrap">
 <?php 
- $authors = get_users([
-  'fields'  => ['ID', 'display_name'],
-  'role'    => 'author',
-  'orderby' => 'display_name',
-]); ?>
+
+$users = get_users();
+foreach ($users as $user) 
+{
+   echo $user->ID;
+   echo $user->display_name;
+   the_author_image($user->ID);
+   echo $user->description;
+}
+
+?>
 
 </div>
 
