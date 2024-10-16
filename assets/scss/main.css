@@ -521,36 +521,36 @@ header {
   border-radius: 100%;
 }
 
-.meta__content {
+.meta__name-link {
   text-align: left;
   font-family: "Satoshi-Medium";
 }
-.meta__content p {
+.meta__name-link p {
   padding: 16px 0;
   font-size: 1rem;
   color: #191919;
   opacity: 0.75;
   line-height: 25px;
 }
-.meta__content a {
+.meta__name-link a {
   padding: 8px 0;
   text-decoration: underline;
 }
-.meta__content .author {
+.meta__name-link .author {
   color: #191919;
   font-size: 1.2rem;
 }
-.meta__content .author a {
+.meta__name-link .author a {
   color: #191919;
   font-size: 1.2rem;
 }
-.meta__content a:last-child {
+.meta__name-link a:last-child {
   color: #0F4BF1;
   font-size: 1rem;
   margin-top: 16px;
   text-decoration: underline;
 }
-.meta__content a:last-child:hover {
+.meta__name-link a:last-child:hover {
   text-decoration: none;
 }
 
