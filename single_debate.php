@@ -18,7 +18,8 @@
                   </div>
                 </div>
               </header>
-              <div class="single-thumb"><?php the_post_thumbnail('fotogrande'); ?></div>
+              <div class="single-thumb">
+                <?php the_post_thumbnail('fotogrande'); ?></div>
               <div class="single-default__presentation">
                 <div class="single-default__category">
                   <?php get_template_part('atoms/category-link'); ?>
