@@ -45,9 +45,11 @@
               <div class="answer_to"><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
               <?php the_field('field_63752e3ee91da'); ?>
               <?php the_content("Sigue leyendo"); ?>
+              <?php the_field('field_637531d2abd69'); ?><!-- bibliografia -->
+              
             </div>
 
-
+                
             <div class="single-default__meta">
               <?php get_template_part('atoms/bio'); ?>
             </div>
