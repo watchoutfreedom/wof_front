@@ -1,6 +1,6 @@
 <?php if( have_rows('field_637531d2abd69') ): ?>
     <ul class="slides">
-    <?php while( have_rows('field_637531d2abd69') ): the_row(); 
+    <?php while( have_rows('field_637531efabd6a') ): the_row(); 
         $image = get_sub_field('image');
         ?>
         <li>
@@ -10,3 +10,4 @@
     <?php endwhile; ?>
     </ul>
 <?php endif; ?>
+
