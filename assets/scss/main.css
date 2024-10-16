@@ -536,7 +536,11 @@ header {
   padding: 8px 0;
   text-decoration: underline;
 }
-.meta__content a:first-child {
+.meta__content .author {
+  color: #191919;
+  font-size: 1.2rem;
+}
+.meta__content .author a {
   color: #191919;
   font-size: 1.2rem;
 }

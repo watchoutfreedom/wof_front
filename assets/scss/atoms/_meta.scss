@@ -38,9 +38,14 @@
     text-decoration: underline;
   }
 
-  a:first-child {
+  .author {
     color: #191919;
     font-size: 1.2rem;
+    
+    a {
+      color: #191919;
+      font-size: 1.2rem;
+    }
   }
 
   a:last-child {
