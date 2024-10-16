@@ -54,22 +54,22 @@
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
-            
-            <div class="meta__valorate">
-            <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
-            </div>
+            <div class="meta">
+              <div class="meta__valorate">
+              <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+              </div>
 
-            <?php 
-              if(wp_get_current_user()->ID == $post->post_author 
-              //|| current_user_can( 'edit_others_posts', $post->ID)
-              ){
-                  echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
-              }
-              else{
-                  echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
-              }
-            ?>
-            
+              <?php 
+                if(wp_get_current_user()->ID == $post->post_author 
+                //|| current_user_can( 'edit_others_posts', $post->ID)
+                ){
+                    echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
+                }
+                else{
+                    echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
+                }
+              ?>
+            </div>
               
              <div class="answers">
             <?php     
