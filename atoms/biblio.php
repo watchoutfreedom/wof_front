@@ -1,15 +1,15 @@
 <div class="bibliografia">
-  <?php if( have_rows('bibliography') ): ?>
-      <ul class="slides">
-      <?php while( have_rows('book') ): the_row(); 
-          $image = get_sub_field('image');
-          ?>
-          <li>
-              <?php echo wp_get_attachment_image( $image, 'full' ); ?>
-              <p><?php echo acf_esc_html( get_sub_field('caption') ); ?></p>
-          </li>
-      <?php endwhile; ?>
-      </ul>
-  <?php endif; ?>
+
+<?php
+$rows = get_field('field_637531d2abd69' );
+if( $rows ) {
+    $index = array_rand( $rows );
+    $rand_row = $rows[ $index ];
+    $rand_row_title = $rand_row['title'];
+    // Do something...
+}
+Link to heading# ?>
+
+    
 </div>
 
