@@ -5,7 +5,7 @@ Template Name: autores
 get_header();
 ?>
 <div class="hero">
-  <h1 class="hero__title">Lista de autores</h1>
+  <h1 class="hero__title">Colaboradores</h1>
   <div class="hero__description">Gracias a todos/as.</div>
 </div>
 
