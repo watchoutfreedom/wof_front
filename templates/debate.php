@@ -9,7 +9,7 @@ get_header();
   <div class="hero__description">Responde con tu propio artículo a las publicaciones.</div>
 </div>
 <div class="debate__meta">
-  <div class="debate__col">Participa del debate conviértete en<span> autor</span></div>
+  <div class="debate__col">Muestra tu criterio. Conviértete en <span>autor</span></div>
   <div class="debate__col"><a href="https://dev.watchoutfreedom.com/wp-content/uploads/sites/3/2024/09/Normas.pdf" target="_blank">Ver reglas [PDF]</a></div>
 </div>
 

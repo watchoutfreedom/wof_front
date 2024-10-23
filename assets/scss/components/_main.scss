@@ -2,7 +2,8 @@ $main-color: $color-dark-gray;
 $main-font-family: $font-body;
 $main-title-font-family: $font-heading;
 $main-a-color: $color-corporative;
-$main-blockquote-font-family: $font-heading;
+$main-blockquote-font-family: 'Satoshi-Bold';
+
 
 .main {
   color: $main-color;
@@ -110,21 +111,14 @@ $main-blockquote-font-family: $font-heading;
     }
   }
 
+  .has-large-font-size,
   blockquote {
+    color: black;
     font-family: $main-blockquote-font-family;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding: 2rem;
-    text-align: center;
-  }
-
-  blockquote:before {
-    background: $color-ligth-gray;
-    content: '';
-    display: block;
-    height: 2px;
-    margin: 0 auto 1rem auto;
-    width: 200px;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 1rem 2rem;
+    text-align: left;
   }
 
   .wp-caption-text {

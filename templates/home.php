@@ -18,7 +18,7 @@ get_header();
         </div>
       <?php endwhile; ?>
     </div>
-    <div class="wrap__box">
+    <div class="wrap__box wrap__box--author">
       <?php $the_query = new WP_Query('showposts=3&category_name=debate&offset=3'); while ($the_query->have_posts()) : $the_query->the_post();?>
         <div class="home__post">
           <?php get_template_part('components/article-list'); ?>

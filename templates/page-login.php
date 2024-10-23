@@ -4,6 +4,8 @@
 */
 ?>
 
+<?php get_header(); ?>
+
 <?php
 if ( is_user_logged_in() ) {
     wp_redirect(home_url());
@@ -109,6 +111,9 @@ if ( ! is_user_logged_in() ) {
         $form = str_replace('name="log"', 'name="log" placeholder="Username"', $form);
         $form = str_replace('name="pwd"', 'name="pwd" placeholder="Password"', $form);
         echo '
+        <div class="home">
+        <div class="wrap wrap--signup wrap--login">
+        <h2>Acceder</h2>
         <div class="login__container">
         ';
         echo $form;
@@ -122,6 +127,8 @@ if ( ! is_user_logged_in() ) {
     }
 
     echo '
+    </div>
+    </div>
     </div>
     ';
     

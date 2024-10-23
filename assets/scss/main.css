@@ -302,6 +302,7 @@ a {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.header__nav .page-item-1454,
 .header__nav .page-item-335,
 .header__nav .page-item-1073,
 .header__nav .page-item-232 {
@@ -536,7 +537,11 @@ header {
   padding: 8px 0;
   text-decoration: underline;
 }
-.meta__content a:first-child {
+.meta__content .meta__name-link {
+  color: #191919;
+  font-size: 1.2rem;
+}
+.meta__content .meta__name-link a {
   color: #191919;
   font-size: 1.2rem;
 }
@@ -564,24 +569,28 @@ header {
   display: flex;
   flex-flow: row wrap;
   padding-bottom: 2rem;
-}
-.meta__valorate a {
-  font-size: 0.95rem;
-  display: inline-block;
-  margin: 0 16px 0 0;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #191919 !important;
-  opacity: 0.65;
-  transition: 0.2s;
-}
-.meta__valorate a span {
-  margin-right: 8px;
-}
-.meta__valorate a:hover {
-  opacity: 1;
-  text-decoration: none !important;
+  /*
+  a {
+    font-size: .95rem;
+    display: inline-block;
+    margin: 0 16px 0 0;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #191919 !important;;
+    opacity: .65;
+    transition: .2s;
+
+    span {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      opacity: 1;
+      text-decoration: none !important; // Revise
+    }
+  }
+    */
 }
 
 @media only screen and (min-width: 768px) {
@@ -727,8 +736,10 @@ header {
 .wrap--createpost {
   display: block;
 }
+.wrap--signup input[type=password],
 .wrap--signup input[type=text],
 .wrap--signup textarea,
+.wrap--createpost input[type=password],
 .wrap--createpost input[type=text],
 .wrap--createpost textarea {
   border-radius: 4px;
@@ -738,8 +749,10 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--signup input[type=password]:focus,
 .wrap--signup input[type=text]:focus,
 .wrap--signup textarea:focus,
+.wrap--createpost input[type=password]:focus,
 .wrap--createpost input[type=text]:focus,
 .wrap--createpost textarea:focus {
   border-color: #191919;
@@ -747,6 +760,28 @@ header {
 .wrap--signup .add_media,
 .wrap--createpost .add_media {
   color: #191919 !important;
+}
+
+.wrap--login {
+  height: calc(100vh - 70px);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.wrap--login h2 {
+  color: white;
+  padding: 24px 0;
+}
+.wrap--login input[type=password],
+.wrap--login input[type=text] {
+  margin: 8px 0;
+}
+.wrap--login input[type=submit] {
+  background: white;
+  color: black !important;
+  margin: 16px 0;
 }
 
 .excerp--response {
@@ -773,6 +808,21 @@ header {
 .acf-label .description {
   font-size: 0.85rem;
   opacity: 0.8;
+}
+
+#grid-contributors {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.single-item {
+  padding-bottom: 24px;
+  padding-right: 24px;
+}
+
+.author-name {
+  padding: 8px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -827,6 +877,9 @@ header {
 @media only screen and (min-width: 1024px) {
   .colabora {
     display: none;
+  }
+  .colabora--show {
+    display: block;
   }
 }
 .product {
@@ -1007,20 +1060,14 @@ header {
 .main a:hover {
   text-decoration: underline;
 }
+.main .has-large-font-size,
 .main blockquote {
-  font-family: "Satoshi-Medium", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding: 2rem;
-  text-align: center;
-}
-.main blockquote:before {
-  background: rgba(0, 0, 0, 0.4);
-  content: "";
-  display: block;
-  height: 2px;
-  margin: 0 auto 1rem auto;
-  width: 200px;
+  color: black;
+  font-family: "Satoshi-Bold";
+  font-size: 2rem;
+  line-height: 3rem;
+  padding: 1rem 2rem;
+  text-align: left;
 }
 .main .wp-caption-text {
   font-family: "Satoshi-Medium", sans-serif;

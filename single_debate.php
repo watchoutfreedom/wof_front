@@ -18,7 +18,8 @@
                   </div>
                 </div>
               </header>
-              <div class="single-thumb"><?php the_post_thumbnail('fotogrande'); ?></div>
+              <div class="single-thumb">
+                <?php the_post_thumbnail('fotogrande'); ?></div>
               <div class="single-default__presentation">
                 <div class="single-default__category">
                   <?php get_template_part('atoms/category-link'); ?>
@@ -45,29 +46,31 @@
               <div class="answer_to"><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
               <?php the_field('field_63752e3ee91da'); ?>
               <?php the_content("Sigue leyendo"); ?>
+              <?php get_template_part('atoms/biblio'); ?>
+
             </div>
 
-
+                
             <div class="single-default__meta">
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
-            
-            <div class="meta__valorate">
-            <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
-            </div>
+            <div class="meta">
+              <div class="meta__valorate">
+              <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+              </div>
 
-            <?php 
-              if(wp_get_current_user()->ID == $post->post_author 
-              //|| current_user_can( 'edit_others_posts', $post->ID)
-              ){
-                  echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
-              }
-              else{
-                  echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
-              }
-            ?>
-            
+              <?php 
+                if(wp_get_current_user()->ID == $post->post_author 
+                //|| current_user_can( 'edit_others_posts', $post->ID)
+                ){
+                    echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
+                }
+                else{
+                    echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
+                }
+              ?>
+            </div>
               
              <div class="answers">
             <?php     
