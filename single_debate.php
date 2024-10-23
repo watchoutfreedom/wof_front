@@ -58,9 +58,9 @@
             <div class="meta">
               <div class="meta__valorate">
         
-              <a id="rating_1425_1" href="#" onkeypress="rate_post();" onclick="rate_post();"><span>👍</span> He aprendido</a>
-              <a id="rating_1425_2" href="#"><span>😐</span> Indiferente</a>
-              <a id="rating_1425_3" href="#"><span>👎</span> Está equivocado</a>            
+              <a id="rating_1425_1" onkeypress="rate_post();" onclick="rate_post();"><span>👍</span> He aprendido</a>
+              <a id="rating_1425_2" onkeypress="rate_post();" onclick="rate_post();"><span>😐</span> Indiferente</a>
+              <a id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();"><span>👎</span> Está equivocado</a>            
               </div>
 
               <?php the_ratings();?>
