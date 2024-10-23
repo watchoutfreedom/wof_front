@@ -58,6 +58,9 @@
             <div class="meta">
               <div class="meta__valorate">
               <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
+              <a href="#"><span>👍</span> He aprendido</a>
+              <a href="#"><span>😐</span> Indiferente</a>
+              <a href="#"><span>👎</span> Está equivocado</a>            
               </div>
 
               <?php 
