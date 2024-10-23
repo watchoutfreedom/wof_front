@@ -117,7 +117,7 @@
   </main>
   <script>
 
-querySelectorAll('#rating_1425 img').forEach(image => {
+querySelectorAll('#post-ratings-1425 img').forEach(image => {
   image.addEventListener('keypress', rate_post);
   image.addEventListener('click', rate_post);
 });
