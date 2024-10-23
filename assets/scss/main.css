@@ -757,6 +757,10 @@ header {
   color: #191919 !important;
 }
 
+.wrap--login {
+  padding: 124px 0;
+}
+
 .excerp--response {
   display: block;
   padding: 2rem 0;
