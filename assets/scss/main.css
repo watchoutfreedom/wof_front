@@ -762,8 +762,12 @@ header {
 }
 
 .wrap--login {
-  padding: 124px 0;
+  height: calc(100% - 70px);
   margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
 }
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
