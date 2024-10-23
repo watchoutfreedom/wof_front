@@ -63,6 +63,8 @@
               <a id="rating_1425_3" href="#"><span>👎</span> Está equivocado</a>            
               </div>
 
+              <?php the_ratings();?>
+
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
                 //|| current_user_can( 'edit_others_posts', $post->ID)
