@@ -119,7 +119,7 @@
     window.addEventListener('load', function() {
 
     document.window.addEventListener('load', function() {
-querySelectorAll('#rating_1425_1 img').forEach(image => {
+querySelectorAll('#rating_1425 img').forEach(image => {
   image.addEventListener('keypress', rate_post);
   image.addEventListener('click', rate_post);
 });
