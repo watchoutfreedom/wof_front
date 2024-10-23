@@ -809,6 +809,21 @@ header {
   opacity: 0.8;
 }
 
+.grid-contributors {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.single-item {
+  padding-bottom: 24px;
+  padding-right: 24px;
+}
+
+.author-name {
+  padding: 8px 0;
+}
+
 @media only screen and (min-width: 768px) {
   .wrap__box {
     flex: 0 1 50%;
