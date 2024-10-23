@@ -268,6 +268,15 @@ function change_role_name() {
   
   add_action('save_post', 'send_pending_post_email');
 
+/**
+ * Changes the image extension used by the WP-PostRatings plugin.
+ * *
+ */
+  function custom_rating_image_extension() {
+    return 'png';
+}
+add_filter( 'wp_postratings_image_extension', 'custom_rating_image_extension' );
+
 ?>
 
 
