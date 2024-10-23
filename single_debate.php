@@ -116,7 +116,6 @@
  
   </main>
   <script>
-    window.addEventListener('load', function() {
 
     document.window.addEventListener('load', function() {
 querySelectorAll('#rating_1425 img').forEach(image => {
@@ -124,7 +123,6 @@ querySelectorAll('#rating_1425 img').forEach(image => {
   image.addEventListener('click', rate_post);
 });
 
-});
 });
 </script>
   <?php get_template_part('components/colabora'); ?>
