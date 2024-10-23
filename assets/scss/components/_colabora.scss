@@ -26,9 +26,12 @@
   text-align: center;
 }
 
-
 @media #{$breakpoints-large} {
   .colabora {
     display: none;
+  }
+
+  .colabora--show {
+    display: block;
   }
 }

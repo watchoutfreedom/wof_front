@@ -43,6 +43,15 @@
       <?php endif; ?>
     </article>
   </main>
+
+  <div class="colabora colabora--show">
+    <h3 class="colabora__title">
+      Si deseas pedir una formación a medida no dudes en escribirnos
+    </h3>
+    <a href="mailto:mail@watchoutfreedom.com">mail@watchoutfreedom.com</a>
+  </div>
+
+
   <?php get_template_part('components/colabora'); ?>
 
   <?php get_template_part('components/list-formacion'); ?>

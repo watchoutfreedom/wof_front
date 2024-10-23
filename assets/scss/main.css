@@ -878,6 +878,9 @@ header {
   .colabora {
     display: none;
   }
+  .colabora--show {
+    display: block;
+  }
 }
 .product {
   max-width: 1280px;
