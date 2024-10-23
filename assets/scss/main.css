@@ -1467,8 +1467,7 @@ header {
 }
 .debate .single-hero .single-default__presentation {
   position: relative;
-  margin-top: 36px;
-  padding: 0 16px;
+  padding: 84px 16px 0 16px;
   z-index: 2;
 }
 .debate .single-hero .single-thumb {
