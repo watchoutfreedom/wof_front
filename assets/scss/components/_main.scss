@@ -111,22 +111,14 @@ $main-blockquote-font-family: 'Satoshi-Bold';
     }
   }
 
+  .has-large-font-size,
   blockquote {
     color: black;
     font-family: $main-blockquote-font-family;
     font-size: 2rem;
     line-height: 3rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     text-align: left;
-  }
-
-  blockquote:before {
-    background: $color-ligth-gray;
-    content: '';
-    display: block;
-    height: 2px;
-    margin: 0 auto 1rem auto;
-    width: 200px;
   }
 
   .wp-caption-text {
