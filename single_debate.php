@@ -117,13 +117,11 @@
   </main>
   <script>
 
-    document.window.addEventListener('load', function() {
 querySelectorAll('#rating_1425 img').forEach(image => {
   image.addEventListener('keypress', rate_post);
   image.addEventListener('click', rate_post);
 });
 
-});
 </script>
   <?php get_template_part('components/colabora'); ?>
 
