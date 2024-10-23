@@ -112,7 +112,7 @@ if ( ! is_user_logged_in() ) {
         $form = str_replace('name="pwd"', 'name="pwd" placeholder="Password"', $form);
         echo '
         <div class="home">
-        <div class="wrap">
+        <div class="wrap wrap--signup wrap--login">
         <div class="login__container">
         ';
         echo $form;
