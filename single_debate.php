@@ -70,7 +70,6 @@
                 </div>         
               </div>
 
-              <?php the_ratings();?>
 
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
@@ -115,12 +114,7 @@
     </article>
  
   </main>
-  <script>
 
-querySelectorAll('.post-ratings img').forEach(image => {
-  image.addEventListener('keypress', rate_post);
-  image.addEventListener('click', rate_post);
-});
 
 </script>
   <?php get_template_part('components/colabora'); ?>
