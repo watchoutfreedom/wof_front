@@ -153,7 +153,8 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   font-family: 'Satoshi-Bold';
   color: black;
   font-size: .85rem;
-  padding: 16px 0;
+  padding: 0;
+  margin: 0;
 }
 
 @media #{$breakpoints-medium} {
