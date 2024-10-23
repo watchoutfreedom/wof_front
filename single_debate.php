@@ -125,6 +125,7 @@ querySelectorAll('#rating_1425 img').forEach(image => {
 });
 
 });
+});
 </script>
   <?php get_template_part('components/colabora'); ?>
 
