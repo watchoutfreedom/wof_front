@@ -149,6 +149,13 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   transform: translateY(-12px);
 }
 
+.main__title {
+  font-family: 'Satoshi-Bold';
+  color: black;
+  font-size: .85rem;
+  padding: 16px 0;
+}
+
 @media #{$breakpoints-medium} {
   .main {
     font-size: 18px;

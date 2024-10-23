@@ -9,6 +9,7 @@
 					<?php the_content("Sigue leyendo"); ?>
 
 					<div class="main__tags">
+						<p class="main__title">Tags/<p>
 						<?php the_tags(''); ?>
 					</div>
 				</div>

@@ -1094,6 +1094,13 @@ header {
   transform: translateY(-12px);
 }
 
+.main__title {
+  font-family: "Satoshi-Bold";
+  color: black;
+  font-size: 0.85rem;
+  padding: 16px 0;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     font-size: 18px;
