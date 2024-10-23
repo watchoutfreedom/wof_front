@@ -70,7 +70,6 @@
                 </div>         
               </div>
 
-              <?php the_ratings();?>
 
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
