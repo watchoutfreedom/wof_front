@@ -1455,7 +1455,7 @@ header {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  height: 70vh;
+  min-height: 70vh;
   background: #191919;
   position: relative;
   overflow: hidden;
@@ -1467,6 +1467,7 @@ header {
 }
 .debate .single-hero .single-default__presentation {
   position: relative;
+  margin-top: 36px;
   padding: 0 16px;
   z-index: 2;
 }
@@ -1570,7 +1571,7 @@ header {
 .single-default__title {
   font-family: "Satoshi-Bold";
   font-size: 3rem;
-  line-height: 2.5rem;
+  line-height: 3.1rem;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
   text-align: center;

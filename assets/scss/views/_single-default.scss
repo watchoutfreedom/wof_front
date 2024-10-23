@@ -56,7 +56,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    height: 70vh;
+    min-height: 70vh;
     background: $color-black;
     position: relative;
     overflow: hidden;
@@ -69,6 +69,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
 
     .single-default__presentation {
       position: relative;
+      margin-top: 36px;
       padding: 0 16px;
       z-index: 2;
     }
@@ -183,7 +184,7 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
 .single-default__title {
   font-family: 'Satoshi-Bold';
   font-size: 3rem;
-  line-height: 2.5rem;
+  line-height: 3.1rem;
   padding-top: .5rem;
   padding-bottom: 1.5rem;
   text-align: center;
