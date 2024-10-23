@@ -163,13 +163,18 @@
 }
 
 .wrap--login {
-  height: calc( 100% - 70px );
+  height: calc( 100vh - 70px );
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
   align-items: center;;
   justify-content: center;
-  
+
+  h2 {
+    color: white;
+    padding: 24px 0;
+  }
+
   input[type="password"],
   input[type="text"] {
     margin: 8px 0;

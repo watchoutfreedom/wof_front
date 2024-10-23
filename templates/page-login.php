@@ -113,6 +113,7 @@ if ( ! is_user_logged_in() ) {
         echo '
         <div class="home">
         <div class="wrap wrap--signup wrap--login">
+        <h2>Acceder</h2>
         <div class="login__container">
         ';
         echo $form;
