@@ -142,6 +142,7 @@
 .wrap--createpost {
   display: block;
 
+  input[type="password],
   input[type="text"],
   textarea {
     border-radius: 4px;
