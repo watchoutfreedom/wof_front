@@ -164,6 +164,18 @@
 
 .wrap--login {
   padding: 124px 0;
+
+
+  input[type="password"],
+  input[type="text"] {
+    margin: 8px 0;
+  }
+
+  input[type="submit"] {
+    background: white;
+    color: black;
+    margin-top: 16px;
+  }
 }
 
 .excerp--response {

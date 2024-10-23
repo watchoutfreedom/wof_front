@@ -764,6 +764,15 @@ header {
 .wrap--login {
   padding: 124px 0;
 }
+.wrap--login input[type=password],
+.wrap--login input[type=text] {
+  margin: 8px 0;
+}
+.wrap--login input[type=submit] {
+  background: white;
+  color: black;
+  margin-top: 16px;
+}
 
 .excerp--response {
   display: block;
