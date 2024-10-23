@@ -104,6 +104,13 @@
      */
   ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/scss/main.css" as="styles">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
+  <link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
+  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/scss/main.css" as="styles">
 
   <?php
     /**
