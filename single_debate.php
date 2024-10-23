@@ -57,10 +57,11 @@
 
             <div class="meta">
               <div class="meta__valorate">
-        
+              <div id="post-ratings-1425" class="post-ratings" itemscope="" itemtype="https://schema.org/Article" data-nonce="6660c12267">
               <a id="rating_1425_1" onkeypress="rate_post();" onclick="rate_post();"><span>👍</span> He aprendido</a>
               <a id="rating_1425_2" onkeypress="rate_post();" onclick="rate_post();"><span>😐</span> Indiferente</a>
-              <a id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();"><span>👎</span> Está equivocado</a>            
+              <a id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();"><span>👎</span> Está equivocado</a>
+                </div>         
               </div>
 
               <?php the_ratings();?>
