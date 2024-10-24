@@ -15,7 +15,7 @@ get_header();
    $display_admins = false;
    $order_by = 'post_count'; // 'nicename', 'email', 'url', 'registered', 'display_name', or 'post_count'
    $order = 'DESC';
-   $role = 'author', 'editor'; // 'subscriber', 'contributor', 'editor', 'author' - leave blank for 'all'
+   $role = 'author'; // 'subscriber', 'contributor', 'editor', 'author' - leave blank for 'all'
    $avatar_size = 161;
    $hide_empty = false; // hides authors with zero posts
    if(!empty($display_admins)) {
