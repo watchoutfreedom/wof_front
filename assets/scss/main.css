@@ -21,6 +21,20 @@
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roman-Regular";
+  src: url("../fonts/roman/FKRomanStandardTrial-Regular.otf") format("otf");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roman-Bold";
+  src: url("../fonts/roman/FKRomanStandardTrial-Bold.otf") format("otf");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 /* news */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -975,7 +989,7 @@ header {
 }
 .main {
   color: #191919;
-  font-family: "__fkRomanStandard_6bdc6d", "__fkRomanStandard_Fallback_6bdc6d", Georgia, serif;
+  font-family: "Roman-Regular", Georgia, serif;
   letter-spacing: -0.01em;
   font-size: 15px;
   line-height: 25px;
@@ -1048,6 +1062,7 @@ header {
 .main b,
 .main strong {
   font-weight: bold;
+  font-family: "Roman-Bold";
 }
 .main i {
   font-style: italic;

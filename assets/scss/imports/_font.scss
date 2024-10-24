@@ -27,3 +27,19 @@
   font-display: swap;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Roman-Regular';
+  src: url('../fonts/roman/FKRomanStandardTrial-Regular.otf') format('otf');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roman-Bold';
+  src: url('../fonts/roman/FKRomanStandardTrial-Bold.otf') format('otf');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
