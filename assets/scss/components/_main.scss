@@ -6,7 +6,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 
 .main {
-  color: $main-color;
+  color: $color-black;
   font-family: $font-main;
   font-size: 18px;
   line-height: 30px;
@@ -32,7 +32,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   ul,
   ol {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
    //max-width: 100%;
   }
 

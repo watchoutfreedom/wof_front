@@ -977,7 +977,7 @@ header {
   }
 }
 .main {
-  color: #555555;
+  color: #191919;
   font-family: "Roboto Serif", serif;
   font-size: 18px;
   line-height: 30px;
@@ -999,7 +999,7 @@ header {
 .main ul,
 .main ol {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .main div {
   margin: 2rem 0;
