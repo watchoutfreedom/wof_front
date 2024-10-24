@@ -943,7 +943,7 @@ header {
   max-width: 1280px;
   margin: 0 auto 2rem auto;
   background: #191919;
-  padding: 8rem 4rem;
+  padding: 8rem 2rem;
   text-align: center;
   color: white;
 }
@@ -969,6 +969,7 @@ header {
 @media only screen and (min-width: 768px) {
   .hero {
     margin: 2rem auto;
+    padding: 8rem 4rem;
   }
   .hero__title {
     font-size: 4rem;
@@ -1212,9 +1213,7 @@ header {
 }
 
 .home__post .article-list__title {
-  width: 80%;
   color: white;
-  transform: translate(100px, -120px);
   font-size: 32px;
   line-height: 40px;
 }
@@ -1255,6 +1254,10 @@ header {
   .page-sidebar__content .article-list {
     flex: 0 1 33.3333333333%;
     padding-right: 32px;
+  }
+  .home__post .article-list__title {
+    width: 80%;
+    transform: translate(100px, -120px);
   }
 }
 @media only screen and (min-width: 1024px) {
