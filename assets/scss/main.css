@@ -1060,7 +1060,6 @@ header {
 .main a:hover {
   text-decoration: underline;
 }
-.main .has-large-font-size,
 .main blockquote {
   color: black;
   font-family: "Satoshi-Bold";
@@ -1124,6 +1123,10 @@ header {
   }
   .main h6 {
     font-size: 1rem;
+  }
+  .main blockquote {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
   }
   .main .wp-block-image {
     transform: translateX(-16px);

@@ -111,7 +111,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
     }
   }
 
-  .has-large-font-size,
+
   blockquote {
     color: black;
     font-family: $main-blockquote-font-family;
@@ -184,6 +184,10 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
     h6 {
       font-size: 1rem;
+    }
+    blockquote {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
     }
 
     .wp-block-image {
