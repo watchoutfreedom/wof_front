@@ -15,7 +15,7 @@ get_header();
    $display_admins = false;
    $order_by = 'post_count'; // 'nicename', 'email', 'url', 'registered', 'display_name', or 'post_count'
    $order = 'DESC';
-   $role = ''; // 'subscriber', 'contributor', 'editor', 'author' - leave blank for 'all'
+   $role = 'author', 'editor'; // 'subscriber', 'contributor', 'editor', 'author' - leave blank for 'all'
    $avatar_size = 161;
    $hide_empty = false; // hides authors with zero posts
    if(!empty($display_admins)) {
@@ -36,19 +36,30 @@ get_header();
          $numposts = count_user_posts($user->ID);
          if($numposts < 1) continue;
       }
-      $authors[] = (array) $user;
+
+      // Check if 'show_community_page' is checked for the author
+      $show_community_page = get_user_meta($user->ID, 'show_community_page', true);
+      if ($show_community_page) {
+          $authors[] = (array) $user;
+      }
    }
-   echo '<ul id="grid-contributors">';
-   foreach($authors as $author) {
-      $display_name = $author['data']->display_name;
-      $avatar = get_avatar($author['ID'], $avatar_size);
-      $author_profile_url = get_author_posts_url($author['ID']);
-      echo '<li class="single-item">';
-      echo '<div class="author-gravatar"><a href="', $author_profile_url, '">', $avatar , '</a></div>';
-      echo '<div class="author-name"><a href="', $author_profile_url, '" class="contributor-link">', $display_name, '</a></div>';
-      echo '</li>';
+
+   // Display authors who have 'show_community_page' checked
+   if (!empty($authors)) {
+      echo '<ul id="grid-contributors">';
+      foreach($authors as $author) {
+         $display_name = $author['data']->display_name;
+         $avatar = get_avatar($author['ID'], $avatar_size);
+         $author_profile_url = get_author_posts_url($author['ID']);
+         echo '<li class="single-item">';
+         echo '<div class="author-gravatar"><a href="', $author_profile_url, '">', $avatar , '</a></div>';
+         echo '<div class="author-name"><a href="', $author_profile_url, '" class="contributor-link">', $display_name, '</a></div>';
+         echo '</li>';
+      }
+      echo '</ul>';
+   } else {
+      echo '<p>No contributors found.</p>';
    }
-   echo '</ul>';
 ?>
 
 </div>
