@@ -115,10 +115,11 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   blockquote {
     color: black;
     font-family: $main-blockquote-font-family;
-    font-size: .85rem;
-    line-height: 1.25rem;
-    padding: 1rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-align: left;
+    background: #fbfbfb;
+    padding: 2rem 2rem;
   }
 
   .wp-caption-text {
