@@ -667,7 +667,6 @@ header {
   flex: 0 1 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
 }
 .wrap__box--news .article-list__response,
 .wrap__box--debate .article-list__response {
