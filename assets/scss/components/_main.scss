@@ -7,7 +7,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 .main {
   color: $color-black;
-  font-family: 'Roman-Thin', Georgia, serif; // Revise font
+  font-family: 'Satoshi-Regular', Helvetica, Arial, sans-serif;
   letter-spacing: -.01em;
   font-size: 15px;
   line-height: 25px;
@@ -97,7 +97,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   b,
   strong {
     font-weight: bold;
-    font-family: 'Roman-Bold';
+    font-family: 'Satoshi-Bold';
   }
 
   i {
