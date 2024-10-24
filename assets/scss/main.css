@@ -22,7 +22,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Roman-Regular";
+  font-family: "Roman-Thin";
   src: url("../fonts/roman/FKRomanStandardTrial-Thin.otf") format("otf");
   font-weight: 700;
   font-display: swap;
@@ -992,7 +992,7 @@ header {
 }
 .main {
   color: #191919;
-  font-family: "Roman-Regular", Georgia, serif;
+  font-family: "Roman-Thin", Georgia, serif;
   letter-spacing: -0.01em;
   font-size: 15px;
   line-height: 25px;
