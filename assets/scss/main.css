@@ -974,8 +974,9 @@ header {
   }
 }
 .main {
-  color: #555555;
-  font-family: "Roboto Serif", serif;
+  color: #191919;
+  font-family: "__fkRomanStandard_6bdc6d", "__fkRomanStandard_Fallback_6bdc6d", Georgia, serif;
+  letter-spacing: -0.01em;
   font-size: 15px;
   line-height: 25px;
 }

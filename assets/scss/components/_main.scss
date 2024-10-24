@@ -6,8 +6,9 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 
 .main {
-  color: $main-color;
-  font-family: $font-main;
+  color: $color-black;
+  font-family: '__fkRomanStandard_6bdc6d', '__fkRomanStandard_Fallback_6bdc6d', Georgia, serif; // Revise font
+  letter-spacing: -.01em;
   font-size: 15px;
   line-height: 25px;
 
