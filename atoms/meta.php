@@ -2,6 +2,7 @@
   <div class="meta__author">
     <?php echo get_avatar( get_the_author_meta('email'), '42' ); ?> 
     <div class="meta__content">
+      prueba
       <?php the_author_posts_link(); ?>
 
       <?php
