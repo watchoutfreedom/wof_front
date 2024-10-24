@@ -16,9 +16,7 @@ get_header();
         $organization_link = get_field('organization_link', 'user_' . get_the_author_meta('ID'));
         
         if ($organization_name && $organization_link): ?>
-          <p class="organization">
             <a href="<?php echo esc_url($organization_link); ?>" target="_blank"><?php echo esc_html($organization_name); ?></a>
-          </p>
       <?php endif; ?>
     </div>
   </div>
