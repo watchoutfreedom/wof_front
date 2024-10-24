@@ -628,7 +628,6 @@ header {
 }
 
 .wrap__box--author .article-list__author {
-  transform: translate(100px, -120px);
   display: block;
   font-size: 1.15rem;
   font-family: "Satoshi-Medium";
