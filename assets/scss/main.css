@@ -997,7 +997,7 @@ header {
 .main ul,
 .main ol {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .main div {
   margin: 2rem 0;
@@ -1104,8 +1104,8 @@ header {
 
 @media only screen and (min-width: 768px) {
   .main {
-    font-size: 18px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 32px;
   }
   .main img {
     margin: 48px 0;

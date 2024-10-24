@@ -33,7 +33,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   ul,
   ol {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
    //max-width: 100%;
   }
 
@@ -161,8 +161,8 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 @media #{$breakpoints-medium} {
   .main {
-    font-size: 18px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 32px;
 
     img {
       margin: 48px 0;
