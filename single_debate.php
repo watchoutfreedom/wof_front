@@ -32,7 +32,7 @@
                 </div>
                 <?php if(get_post_status($post->ID) == 'pending'){ ?>
               <div class="pending single-default__intro">
-              Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
+                Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
               </div>
               <?php } ?> 
               </div>
