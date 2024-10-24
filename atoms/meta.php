@@ -11,14 +11,12 @@
       $organization_link = get_field('organization_link', 'user_' . $author_id);
 
       if ($organization_name && $organization_link): ?>
-        <p>
           <a class="meta__organization" href="<?php echo esc_url($organization_link); ?>" target="_blank">
             <?php echo esc_html($organization_name); ?>
           </a>
-        </p>
       <?php 
       elseif ($organization_name): ?>
-        <p><?php echo esc_html($organization_name); ?></p>
+        <?php echo esc_html($organization_name); ?>
       <?php endif; ?>
     </div>
   </div>
