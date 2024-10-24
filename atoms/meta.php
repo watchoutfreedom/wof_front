@@ -7,7 +7,7 @@
       <?php
       $author_id = get_the_author_meta('ID');
 
-      $organization_name = get_field('organization', 'user_' . $author_id);
+      $organization_name = get_field('Organization', 'user_' . $author_id);
       $organization_link = get_field('organization_link', 'user_' . $author_id);
 
       echo '<pre>';
