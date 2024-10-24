@@ -2,12 +2,18 @@
   <div class="meta__author">
     <?php echo get_avatar( get_the_author_meta('email'), '42' ); ?> 
     <div class="meta__content">
-      prueba
       <?php the_author_posts_link(); ?>
 
       <?php
-      $organization_name = get_field('organization');
-      $organization_link = get_field('organization_link');
+      $author_id = get_the_author_meta('ID');
+
+      $organization_name = get_field('organization', 'user_' . $author_id);
+      $organization_link = get_field('organization_link', 'user_' . $author_id);
+
+      echo '<pre>';
+      echo 'Organization: ' . print_r($organization_name, true) . '<br>';
+      echo 'Organization Link: ' . print_r($organization_link, true) . '<br>';
+      echo '</pre>';
 
       if ($organization_name && $organization_link): ?>
         <p>
