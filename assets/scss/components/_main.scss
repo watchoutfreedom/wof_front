@@ -6,11 +6,10 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 
 .main {
-  color: $color-black;
-  font-family: 'Satoshi-Regular', Helvetica, Arial, sans-serif;
-  letter-spacing: -.01em;
-  font-size: 15px;
-  line-height: 25px;
+  color: $main-color;
+  font-family: $font-main;
+  font-size: 18px;
+  line-height: 30px;
 
   img {
     @extend .flash;
@@ -33,7 +32,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   ul,
   ol {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
    //max-width: 100%;
   }
 
@@ -97,7 +96,6 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   b,
   strong {
     font-weight: bold;
-    font-family: 'Satoshi-Bold';
   }
 
   i {
@@ -162,8 +160,8 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 @media #{$breakpoints-medium} {
   .main {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 34px;
 
     img {
       margin: 48px 0;
