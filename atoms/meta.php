@@ -10,14 +10,9 @@
       $organization_name = get_field('Organization', 'user_' . $author_id);
       $organization_link = get_field('organization_link', 'user_' . $author_id);
 
-      echo '<pre>';
-      echo 'Organization: ' . print_r($organization_name, true) . '<br>';
-      echo 'Organization Link: ' . print_r($organization_link, true) . '<br>';
-      echo '</pre>';
-
       if ($organization_name && $organization_link): ?>
         <p>
-          <a href="<?php echo esc_url($organization_link); ?>" target="_blank">
+          <a class="meta__organization" href="<?php echo esc_url($organization_link); ?>" target="_blank">
             <?php echo esc_html($organization_name); ?>
           </a>
         </p>
