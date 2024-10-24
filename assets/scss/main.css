@@ -114,8 +114,6 @@ input:focus {
 /* All of our custom controls should be what we expect them to be */
 input,
 textarea {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -127,8 +125,6 @@ input[type=submit],
 input[type=checkbox],
 input[type=radio],
 select {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -480,7 +476,8 @@ header {
 .picture {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.1);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .category-link a {
@@ -525,6 +522,8 @@ header {
 .meta__content {
   text-align: left;
   font-family: "Satoshi-Medium";
+  display: flex;
+  flex-direction: column;
 }
 .meta__content p {
   padding: 16px 0;
@@ -545,13 +544,13 @@ header {
   color: #191919;
   font-size: 1.2rem;
 }
-.meta__content a:last-child {
+.meta__content a:first-child {
   color: #0F4BF1;
   font-size: 1rem;
   margin-top: 16px;
   text-decoration: underline;
 }
-.meta__content a:last-child:hover {
+.meta__content a:first-child:hover {
   text-decoration: none;
 }
 
@@ -1209,7 +1208,8 @@ header {
   width: 100%;
 }
 .article-list__picture > img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   top: 0;
   position: absolute;
@@ -1288,7 +1288,8 @@ header {
     width: 100%;
   }
   .article-list__picture > img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 100%;
     top: 0;
     position: absolute;
@@ -1410,7 +1411,8 @@ header {
   width: 100%;
 }
 .last-news__picture > img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   top: 0;
   position: absolute;
@@ -1491,7 +1493,8 @@ header {
   background-size: 100% 100%;
   background-position: center center;
   background-size: contain;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .debate .single-hero .single-thumb img {
   right: 0;
@@ -1503,7 +1506,8 @@ header {
   background-size: 100% 100%;
   background-position: center center;
   background-size: contain;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .debate .single-hero .category-link a {
   color: white;
@@ -1787,6 +1791,4 @@ header {
   .page-sidebar__link--btn {
     margin: 24px;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
