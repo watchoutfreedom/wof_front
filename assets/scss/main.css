@@ -781,6 +781,8 @@ header {
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
+  width: 400px;
+  max-width: 90%;
 }
 .wrap--login h2 {
   color: white;
@@ -789,6 +791,7 @@ header {
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
   margin: 8px 0;
+  width: 100%;
 }
 .wrap--login input[type=submit] {
   background: white;
