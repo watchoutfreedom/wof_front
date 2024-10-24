@@ -942,14 +942,13 @@ header {
   max-width: 1280px;
   margin: 0 auto 2rem auto;
   background: #191919;
-  padding: 8rem 2rem;
+  padding: 8rem 1rem;
   text-align: center;
   color: white;
 }
 
 .hero__title {
   font-family: "Satoshi-Bold";
-  width: 80%;
   margin: auto;
   font-size: 3rem;
   font-weight: bold;
@@ -972,6 +971,7 @@ header {
   }
   .hero__title {
     font-size: 4rem;
+    width: 80%;
   }
 }
 .main {
