@@ -15,22 +15,32 @@
 
 
       <?php
-      // Try to fetch the 'donar' field by name
-      $donar_link = get_field('donations_link'); // Use the exact field name from ACF
+// Attempt to fetch the 'donations_link' field via ACF
+$donar_link = get_field('donations_link');
 
-      // Debugging output
-      echo '<pre>';
-      echo 'Field Name: donar<br>';
-      echo 'Field Value: ';
-      var_dump($donar_link); // Check what value is retrieved
-      echo '</pre>';
+// Debugging output for ACF result
+echo '<pre>';
+echo 'Using get_field("donations_link"):<br>';
+var_dump($donar_link);
+echo '</pre>';
 
-      // Conditional check to display link if not empty
-      if ($donar_link): ?>
-          <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
-      <?php else: ?>
-          <p>No Donar Link available.</p> <!-- Temporary message to indicate when the link is empty -->
-      <?php endif; ?>
+// If ACF returns null, try getting the field with get_post_meta as a fallback
+if (!$donar_link) {
+    $donar_link = get_post_meta(get_the_ID(), 'donations_link', true); // Fetch directly from post meta
+    
+    // Debugging output for get_post_meta result
+    echo '<pre>';
+    echo 'Using get_post_meta("donations_link"):<br>';
+    var_dump($donar_link);
+    echo '</pre>';
+}
+
+// Conditional check to display link if not empty
+if ($donar_link): ?>
+    <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
+<?php else: ?>
+    <p>No Donar Link available.</p> <!-- Message to show if the field is empty -->
+<?php endif; ?>
 
 
 
