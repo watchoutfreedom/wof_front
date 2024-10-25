@@ -16,7 +16,7 @@
 
       <?php
       // Try to fetch the 'donar' field by name
-      $donar_link = get_field('donar'); // Use the exact field name from ACF
+      $donar_link = get_field('donations_link'); // Use the exact field name from ACF
 
       // Debugging output
       echo '<pre>';
