@@ -15,14 +15,21 @@
 
 
       <?php
-        $donar_link = get_field('donaciones');
+      // Try to fetch the 'donar' field by name
+      $donar_link = get_field('donar'); // Use the exact field name from ACF
 
-        echo '<pre>Donar Link: ';
-        var_dump($donar_link);
-        echo '</pre>';
+      // Debugging output
+      echo '<pre>';
+      echo 'Field Name: donar<br>';
+      echo 'Field Value: ';
+      var_dump($donar_link); // Check what value is retrieved
+      echo '</pre>';
 
-        if ($donar_link): ?>
+      // Conditional check to display link if not empty
+      if ($donar_link): ?>
           <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
+      <?php else: ?>
+          <p>No Donar Link available.</p> <!-- Temporary message to indicate when the link is empty -->
       <?php endif; ?>
 
 
