@@ -5,7 +5,7 @@ Template Name: formacion
 get_header();
 ?>
 <div class="hero">
-  <h1 class="hero__title">Formación</h1>
+  <h1 class="hero__title">Divulgación</h1>
   <div class="hero__description">Charlas y cursos que ofrecemos, junto a colaboradores de la asociación, a entidades interesadas. Pregúntanos sobre ellas.</div>
 </div>
 
