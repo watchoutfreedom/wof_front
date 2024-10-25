@@ -72,7 +72,7 @@ get_header();
 
    // Display entities
    if (!empty($entities)) {
-      echo '<h2>Entidades</h2>';
+      echo '<h2>Entidades colaboradoras</h2>';
       echo '<ul id="grid-contributors">';
       foreach($entities as $entitie) {
          $display_name = $entitie['data']->display_name;
