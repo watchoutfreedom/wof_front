@@ -1264,6 +1264,9 @@ header {
     width: 80%;
     transform: translate(100px, -120px);
   }
+  .home__post .article-list__author {
+    transform: translate(100px, -120px);
+  }
 }
 @media only screen and (min-width: 1024px) {
   .home__post .article-list__title {
