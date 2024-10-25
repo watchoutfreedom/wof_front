@@ -40,7 +40,8 @@ get_header();
 
       // Check if 'show_community_page' is checked for the author
       $show_community_page = get_user_meta($user->ID, 'show_community_page', true);
-      if ($show_community_page) {
+      $entidad = get_user_meta($user->ID, 'entidad', true);
+      if ($show_community_page && !$entidad) {
           $authors[] = (array) $user;
       }
 
