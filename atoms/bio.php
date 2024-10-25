@@ -13,8 +13,21 @@
      </div>
       <p><?php the_author_description(); ?></p>
 
+
+      <?php
+        $donar_link = get_field('donar');
+
+        echo '<pre>Donar Link: ';
+        var_dump($donar_link);
+        echo '</pre>';
+
+        if ($donar_link): ?>
+          <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
+      <?php endif; ?>
+
       <?php
       $donar_link = get_field('field_6534082571f05');
+
       if ($donar_link): ?>
         <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
       <?php endif; ?>
