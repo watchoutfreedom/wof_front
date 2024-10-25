@@ -30,6 +30,7 @@ get_header();
       $blogusers = get_users('exclude='.$exclude.'&orderby='.$order_by.'&order='.$order.'&role='.$role);
    }
    $authors = array();
+   $entities = array();
    foreach ($blogusers as $bloguser) {
       $user = get_userdata($bloguser->ID);
       if(!empty($hide_empty)) {
@@ -42,6 +43,12 @@ get_header();
       if ($show_community_page) {
           $authors[] = (array) $user;
       }
+
+      // Check if 'show_community_page' is checked for the author
+      $entidad = get_user_meta($user->ID, 'entidad', true);
+      if ($entidad) {
+            $entities[] = (array) $user;
+      }
    }
 
    // Display authors who have 'show_community_page' checked
@@ -51,6 +58,23 @@ get_header();
          $display_name = $author['data']->display_name;
          $avatar = get_avatar($author['ID'], $avatar_size);
          $author_profile_url = get_author_posts_url($author['ID']);
+         echo '<li class="single-item">';
+         echo '<div class="author-gravatar"><a href="', $author_profile_url, '">', $avatar , '</a></div>';
+         echo '<div class="author-name"><a href="', $author_profile_url, '" class="contributor-link">', $display_name, '</a></div>';
+         echo '</li>';
+      }
+      echo '</ul>';
+   } else {
+      echo '<p>No contributors found.</p>';
+   }
+
+   // Display entities
+   if (!empty($entities)) {
+      echo '<ul id="grid-contributors">';
+      foreach($entities as $entitie) {
+         $display_name = $entitie['data']->display_name;
+         $avatar = get_avatar($entitie['ID'], $avatar_size);
+         $author_profile_url = get_author_posts_url($entitie['ID']);
          echo '<li class="single-item">';
          echo '<div class="author-gravatar"><a href="', $author_profile_url, '">', $avatar , '</a></div>';
          echo '<div class="author-name"><a href="', $author_profile_url, '" class="contributor-link">', $display_name, '</a></div>';
