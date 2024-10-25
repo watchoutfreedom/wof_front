@@ -15,7 +15,7 @@
 
 
       <?php
-        $donar_link = get_field('donar');
+        $donar_link = get_field('donaciones');
 
         echo '<pre>Donar Link: ';
         var_dump($donar_link);
@@ -25,14 +25,8 @@
           <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
       <?php endif; ?>
 
-      <?php
-      $donar_link = get_field('field_6534082571f05');
 
-      if ($donar_link): ?>
-        <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
-      <?php endif; ?>
 
-      <a href="<?php the_field('field_670f89bf1a40f'); ?>"><?php the_field('field_670f89bf1a40f'); ?></a>
     </div>
   </div>
 </div>
