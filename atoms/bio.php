@@ -19,7 +19,7 @@
 
       // Conditional check to display link if not empty
       if ($donar_link): ?>
-          <a href="<?php echo esc_url($donar_link); ?>">Donar</a>
+          <a href="<?php echo esc_url($donar_link); ?>">Donar al autor</a>
       <?php endif; ?>
 
     </div>
