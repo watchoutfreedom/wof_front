@@ -192,6 +192,38 @@ function allow_authors_to_publish_pending_posts() {
 }
 add_action('init', 'allow_authors_to_publish_pending_posts');
 
+add_action('acf/input/admin_footer', 'acf_add_clear_button_to_post_object');
+function acf_add_clear_button_to_post_object() {
+    ?>
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                // Select your post object field by name or ID
+                var postObjectField = $('.acf-field-post-object .select2-selection__rendered');
+
+                // Append a clear button next to the field if it's filled
+                postObjectField.each(function() {
+                    var field = $(this);
+                    if (!field.find('.clear-button').length) {
+                        field.append('<span class="clear-button" style="cursor:pointer; color:red; margin-left:5px;">Clear</span>');
+                    }
+                });
+
+                // Add click event to clear the field when 'Clear' is clicked
+                $(document).on('click', '.clear-button', function() {
+                    var field = $(this).closest('.acf-field-post-object');
+                    field.find('select').val(null).trigger('change'); // Clear the selection
+                    $(this).remove(); // Remove the clear button after clearing
+                });
+            });
+        })(jQuery);
+    </script>
+    <style>
+        .clear-button { font-weight: bold; }
+    </style>
+    <?php
+}
+
 
 /**
  * Rename the contributor role to "Conversador".

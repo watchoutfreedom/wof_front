@@ -32,7 +32,7 @@
                 </div>
                 <?php if(get_post_status($post->ID) == 'pending'){ ?>
               <div class="pending single-default__intro">
-              Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
+                Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
               </div>
               <?php } ?> 
               </div>
@@ -63,10 +63,10 @@
               src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44d.svg"><span>He aprendido</span>
               <img id="rating_1425_2" onkeypress="rate_post();" onclick="rate_post();" 
               draggable="false" role="img" class="emoji" alt="👍" 
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f610.svg"><span>He aprendido</span>
+              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f610.svg"><span>Indiferente</span>
               <img id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();" 
               draggable="false" role="img" class="emoji" alt="👍" 
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44e.svg"><span>He aprendido</span>
+              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44e.svg"><span>Está equivocado</span>
                 </div>         
               </div>
 

@@ -24,6 +24,8 @@
 .meta__content {
   text-align: left;
   font-family: 'Satoshi-Medium';
+  display: flex;
+  flex-direction: column;
 
   p {
     padding: 16px 0;
@@ -48,7 +50,7 @@
     }
   }
 
-  a:last-child {
+  a:first-child {
     color: #0F4BF1;
     font-size: 1rem;
     margin-top: 16px;
