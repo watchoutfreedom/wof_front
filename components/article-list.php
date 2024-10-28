@@ -10,12 +10,6 @@
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
       <div class="article-list__date"> <?php the_time('d F Y'); ?></div>
     </a>
-      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
-        <h3 class="article-list__title">
-          <span><?php the_title(); ?></span>
-        </h3>
-      </a>
-      <div class="article-list__author"><?php the_author_posts_link(); ?></div>
       <div class="article-list__responses">
         <?php 
          $posts = get_posts(array(
@@ -28,7 +22,12 @@
         if($answer_to = get_field('answer_to')) echo " Respuesta a <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";
         ?>
       </div>
-
+      <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
+        <h3 class="article-list__title">
+          <span><?php the_title(); ?></span>
+        </h3>
+      </a>
+      <div class="article-list__author"><?php the_author_posts_link(); ?></div>
     </a>
   </div>
 </article>
