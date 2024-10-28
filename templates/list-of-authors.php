@@ -63,6 +63,7 @@ get_header();
          echo '<li class="single-item">';
          echo '<div class="author-gravatar"><a href="', $author_profile_url, '">', $avatar , '</a></div>';
          echo '<div class="author-name"><a href="', $author_profile_url, '" class="contributor-link">', $display_name, '</a></div>';
+         echo '<p><?php the_author_description(); ?></p>';
          echo '</li>';
       }
       echo '</ul>';
