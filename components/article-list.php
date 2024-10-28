@@ -11,41 +11,29 @@
       <div class="article-list__date"> <?php the_time('d F Y'); ?></div>
     </a>
       <div class="article-list__responses">
-
       <?php 
-          $posts = get_posts(array(
-              'numberposts'   => -1,
-              'post_type'     => 'post',
-              'meta_key'      => 'answer_to',
-              'meta_value'    => get_the_ID(),
-          ));
+        $posts = get_posts(array(
+            'numberposts'   => -1,
+            'post_type'     => 'post',
+            'meta_key'      => 'answer_to',
+            'meta_value'    => get_the_ID(),
+        ));
 
-          echo '<pre>Posts with answer_to pointing to current post: ';
-          var_dump($posts);
-          echo '</pre>';
+        if (!empty($posts)) {
+            echo count($posts) . " respuestas";
+        }
 
-          if (!empty($posts)) {
-              echo count($posts) . " respuestas";
-          }
+        $answer_to = get_field('answer_to');
 
-          $answer_to_exists = get_field('answer_to');
-          echo '<pre>Does answer_to field exist? ';
-          var_dump($answer_to_exists);
-          echo '</pre>';
+        if ($answer_to) {
+            $answer_to_permalink = get_permalink($answer_to);
+            $answer_to_title = get_the_title($answer_to);
 
-          if ($answer_to_exists) {
-              $answer_to = get_field('answer_to'); 
-              
-              echo '<pre>Value of answer_to field: ';
-              var_dump($answer_to);
-              echo '</pre>';
-              
-              if ($answer_to) {
-                  echo " Respuesta a <a class='answer__to' href='" . esc_url(get_permalink($answer_to)) . "'>" . esc_html(get_the_title($answer_to)) . "</a>";
-              }
-          }
-          ?>
-
+            if ($answer_to_permalink && $answer_to_title) {
+                echo " Respuesta a <a class='answer__to' href='" . esc_url($answer_to_permalink) . "'>" . esc_html($answer_to_title) . "</a>";
+            }
+        }
+        ?>
       </div>
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
         <h3 class="article-list__title">
