@@ -31,7 +31,7 @@ get_header();
     <div class="wrap__box wrap__box--news">
       <h3 class="wrap__title">Divulgación</h3>
       <?php $the_query = new WP_Query('showposts=6&category_name=divulgacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <?php get_template_part('components/debate-list'); ?>
+      <?php get_template_part('components/formacion-list'); ?>
       <?php endwhile; ?>
     </div>
   </div>
