@@ -114,6 +114,8 @@ input:focus {
 /* All of our custom controls should be what we expect them to be */
 input,
 textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -125,6 +127,8 @@ input[type=submit],
 input[type=checkbox],
 input[type=radio],
 select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -476,8 +480,7 @@ header {
 .picture {
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.1);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .category-link a {
@@ -817,6 +820,7 @@ header {
 }
 
 .single-item {
+  flex: 0 1 20%;
   padding-bottom: 24px;
   padding-right: 24px;
 }
@@ -1208,8 +1212,7 @@ header {
   width: 100%;
 }
 .article-list__picture > img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   top: 0;
   position: absolute;
@@ -1291,8 +1294,7 @@ header {
     width: 100%;
   }
   .article-list__picture > img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     height: 100%;
     top: 0;
     position: absolute;
@@ -1414,8 +1416,7 @@ header {
   width: 100%;
 }
 .last-news__picture > img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   top: 0;
   position: absolute;
@@ -1496,8 +1497,7 @@ header {
   background-size: 100% 100%;
   background-position: center center;
   background-size: contain;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .debate .single-hero .single-thumb img {
   right: 0;
@@ -1509,8 +1509,7 @@ header {
   background-size: 100% 100%;
   background-position: center center;
   background-size: contain;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .debate .single-hero .category-link a {
   color: white;
@@ -1794,4 +1793,6 @@ header {
   .page-sidebar__link--btn {
     margin: 24px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
