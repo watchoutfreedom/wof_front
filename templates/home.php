@@ -26,20 +26,21 @@ get_header();
       <?php endwhile; ?>
     </div>
   </div>
+  
+  <div class="wrap">
+    <div class="wrap__box wrap__box--news">
+      <h3 class="wrap__title">Divulgación</h3>
+      <?php $the_query = new WP_Query('showposts=6&category_name=divulgacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
+      <?php get_template_part('components/formacion'); ?>
+      <?php endwhile; ?>
+    </div>
+  </div>
 
   <div class="wrap">
     <div class="wrap__box wrap__box--shop">
       <h3 class="wrap__title">Tienda</h3>
       <?php $the_query = new WP_Query('showposts=4&category_name=tienda'); while ($the_query->have_posts()) : $the_query->the_post();?>
         <?php get_template_part('components/product'); ?>
-      <?php endwhile; ?>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="wrap__box wrap__box--news">
-      <h3 class="wrap__title">Novedades WOF</h3>
-      <?php $the_query = new WP_Query('showposts=12&category_name=noticias'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <?php get_template_part('components/noticia'); ?>
       <?php endwhile; ?>
     </div>
   </div>
