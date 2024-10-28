@@ -270,7 +270,7 @@ function change_role_name() {
 	}
   }
   
-//   add_action('save_post', 'send_pending_post_email');
+  add_action('save_post', 'send_pending_post_email');
 
   
 
