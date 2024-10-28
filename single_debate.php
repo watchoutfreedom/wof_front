@@ -57,19 +57,23 @@
 
             <div class="meta">
               <div class="meta__valorate">
-              <div id="post-ratings-1425" class="post-ratings" itemscope="" itemtype="https://schema.org/Article" data-nonce="6660c12267">
-              <img id="rating_1425_1" onkeypress="rate_post();" onclick="rate_post();" 
-              draggable="false" role="img" class="emoji" alt="👍" 
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44d.svg"><span>He aprendido</span>
-              <img id="rating_1425_2" onkeypress="rate_post();" onclick="rate_post();" 
-              draggable="false" role="img" class="emoji" alt="👍" 
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f610.svg"><span>Indiferente</span>
-              <img id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();" 
-              draggable="false" role="img" class="emoji" alt="👍" 
-              src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44e.svg"><span>Está equivocado</span>
+                <div id="post-ratings-1425" class="post-ratings" itemscope="" itemtype="https://schema.org/Article" data-nonce="6660c12267">
+    
+                  <div class="meta__valorate--btn" id="rating_1425_1" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
+                    <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44d.svg"><span>He aprendido</span>
+                  </div>
+
+                  <div class="meta__valorate--btn" id="rating_1425_2" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
+                    <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f610.svg"><span>He aprendido</span>
+                  </div>
+
+                  <div class="meta__valorate--btn" id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
+                    <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44e.svg"><span>He aprendido</span>
+                  </div>
+                
+
                 </div>         
               </div>
-
 
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
