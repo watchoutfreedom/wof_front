@@ -45,8 +45,6 @@ $article-list-paragraph-color: $color-dark-gray;
 
 .article-list__picture {
   @include aspect-ratio(2,1.5);
-
-  margin-top: 2.2rem;
 }
 
 .home__post {
