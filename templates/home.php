@@ -26,15 +26,6 @@ get_header();
       <?php endwhile; ?>
     </div>
   </div>
-  
-  <div class="wrap">
-    <div class="wrap__box wrap__box--news">
-      <h3 class="wrap__title">Divulgación</h3>
-      <?php $the_query = new WP_Query('showposts=6&category_name=divulgacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <?php get_template_part('components/formacion'); ?>
-      <?php endwhile; ?>
-    </div>
-  </div>
 
   <div class="wrap">
     <div class="wrap__box wrap__box--shop">
