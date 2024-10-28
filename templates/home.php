@@ -7,7 +7,7 @@ get_header();
 <div class="home">
 <div class="hero">
     <h1 class="hero__title">Conoce el otro lado.</h1>
-    <div class="hero__description">Wof es una asociación que fomenta la cooperación social, el debate y el conocimiento en materias afectadas por la desinformación o el desinterés del statu quo.</div>
+    <div class="hero__description">WOF! fomenta la cooperación social, el debate y el conocimiento en materias afectadas por la desinformación o el desinterés del statu quo.</div>
   </div>
   <div class="wrap">
     <div class="wrap__box wrap__box--author">
