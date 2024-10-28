@@ -12,22 +12,25 @@
     </a>
       <div class="article-list__responses">
       <?php 
-        $posts = get_posts(array(
-            'numberposts'   => -1,
-            'post_type'     => 'post',
-            'meta_key'      => 'answer_to',
-            'meta_value'    => get_the_ID(),
-        ));
+          $posts = get_posts(array(
+              'numberposts'   => -1,
+              'post_type'     => 'post',
+              'meta_key'      => 'answer_to',
+              'meta_value'    => get_the_ID(),
+          ));
 
-        if (!empty($posts)) {
-            echo count($posts) . " respuestas";
-        }
+          if (!empty($posts)) {
+              echo count($posts) . " respuestas";
+          }
 
-        $answer_to = get_field('answer_to');
-        if ($answer_to) {
-            echo " Respuesta a <a class='answer__to' href='" . esc_url(get_permalink($answer_to)) . "'>" . esc_html(get_the_title($answer_to)) . "</a>";
-        }
+          if (get_field('answer_to')) {
+              $answer_to = get_field('answer_to'); // Retrieve the field's value
+              if ($answer_to) {
+                  echo " Respuesta a <a class='answer__to' href='" . esc_url(get_permalink($answer_to)) . "'>" . esc_html(get_the_title($answer_to)) . "</a>";
+              }
+          }
         ?>
+
       </div>
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
         <h3 class="article-list__title">
