@@ -2,13 +2,14 @@ $main-color: $color-dark-gray;
 $main-font-family: $font-body;
 $main-title-font-family: $font-heading;
 $main-a-color: $color-corporative;
-$main-blockquote-font-family: $font-heading;
+$main-blockquote-font-family: 'Satoshi-Bold';
+
 
 .main {
-  color: $main-color;
+  color: $color-black;
   font-family: $font-main;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 30px;
 
   img {
     @extend .flash;
@@ -31,7 +32,7 @@ $main-blockquote-font-family: $font-heading;
   ul,
   ol {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
    //max-width: 100%;
   }
 
@@ -110,21 +111,15 @@ $main-blockquote-font-family: $font-heading;
     }
   }
 
-  blockquote {
-    font-family: $main-blockquote-font-family;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding: 2rem;
-    text-align: center;
-  }
 
-  blockquote:before {
-    background: $color-ligth-gray;
-    content: '';
-    display: block;
-    height: 2px;
-    margin: 0 auto 1rem auto;
-    width: 200px;
+  blockquote {
+    color: black;
+    font-family: $main-blockquote-font-family;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+    background: #fbfbfb;
+    padding: 2rem 2rem;
   }
 
   .wp-caption-text {
@@ -155,6 +150,14 @@ $main-blockquote-font-family: $font-heading;
   transform: translateY(-12px);
 }
 
+.main__title {
+  font-family: 'Satoshi-Bold';
+  color: black;
+  font-size: .85rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @media #{$breakpoints-medium} {
   .main {
     font-size: 18px;
@@ -182,6 +185,10 @@ $main-blockquote-font-family: $font-heading;
 
     h6 {
       font-size: 1rem;
+    }
+    blockquote {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
     }
 
     .wp-block-image {

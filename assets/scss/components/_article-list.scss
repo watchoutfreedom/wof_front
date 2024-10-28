@@ -45,15 +45,11 @@ $article-list-paragraph-color: $color-dark-gray;
 
 .article-list__picture {
   @include aspect-ratio(2,1.5);
-
-  margin-top: 2.2rem;
 }
 
 .home__post {
   .article-list__title {
-    width: 80%;
     color: white;
-    transform: translate(100px, -120px);
     font-size: 32px;
     line-height: 40px;
 
@@ -102,6 +98,16 @@ $pgs-desktop: 32px;
     .article-list {
       flex: 0 1 calc( 100%/3 );
       padding-right: $pgs-desktop;
+    }
+  }
+
+  .home__post {
+    .article-list__title {
+      width: 80%;
+      transform: translate(100px, -120px);
+    }
+    .article-list__author {
+      transform: translate(100px, -120px);
     }
   }
 }

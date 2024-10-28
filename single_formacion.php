@@ -31,17 +31,24 @@
                 </div>
               </div>
           </div>
-          <div class="single-default__meta">
-            <?php get_template_part('atoms/meta'); ?>
-          </div>
           <div class="main single-default__main">
+          <?php the_field('field_63752e3ee91da'); ?>
             <?php the_content("Sigue leyendo"); ?>
-        </div>
+          </div>
       <?php endwhile; else: ?>
         <?php include (TEMPLATEPATH . '/404.php'); ?>
       <?php endif; ?>
     </article>
   </main>
+
+  <div class="colabora colabora--show">
+    <h3 class="colabora__title">
+      Si deseas pedir una formación a medida no dudes en escribirnos
+    </h3>
+    <a href="mailto:mail@watchoutfreedom.com">mail@watchoutfreedom.com</a>
+  </div>
+
+
   <?php get_template_part('components/colabora'); ?>
 
   <?php get_template_part('components/list-formacion'); ?>

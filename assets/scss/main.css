@@ -302,6 +302,7 @@ a {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.header__nav .page-item-1454,
 .header__nav .page-item-335,
 .header__nav .page-item-1073,
 .header__nav .page-item-232 {
@@ -524,6 +525,8 @@ header {
 .meta__content {
   text-align: left;
   font-family: "Satoshi-Medium";
+  display: flex;
+  flex-direction: column;
 }
 .meta__content p {
   padding: 16px 0;
@@ -536,17 +539,21 @@ header {
   padding: 8px 0;
   text-decoration: underline;
 }
-.meta__content a:first-child {
+.meta__content .meta__name-link {
   color: #191919;
   font-size: 1.2rem;
 }
-.meta__content a:last-child {
+.meta__content .meta__name-link a {
+  color: #191919;
+  font-size: 1.2rem;
+}
+.meta__content a:first-child {
   color: #0F4BF1;
   font-size: 1rem;
   margin-top: 16px;
   text-decoration: underline;
 }
-.meta__content a:last-child:hover {
+.meta__content a:first-child:hover {
   text-decoration: none;
 }
 
@@ -565,7 +572,8 @@ header {
   flex-flow: row wrap;
   padding-bottom: 2rem;
 }
-.meta__valorate a {
+
+.meta__valorate--btn {
   font-size: 0.95rem;
   display: inline-block;
   margin: 0 16px 0 0;
@@ -576,10 +584,10 @@ header {
   opacity: 0.65;
   transition: 0.2s;
 }
-.meta__valorate a span {
+.meta__valorate--btn span {
   margin-right: 8px;
 }
-.meta__valorate a:hover {
+.meta__valorate--btn:hover {
   opacity: 1;
   text-decoration: none !important;
 }
@@ -619,7 +627,6 @@ header {
 }
 
 .wrap__box--author .article-list__author {
-  transform: translate(100px, -120px);
   display: block;
   font-size: 1.15rem;
   font-family: "Satoshi-Medium";
@@ -651,6 +658,7 @@ header {
 .wrap__title {
   margin-top: 2rem;
   font-weight: bold;
+  padding-bottom: 1rem;
   font-size: 1.5rem;
 }
 
@@ -659,7 +667,6 @@ header {
   flex: 0 1 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
 }
 .wrap__box--news .article-list__response,
 .wrap__box--debate .article-list__response {
@@ -727,8 +734,10 @@ header {
 .wrap--createpost {
   display: block;
 }
+.wrap--signup input[type=password],
 .wrap--signup input[type=text],
 .wrap--signup textarea,
+.wrap--createpost input[type=password],
 .wrap--createpost input[type=text],
 .wrap--createpost textarea {
   border-radius: 4px;
@@ -738,8 +747,10 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--signup input[type=password]:focus,
 .wrap--signup input[type=text]:focus,
 .wrap--signup textarea:focus,
+.wrap--createpost input[type=password]:focus,
 .wrap--createpost input[type=text]:focus,
 .wrap--createpost textarea:focus {
   border-color: #191919;
@@ -747,6 +758,31 @@ header {
 .wrap--signup .add_media,
 .wrap--createpost .add_media {
   color: #191919 !important;
+}
+
+.wrap--login {
+  height: calc(100vh - 70px);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  max-width: 90%;
+}
+.wrap--login h2 {
+  color: white;
+  padding: 24px 0;
+}
+.wrap--login input[type=password],
+.wrap--login input[type=text] {
+  margin: 8px 0;
+  width: 100%;
+}
+.wrap--login input[type=submit] {
+  background: white;
+  color: black !important;
+  margin: 16px 0;
 }
 
 .excerp--response {
@@ -773,6 +809,22 @@ header {
 .acf-label .description {
   font-size: 0.85rem;
   opacity: 0.8;
+}
+
+#grid-contributors {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.single-item {
+  flex: 0 1 20%;
+  padding-bottom: 24px;
+  padding-right: 24px;
+}
+
+.author-name {
+  padding: 8px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -827,6 +879,9 @@ header {
 @media only screen and (min-width: 1024px) {
   .colabora {
     display: none;
+  }
+  .colabora--show {
+    display: block;
   }
 }
 .product {
@@ -890,14 +945,13 @@ header {
   max-width: 1280px;
   margin: 0 auto 2rem auto;
   background: #191919;
-  padding: 8rem 4rem;
+  padding: 8rem 1rem;
   text-align: center;
   color: white;
 }
 
 .hero__title {
   font-family: "Satoshi-Bold";
-  width: 80%;
   margin: auto;
   font-size: 3rem;
   font-weight: bold;
@@ -916,16 +970,18 @@ header {
 @media only screen and (min-width: 768px) {
   .hero {
     margin: 2rem auto;
+    padding: 8rem 4rem;
   }
   .hero__title {
     font-size: 4rem;
+    width: 80%;
   }
 }
 .main {
-  color: #555555;
+  color: #191919;
   font-family: "Roboto Serif", serif;
-  font-size: 15px;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 30px;
 }
 .main img {
   display: block;
@@ -944,7 +1000,7 @@ header {
 .main ul,
 .main ol {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 .main div {
   margin: 2rem 0;
@@ -1008,19 +1064,13 @@ header {
   text-decoration: underline;
 }
 .main blockquote {
-  font-family: "Satoshi-Medium", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding: 2rem;
-  text-align: center;
-}
-.main blockquote:before {
-  background: rgba(0, 0, 0, 0.4);
-  content: "";
-  display: block;
-  height: 2px;
-  margin: 0 auto 1rem auto;
-  width: 200px;
+  color: black;
+  font-family: "Satoshi-Bold";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  background: #fbfbfb;
+  padding: 2rem 2rem;
 }
 .main .wp-caption-text {
   font-family: "Satoshi-Medium", sans-serif;
@@ -1047,6 +1097,14 @@ header {
   transform: translateY(-12px);
 }
 
+.main__title {
+  font-family: "Satoshi-Bold";
+  color: black;
+  font-size: 0.85rem;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @media only screen and (min-width: 768px) {
   .main {
     font-size: 18px;
@@ -1069,6 +1127,10 @@ header {
   }
   .main h6 {
     font-size: 1rem;
+  }
+  .main blockquote {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
   }
   .main .wp-block-image {
     transform: translateX(-16px);
@@ -1139,7 +1201,6 @@ header {
 .article-list__picture {
   position: relative;
   overflow: hidden;
-  margin-top: 2.2rem;
 }
 .article-list__picture:before {
   padding-top: calc(1.5 / 2 * 100%);
@@ -1157,9 +1218,7 @@ header {
 }
 
 .home__post .article-list__title {
-  width: 80%;
   color: white;
-  transform: translate(100px, -120px);
   font-size: 32px;
   line-height: 40px;
 }
@@ -1200,6 +1259,13 @@ header {
   .page-sidebar__content .article-list {
     flex: 0 1 33.3333333333%;
     padding-right: 32px;
+  }
+  .home__post .article-list__title {
+    width: 80%;
+    transform: translate(100px, -120px);
+  }
+  .home__post .article-list__author {
+    transform: translate(100px, -120px);
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1400,7 +1466,7 @@ header {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  height: 70vh;
+  min-height: 70vh;
   background: #191919;
   position: relative;
   overflow: hidden;
@@ -1412,7 +1478,7 @@ header {
 }
 .debate .single-hero .single-default__presentation {
   position: relative;
-  padding: 0 16px;
+  padding: 84px 16px 0 16px;
   z-index: 2;
 }
 .debate .single-hero .single-thumb {
@@ -1514,8 +1580,8 @@ header {
 
 .single-default__title {
   font-family: "Satoshi-Bold";
-  font-size: 3rem;
-  line-height: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 44px;
   padding-top: 0.5rem;
   padding-bottom: 1.5rem;
   text-align: center;

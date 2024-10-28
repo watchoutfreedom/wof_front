@@ -20,7 +20,6 @@
 
 .wrap__box--author {
   .article-list__author {
-    transform: translate(100px, -120px);
     display: block;
     font-size: 1.15rem;
     font-family: 'Satoshi-Medium';
@@ -56,6 +55,7 @@
 .wrap__title {
   margin-top: 2rem;
   font-weight: bold;
+  padding-bottom: 1rem;
   font-size: 1.5rem;
 }
 
@@ -64,7 +64,6 @@
   flex: 0 1 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
 
   .article-list__response {
     display: block;
@@ -142,6 +141,7 @@
 .wrap--createpost {
   display: block;
 
+  input[type="password"],
   input[type="text"],
   textarea {
     border-radius: 4px;
@@ -158,6 +158,34 @@
 
   .add_media {
     color: $color-black !important;
+  }
+}
+
+.wrap--login {
+  height: calc( 100vh - 70px );
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;;
+  justify-content: center;
+  width: 400px;
+  max-width: 90%;
+
+  h2 {
+    color: white;
+    padding: 24px 0;
+  }
+
+  input[type="password"],
+  input[type="text"] {
+    margin: 8px 0;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    background: white;
+    color: black !important;
+    margin: 16px 0;
   }
 }
 
@@ -188,6 +216,22 @@
     font-size: .85rem;
     opacity: .8;
   }
+}
+
+#grid-contributors {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.single-item {
+  flex: 0 1 20%;
+  padding-bottom: 24px;
+  padding-right: 24px;
+}
+
+.author-name {
+  padding: 8px 0;
 }
 
 @media #{$breakpoints-medium} {

@@ -4,14 +4,13 @@ $hero-padding: 2rem;
   max-width: 1280px;
   margin: 0 auto $hero-padding auto;
   background: $color-black;
-  padding: 8rem 4rem;
+  padding: 8rem 1rem;
   text-align: center;
   color: white;
 }
 
 .hero__title {
   font-family: 'Satoshi-Bold';
-  width: 80%;
   margin: auto;
   font-size: 3rem;
   font-weight: bold;
@@ -31,9 +30,11 @@ $hero-padding: 2rem;
 @media #{$breakpoints-medium} {
   .hero {
     margin: $hero-padding auto;
+    padding: 8rem 4rem;
   }
 
   .hero__title {
     font-size: 4rem;
+    width: 80%;
   }
 }

@@ -7,6 +7,11 @@
 				<div class="main single-noticias__main product__main">
 					<div class="maincontent"><?php the_field('field_63752e3ee91da'); ?></div>
 					<?php the_content("Sigue leyendo"); ?>
+
+					<div class="main__tags">
+						<p class="main__title">Tags</p>
+						<?php the_tags(''); ?>
+					</div>
 				</div>
 			</div>
 			<div class="product__sidebar">

@@ -18,7 +18,8 @@
                   </div>
                 </div>
               </header>
-              <div class="single-thumb"><?php the_post_thumbnail('fotogrande'); ?></div>
+              <div class="single-thumb">
+                <?php the_post_thumbnail('fotogrande'); ?></div>
               <div class="single-default__presentation">
                 <div class="single-default__category">
                   <?php get_template_part('atoms/category-link'); ?>
@@ -29,7 +30,13 @@
                 <div class="single-default__intro">
                   <?php the_field('field_6375315c72e9d'); ?>
                 </div>
+                <?php if(get_post_status($post->ID) == 'pending'){ ?>
+              <div class="pending single-default__intro">
+                Gracias por mandar tu respuesta. La publicaremos cuando un autor la revise.
               </div>
+              <?php } ?> 
+              </div>
+              
           </div>
           <div class="single-default__meta">
             <?php get_template_part('atoms/meta'); ?>
@@ -39,32 +46,48 @@
               <div class="answer_to"><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
               <?php the_field('field_63752e3ee91da'); ?>
               <?php the_content("Sigue leyendo"); ?>
+              <?php get_template_part('atoms/biblio'); ?>
+
             </div>
 
-
+                
             <div class="single-default__meta">
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
-            
-            <div class="main single-default__main">
-            <div class="meta__valorate">
-              <a href="#"><span>👍</span> He aprendido</a>
-              <a href="#"><span>😐</span> Indiferente</a>
-              <a href="#"><span>👎</span> Está equivocado</a>            
-            </div>
+            <div class="meta">
+              <div class="meta__valorate">
+              <div id="post-ratings-1425" class="post-ratings" itemscope="" itemtype="https://schema.org/Article" data-nonce="6660c12267">
+                            
+              <div class="meta__valorate--btn" id="rating_1425_1" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
+                <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44d.svg"><span>He aprendido</span>
+              </div>
 
-            <?php 
-              if(wp_get_current_user()->ID == $post->post_author 
-              //|| current_user_can( 'edit_others_posts', $post->ID)
-              ){
-                  echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
-              }
-              else{
-                  echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
-              }
-            ?>
+              <div class="meta__valorate--btn" id="rating_1425_2" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
+                <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f610.svg"><span>Indiferente</span>
+              </div>
+
+              <div class="meta__valorate--btn" id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
+                <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44e.svg"><span>Está equivocado</span>
+              </div>
             
+            
+            </div>         
+              
+              </div>
+
+
+              <?php 
+                if(wp_get_current_user()->ID == $post->post_author 
+                //|| current_user_can( 'edit_others_posts', $post->ID)
+                ){
+                    echo "<a class='button' href='/create-post?action=edit&id=".$post->ID."'>EDITAR</a>";
+                }
+                else{
+                    echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
+                }
+              ?>
+            </div>
               
              <div class="answers">
             <?php     
@@ -97,6 +120,9 @@
     </article>
  
   </main>
+
+
+</script>
   <?php get_template_part('components/colabora'); ?>
 
   <?php get_template_part('components/list-debate'); ?>

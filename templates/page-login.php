@@ -4,6 +4,8 @@
 */
 ?>
 
+<?php get_header(); ?>
+
 <?php
 if ( is_user_logged_in() ) {
     wp_redirect(home_url());
@@ -27,26 +29,61 @@ if ( is_user_logged_in() ) {
 
 if ( ! is_user_logged_in() ) {
 
-    if( isset($_GET['action']) && $_GET['action'] == 'lostpassword'){?>
+    if( isset($_GET['action']) && $_GET['action'] == 'lostpassword'){
+        
+        ?>
     
 
-        <div id="password-lost-form">
-            <h3><?php _e( 'Forgot Your Password?', 'personalize-login' ); ?></h3>
-        <p>
-            <?phpe("Enter your email address and we'll send you a link you can use to pick a new password.",'personalize_login');?>
-        </p>
+    <div id="password-lost-form">
+    <h3><?php _e( 'Forgot Your Password?', 'personalize-login' ); ?></h3>
+    <p>
+        <?php _e("Enter your email address and we'll send you a link you can use to pick a new password.",'personalize_login');?>
+    </p>
 
-        <form id="lostpasswordform" action="<?php echo wp_lostpassword_url(); ?>" method="post">
-                <input type="text" name="user_login" id="user_login" placeholder="Email">
-                <br>
-                <input type="submit" name="submit" class="button" value="<?php _e( 'Reset Password', 'personalize-login' ); ?>"/>
-        </form>
-        
-        <?php if($error) echo display_error_message($error);?>
+    <form id="lostpasswordform" action="<?php echo wp_lostpassword_url(); ?>" method="post">
+        <input type="text" name="user_login" id="user_login" placeholder="Email">
+        <br>
+        <input type="submit" name="submit" class="button" value="<?php _e( 'Reset Password', 'personalize-login' ); ?>"/>
+    </form>
 
-        </div>
+    <?php if($error) echo display_error_message($error);?>
 
-    <?php }
+    <?php
+    if($_POST['submit']) {
+        $email = $_POST['user_login'];
+        $user = get_user_by('email', $email);
+
+        if($user) {
+            $reset_key = wp_generate_password(12, false);
+            $user_id = $user->ID;
+
+            // Update the user with the reset key
+            update_user_meta($user_id, 'reset_key', $reset_key);
+
+            // Send the password reset email
+            $subject = 'Password Reset Request';
+            $body = 'Someone requested that the password be reset for the following account:<br><br>
+                    Site Name: ' . get_bloginfo('name') . '<br>
+                    Username: ' . $user->user_login . '<br>
+                    Email: ' . $user->user_email . '<br><br>
+                    To reset your password, visit the following address:<br>
+                    <a href="' . site_url('/wp-login.php?action=rp&key=' . $reset_key . '&login=' . $user->user_login) . '">Reset Password</a><br><br>
+                    Best regards,<br>
+                    ' . get_bloginfo('name') . ' Team';
+
+            wp_mail($email, $subject, $body);
+
+            echo '<p>Password reset email sent successfully.</p>';
+        } else {
+            echo '<p>User not found.</p>';
+        }
+    }
+    ?>
+</div>
+
+    <?php 
+    
+    }
 
     else{
 
@@ -74,6 +111,9 @@ if ( ! is_user_logged_in() ) {
         $form = str_replace('name="log"', 'name="log" placeholder="Username"', $form);
         $form = str_replace('name="pwd"', 'name="pwd" placeholder="Password"', $form);
         echo '
+        <div class="home">
+        <div class="wrap wrap--signup wrap--login">
+        <h2>Acceder</h2>
         <div class="login__container">
         ';
         echo $form;
@@ -87,6 +127,8 @@ if ( ! is_user_logged_in() ) {
     }
 
     echo '
+    </div>
+    </div>
     </div>
     ';
     

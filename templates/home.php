@@ -18,7 +18,7 @@ get_header();
         </div>
       <?php endwhile; ?>
     </div>
-    <div class="wrap__box">
+    <div class="wrap__box wrap__box--author">
       <?php $the_query = new WP_Query('showposts=3&category_name=debate&offset=3'); while ($the_query->have_posts()) : $the_query->the_post();?>
         <div class="home__post">
           <?php get_template_part('components/article-list'); ?>
@@ -29,9 +29,9 @@ get_header();
   
   <div class="wrap">
     <div class="wrap__box wrap__box--news">
-      <h3 class="wrap__title">Formaciones</h3>
-      <?php $the_query = new WP_Query('showposts=6&category_name=formacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <?php get_template_part('components/article-list'); ?>
+      <h3 class="wrap__title">Divulgación</h3>
+      <?php $the_query = new WP_Query('showposts=6&category_name=divulgacion'); while ($the_query->have_posts()) : $the_query->the_post();?>
+      <?php get_template_part('components/card-formacion'); ?>
       <?php endwhile; ?>
     </div>
   </div>
@@ -39,16 +39,17 @@ get_header();
   <div class="wrap">
     <div class="wrap__box wrap__box--shop">
       <h3 class="wrap__title">Tienda</h3>
-      <?php $the_query = new WP_Query('showposts=8&category_name=tienda'); while ($the_query->have_posts()) : $the_query->the_post();?>
-        <?php get_template_part('components/product'); ?>
+      <?php $the_query = new WP_Query('showposts=4&category_name=tienda'); while ($the_query->have_posts()) : $the_query->the_post();?>
+        <?php get_template_part('components/card-product'); ?>
       <?php endwhile; ?>
     </div>
   </div>
+  
   <div class="wrap">
     <div class="wrap__box wrap__box--news">
       <h3 class="wrap__title">Novedades WOF</h3>
       <?php $the_query = new WP_Query('showposts=12&category_name=noticias'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <?php get_template_part('components/article-list'); ?>
+      <?php get_template_part('components/card-noticia'); ?>
       <?php endwhile; ?>
     </div>
   </div>
