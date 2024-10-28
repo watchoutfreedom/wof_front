@@ -15,7 +15,6 @@
           <span><?php the_title(); ?></span>
         </h3>
       </a>
-      <div class="article-list__author"><?php the_author_posts_link(); ?></div>
     </a>
   </div>
 </article>
