@@ -248,6 +248,9 @@ function change_role_name() {
   
   }
 
+  if (function_exists('add_theme_support')) {
+    add_theme_support('post-thumbnails');
+}
 
 /**
  * Sends an email to the admin when a post is submitted and pending review.
