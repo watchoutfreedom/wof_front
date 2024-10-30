@@ -8,9 +8,13 @@
   </div>
   <div class="article-list__content">
     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="article-list__link">
-      <div class="article-list__precio">
-        <?php the_field('field_6377e4e40ad0e'); ?> €
-      </div>
+      <?php 
+      $price = get_field('field_6377e4e40ad0e'); 
+      if (!empty($price) && $price != 0) : ?>
+        <div class="article-list__precio">
+          <?php echo esc_html($price); ?> €
+        </div>
+      <?php endif; ?>
       <h3 class="article-list__title">
           <?php the_title(); ?>
       </h3>
