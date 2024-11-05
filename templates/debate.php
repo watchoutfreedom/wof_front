@@ -8,10 +8,6 @@ get_header();
   <h1 class="hero__title">Debate</h1>
   <div class="hero__description">Responde con tu propio artículo a las publicaciones.</div>
 </div>
-<!-- <div class="debate__meta">
-  <div class="debate__col">Muestra tu criterio. Conviértete en <span>autor</span></div>
-  <div class="debate__col"><a href="https://dev.watchoutfreedom.com/wp-content/uploads/sites/3/2024/09/Normas.pdf" target="_blank">Ver reglas [PDF]</a></div>
-</div> -->
 
 <div class="wrap">
   <div class="wrap__box wrap__box--debate">
@@ -19,6 +15,7 @@ get_header();
   </div>
 </div>
 
+<?php get_template_part('components/instructions'); ?>
 <?php get_template_part('components/colabora'); ?>
 
 <?php get_footer(); ?>
