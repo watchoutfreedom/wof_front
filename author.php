@@ -5,7 +5,7 @@ Template Name: debate
 get_header();
 ?>
 
-<div class="wrap">  
+<div class="wrap"> 
   <div class="meta__author">
     <?php echo get_avatar( get_the_author_meta('email'), '42' ); ?> 
     <div class="meta__content">
