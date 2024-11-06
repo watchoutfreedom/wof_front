@@ -102,6 +102,16 @@
   }
 }
 
+
+.wrap__box--debate {
+  .article-list:first-child,
+  .article-list:nth-child(6),
+  .article-list:nth-child(13) {
+    flex: 0 1 50%;
+  }
+}
+
+
 .wrap__box--news {
   .article-list {
     display: flex;
