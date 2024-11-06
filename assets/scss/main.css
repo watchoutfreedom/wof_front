@@ -848,11 +848,14 @@ header {
   .wrap__box--news {
     margin-top: 4rem;
   }
-  .wrap__box--debate .article-list:first-child,
-  .wrap__box--debate .article-list:nth-child(6),
-  .wrap__box--debate .article-list:nth-child(13) {
-    flex: 0 1 50% !important;
+  /*.wrap__box--debate {
+    .article-list:first-child,
+    .article-list:nth-child(6),
+    .article-list:nth-child(13) {
+      flex: 0 1 50% !important;
+    }
   }
+  */
 }
 .colabora {
   width: 90%;
