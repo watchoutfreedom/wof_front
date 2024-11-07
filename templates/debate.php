@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="hero">
   <h1 class="hero__title">Debate</h1>
-  <div class="hero__description">Responde con tu propio artículo a las publicaciones.</div>
+  <div class="hero__description">Responde con tu propio artículo a las publicaciones</div>
 </div>
 
 <div class="wrap">
