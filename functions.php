@@ -272,10 +272,16 @@ function change_role_name() {
   
   add_action('save_post', 'send_pending_post_email');
 
-/* Limit  excerpt */
-
-function my_excerpt_length($length){ return 20; } add_filter(‘excerpt_length’, ‘my_excerpt_length’);
-
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 ?>
 
 
