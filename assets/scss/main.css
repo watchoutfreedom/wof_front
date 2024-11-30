@@ -1414,6 +1414,7 @@ header {
   width: 100%;
 }
 
+.wrap--signup,
 .wrap--login {
   height: calc(100vh - 70px);
   margin: 0 auto;
@@ -1423,21 +1424,27 @@ header {
   width: 400px;
   max-width: 90%;
 }
+.wrap--signup h2,
 .wrap--login h2 {
   font-weight: bold;
   padding-bottom: 4px;
   font-size: 24px;
 }
+.wrap--signup h2,
+.wrap--signup p,
 .wrap--login h2,
 .wrap--login p {
   color: white;
   text-align: left;
 }
+.wrap--signup .description,
 .wrap--login .description {
   opacity: 0.4;
   font-size: 16px;
   line-height: 24px;
 }
+.wrap--signup input[type=password],
+.wrap--signup input[type=text],
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
   margin: 8px 0;
@@ -1449,10 +1456,13 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--signup input[type=password]:focus,
+.wrap--signup input[type=text]:focus,
 .wrap--login input[type=password]:focus,
 .wrap--login input[type=text]:focus {
   border-color: white;
 }
+.wrap--signup input[type=submit],
 .wrap--login input[type=submit] {
   background: white;
   color: black !important;
