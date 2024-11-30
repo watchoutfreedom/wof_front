@@ -12,7 +12,8 @@ acf_form_head();
 get_header();?>
 <div class="home">
 <div class="wrap wrap--signup">
-
+<h2>Créate una cuenta gratis</h2>
+<p class="description">Crear una cuenta es muy fácil y podrás publicar y contestar en nuestos debates</p>
     <?php 
     
     if (get_transient('originalRegisterRefererURL') ){
@@ -34,5 +35,5 @@ get_header();?>
     ?>
 </div>
     </div>
-    
+
 <?php wp_footer(); ?>
