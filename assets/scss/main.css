@@ -1414,13 +1414,16 @@ header {
   width: 100%;
 }
 
-.wrap--signup,
-.wrap--login {
+.home--login {
   height: calc(100vh - 70px);
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+}
+
+.wrap--signup,
+.wrap--login {
   width: 400px;
   max-width: 90%;
 }

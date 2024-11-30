@@ -10,7 +10,7 @@ if ( is_user_logged_in() )
 acf_form_head();
 
 get_header();?>
-<div class="home">
+<div class="home home--login">
 <div class="wrap wrap--signup">
 <h2>Créate una cuenta gratis</h2>
 <p class="description">Crear una cuenta es muy fácil y podrás publicar y contestar en nuestos debates</p>
