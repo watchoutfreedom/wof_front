@@ -51,10 +51,11 @@
 }
 
 .login__links {
+  margin-top: 8px;
+
   a {
     display: block;
-    padding: 4px 0;
-    margin: 4px 0;
+    margin: 2px 0;
     opacity: .6;
     transition: .4s;
     text-decoration: none;
