@@ -39,6 +39,9 @@
         <h3 class="article-list__title">
           <span><?php the_title(); ?></span>
         </h3>
+        <div class="article-list__excerpt">
+          <?php the_excerpt(); ?>
+        </div>
       </a>
       <div class="article-list__author"><?php the_author_posts_link(); ?></div>
 
