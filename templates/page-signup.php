@@ -24,16 +24,16 @@ get_header();?>
     
     
     acf_form([
-            echo '
-            <div class="home">
-            ';
+        echo '
+        <div class="home">
+        ';
             'id' => 'register_new_user',
             'field_groups' => [ 283 ],
             'honeypot' => true,
             'post_id'      => 'new_user',
             'return' => $redirect,
             'updated_message' => __("Solicitud registrada. Confirma la suscripción en tu email", 'acf'),
-            'submit_value' => __("UNIRME", 'acf')]);
+            'submit_value' => __("UNIRME", 'acf')]),
             echo '
             </div>
             ';
