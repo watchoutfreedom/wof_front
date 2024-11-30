@@ -1420,6 +1420,7 @@ header {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  overflow: auto;
 }
 
 .wrap--signup,
