@@ -13,14 +13,15 @@
     padding-bottom: 4px;
     font-size: 24px;
   }
+
   h2,
   p {
     color: white;
     text-align: left;
   }
-
-  p {
-    opacity: .6;
+  
+  .description {
+    opacity: .4;
   }
   
   input[type="password"],
@@ -44,7 +45,5 @@
 }
 
 .login__container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 280px;
+  width: 100%;
 }

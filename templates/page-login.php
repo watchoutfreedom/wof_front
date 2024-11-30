@@ -114,7 +114,7 @@ if ( ! is_user_logged_in() ) {
         <div class="home">
         <div class="wrap wrap--signup wrap--login">
         <h2>Acceder</h2>
-        <p>Accede a tu cuenta de wofreedom y participa en los debates</p>
+        <p class="description">Accede a tu cuenta de wofreedom y participa en los debates</p>
         <div class="login__container">
         ';
         echo $form;

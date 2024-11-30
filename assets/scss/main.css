@@ -1433,8 +1433,8 @@ header {
   color: white;
   text-align: left;
 }
-.wrap--login p {
-  opacity: 0.6;
+.wrap--login .description {
+  opacity: 0.4;
 }
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
@@ -1454,9 +1454,7 @@ header {
 }
 
 .login__container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 280px;
+  width: 100%;
 }
 
 .home {
