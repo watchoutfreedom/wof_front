@@ -118,7 +118,7 @@ if ( ! is_user_logged_in() ) {
         <div class="login__container">
         ';
         echo $form;
-        echo "<div class='login__links'> <a class='button__links' href='/login?action=lostpassword'>Recuperar contraseña</a><br>";
+        echo "<div class='login__links'> <a class='button__links' href='/login?action=lostpassword'>Recuperar contraseña</a>";
         echo "<a class='button__links' href='/sign-up'>No tienes cuenta? Únete!</a><br></div>";
 
     }
