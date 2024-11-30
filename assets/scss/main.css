@@ -668,9 +668,7 @@ header {
   display: flex;
   flex-flow: row wrap;
 }
-.wrap__box--news .article-list__excerpt,
 .wrap__box--news .article-list__response,
-.wrap__box--debate .article-list__excerpt,
 .wrap__box--debate .article-list__response {
   display: block;
 }
@@ -854,6 +852,11 @@ header {
   .wrap__box--debate .article-list:nth-child(6),
   .wrap__box--debate .article-list:nth-child(13) {
     flex: 0 1 50% !important;
+  }
+  .wrap__box--debate .article-list:first-child .article-list__excerpt,
+  .wrap__box--debate .article-list:nth-child(6) .article-list__excerpt,
+  .wrap__box--debate .article-list:nth-child(13) .article-list__excerpt {
+    display: block !important;
   }
 }
 .colabora {
