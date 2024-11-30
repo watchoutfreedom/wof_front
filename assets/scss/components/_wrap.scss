@@ -59,6 +59,12 @@
   font-size: 1.5rem;
 }
 
+.wrap__box--debate {
+  .article-list__excerpt {
+    display: block;
+  } 
+}
+
 .wrap__box--news,
 .wrap__box--debate {
   flex: 0 1 100%;
@@ -266,10 +272,6 @@
     .article-list:nth-child(6),
     .article-list:nth-child(13) {
       flex: 0 1 50% !important;
-
-      .article-list__excerpt {
-        display: block !important;
-      } 
     }
   }
 
