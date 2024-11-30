@@ -764,31 +764,6 @@ header {
   color: #191919 !important;
 }
 
-.wrap--login {
-  height: calc(100vh - 70px);
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  width: 400px;
-  max-width: 90%;
-}
-.wrap--login h2 {
-  color: white;
-  padding: 24px 0;
-}
-.wrap--login input[type=password],
-.wrap--login input[type=text] {
-  margin: 8px 0;
-  width: 100%;
-}
-.wrap--login input[type=submit] {
-  background: white;
-  color: black !important;
-  margin: 16px 0;
-}
-
 .excerp--response {
   display: block;
   padding: 2rem 0;
@@ -1439,6 +1414,33 @@ header {
   width: 100%;
 }
 
+.wrap--login {
+  height: calc(100vh - 70px);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  max-width: 90%;
+}
+.wrap--login input[type=password],
+.wrap--login input[type=text] {
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.021);
+  border: 0;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.wrap--login input[type=submit] {
+  background: white;
+  color: black !important;
+  margin: 16px 0;
+}
+
 .custom_loginform {
   width: 90%;
   margin: autO;
@@ -1451,15 +1453,6 @@ header {
 }
 .custom_loginform p {
   opacity: 0.6;
-}
-.custom_loginform input[type=password],
-.custom_loginform input[type=text] {
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.021);
-  border: 0;
-  color: white;
-  padding: 1rem;
-  font-size: 1rem;
 }
 
 .home {
