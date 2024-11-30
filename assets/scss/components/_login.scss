@@ -3,7 +3,7 @@
   height: calc( 100vh - 70px );
   margin: 0 auto;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   width: 400px;
   max-width: 90%;
@@ -22,8 +22,10 @@
   
   .description {
     opacity: .4;
+    font-size: 16px;
+    line-height: 24px;
   }
-  
+
   input[type="password"],
   input[type="text"] {
     margin: 8px 0;
@@ -46,4 +48,19 @@
 
 .login__container {
   width: 100%;
+}
+
+.login__links {
+  a {
+    display: block;
+    padding: 4px 0;
+    margin: 4px 0;
+    opacity: .6;
+    transition: .4s;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }

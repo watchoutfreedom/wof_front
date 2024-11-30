@@ -1418,7 +1418,7 @@ header {
   height: calc(100vh - 70px);
   margin: 0 auto;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   width: 400px;
   max-width: 90%;
@@ -1435,6 +1435,8 @@ header {
 }
 .wrap--login .description {
   opacity: 0.4;
+  font-size: 16px;
+  line-height: 24px;
 }
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
@@ -1455,6 +1457,18 @@ header {
 
 .login__container {
   width: 100%;
+}
+
+.login__links a {
+  display: block;
+  padding: 4px 0;
+  margin: 4px 0;
+  opacity: 0.6;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.login__links a:hover {
+  opacity: 1;
 }
 
 .home {
