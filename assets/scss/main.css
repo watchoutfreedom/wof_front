@@ -668,7 +668,9 @@ header {
   display: flex;
   flex-flow: row wrap;
 }
+.wrap__box--news .article-list__excerpt,
 .wrap__box--news .article-list__response,
+.wrap__box--debate .article-list__excerpt,
 .wrap__box--debate .article-list__response {
   display: block;
 }
@@ -1177,10 +1179,18 @@ header {
   transition: transform 0.4s;
 }
 
+.article-list__excerpt,
 .article-list__author,
 .article-list__response,
 .article-list__date {
   display: none;
+}
+
+.article-list__excerpt {
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 0;
 }
 
 .article-list:hover {

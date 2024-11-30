@@ -272,7 +272,9 @@ function change_role_name() {
   
   add_action('save_post', 'send_pending_post_email');
 
-  
+/* Limit  excerpt */
+
+function my_excerpt_length($length){ return 80; } add_filter(‘excerpt_length’, ‘my_excerpt_length’);
 
 ?>
 

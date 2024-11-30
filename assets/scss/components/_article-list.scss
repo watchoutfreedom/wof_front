@@ -13,11 +13,20 @@ $article-list-paragraph-color: $color-dark-gray;
   transition: transform .4s;
 }
 
+.article-list__excerpt,
 .article-list__author,
 .article-list__response,
 .article-list__date {
   display: none;
 }
+
+.article-list__excerpt {
+  opacity: .8;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 0;
+}
+
 
 .article-list:hover {
   transform: translateY(-10px);
