@@ -9,6 +9,16 @@
   width: 400px;
   max-width: 90%;
 
+  h2,
+  p {
+    color: white;
+    text-align: left;
+  }
+
+  p {
+    opacity: .6;
+  }
+  
   input[type="password"],
   input[type="text"] {
     margin: 8px 0;
@@ -29,18 +39,8 @@
   }
 }
 
-.custom_loginform {
+.login__container {
   width: 90%;
   margin: autO;
   max-width: 280px;
-
-  h2,
-  p {
-    color: white;
-    text-align: left;
-  }
-
-  p {
-    opacity: .6;
-  }
 }

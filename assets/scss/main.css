@@ -1424,6 +1424,14 @@ header {
   width: 400px;
   max-width: 90%;
 }
+.wrap--login h2,
+.wrap--login p {
+  color: white;
+  text-align: left;
+}
+.wrap--login p {
+  opacity: 0.6;
+}
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
   margin: 8px 0;
@@ -1441,18 +1449,10 @@ header {
   margin: 16px 0;
 }
 
-.custom_loginform {
+.login__container {
   width: 90%;
   margin: autO;
   max-width: 280px;
-}
-.custom_loginform h2,
-.custom_loginform p {
-  color: white;
-  text-align: left;
-}
-.custom_loginform p {
-  opacity: 0.6;
 }
 
 .home {
