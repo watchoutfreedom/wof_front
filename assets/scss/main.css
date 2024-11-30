@@ -1444,10 +1444,14 @@ header {
   width: 100%;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.021);
-  border: 0;
+  border: 1.5px solid transparent;
   color: white;
   padding: 1rem;
   font-size: 1rem;
+}
+.wrap--login input[type=password]:focus,
+.wrap--login input[type=text]:focus {
+  border-color: white;
 }
 .wrap--login input[type=submit] {
   background: white;
