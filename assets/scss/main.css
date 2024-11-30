@@ -1503,6 +1503,12 @@ header {
   opacity: 1;
 }
 
+.acf-form .acf-field {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
 .home {
   background: #191919;
   color: white;
