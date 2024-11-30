@@ -1,0 +1,25 @@
+.custom_loginform {
+  width: 90%;
+  margin: autO;
+  max-width: 280px;
+  
+  h2,
+  p {
+    color: white;
+    text-align: left;
+  }
+
+  p {
+    opacity: .6;
+  }
+
+  input[type=password], 
+  input[type=text] {
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .021);
+    border: 0;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

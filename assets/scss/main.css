@@ -1439,6 +1439,29 @@ header {
   width: 100%;
 }
 
+.custom_loginform {
+  width: 90%;
+  margin: autO;
+  max-width: 280px;
+}
+.custom_loginform h2,
+.custom_loginform p {
+  color: white;
+  text-align: left;
+}
+.custom_loginform p {
+  opacity: 0.6;
+}
+.custom_loginform input[type=password],
+.custom_loginform input[type=text] {
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.021);
+  border: 0;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
 .home {
   background: #191919;
   color: white;
