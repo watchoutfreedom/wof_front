@@ -8,10 +8,18 @@
   width: 400px;
   max-width: 90%;
 
+  .acf-required {
+    display: none;
+  }
+
   h2 {
     font-weight: bold;
     padding-bottom: 4px;
     font-size: 24px;
+  }
+
+  .acf-fields>.acf-field {
+    border: 0 !important; // Revise
   }
 
   h2,
@@ -26,6 +34,8 @@
     line-height: 24px;
   }
 
+  input[type="number"],
+  input[type="email"],
   input[type="password"],
   input[type="text"] {
     margin: 8px 0;

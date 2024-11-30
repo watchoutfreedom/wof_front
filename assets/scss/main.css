@@ -1424,11 +1424,19 @@ header {
   width: 400px;
   max-width: 90%;
 }
+.wrap--signup .acf-required,
+.wrap--login .acf-required {
+  display: none;
+}
 .wrap--signup h2,
 .wrap--login h2 {
   font-weight: bold;
   padding-bottom: 4px;
   font-size: 24px;
+}
+.wrap--signup .acf-fields > .acf-field,
+.wrap--login .acf-fields > .acf-field {
+  border: 0 !important;
 }
 .wrap--signup h2,
 .wrap--signup p,
@@ -1443,8 +1451,12 @@ header {
   font-size: 16px;
   line-height: 24px;
 }
+.wrap--signup input[type=number],
+.wrap--signup input[type=email],
 .wrap--signup input[type=password],
 .wrap--signup input[type=text],
+.wrap--login input[type=number],
+.wrap--login input[type=email],
 .wrap--login input[type=password],
 .wrap--login input[type=text] {
   margin: 8px 0;
@@ -1456,8 +1468,12 @@ header {
   padding: 1rem;
   font-size: 1rem;
 }
+.wrap--signup input[type=number]:focus,
+.wrap--signup input[type=email]:focus,
 .wrap--signup input[type=password]:focus,
 .wrap--signup input[type=text]:focus,
+.wrap--login input[type=number]:focus,
+.wrap--login input[type=email]:focus,
 .wrap--login input[type=password]:focus,
 .wrap--login input[type=text]:focus {
   border-color: white;
