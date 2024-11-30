@@ -1467,6 +1467,7 @@ header {
   color: white;
   padding: 1rem !important;
   font-size: 1rem;
+  transition: all 0.4s;
 }
 .wrap--signup input[type=number]:focus,
 .wrap--signup input[type=email]:focus,
@@ -1480,9 +1481,13 @@ header {
 }
 .wrap--signup input[type=submit],
 .wrap--login input[type=submit] {
+  margin-top: 12px;
   background: white;
   color: black !important;
   margin: 16px 0;
+  padding: 18px 48px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .login__container {
