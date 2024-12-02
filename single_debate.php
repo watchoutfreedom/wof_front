@@ -46,8 +46,8 @@
               <div class="answer_to"><?php if($answer_to = get_field('answer_to')) echo " Este artículo es una respuesta a la publicación <a class='answer__to' href=".get_permalink($answer_to).">".get_the_title($answer_to)."</a>";?></div>
               <?php the_field('field_63752e3ee91da'); ?>
               <?php $content = get_the_content("Sigue leyendo"); ?>
-              <?php if (empty($content)) echo "Sin contenido"; ?>
-              <?php get_template_part('atoms/biblio'); ?>s
+              <?php if (empty($content)) echo "Sin contenido"; else the_content();?>
+              <?php get_template_part('atoms/biblio'); ?>
 
             </div>
 
