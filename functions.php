@@ -297,13 +297,7 @@ function excerpt( $limit ) {
 	$content = str_replace(']]>', ']]&gt;', $content);
 	return $content;
 	}
-	
-	
-	add_filter('acf/prepare_field/key={field_674d7a642771b}', 'not_required_in_admin');
-        function not_required_in_admin($field) {
-                $field['required'] = true;
-        return $field;
-}
+
 	
 	
 	?>
