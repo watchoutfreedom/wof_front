@@ -111,13 +111,14 @@ if ( ! is_user_logged_in() ) {
         $form = str_replace('name="log"', 'name="log" placeholder="Username"', $form);
         $form = str_replace('name="pwd"', 'name="pwd" placeholder="Password"', $form);
         echo '
-        <div class="home">
+        <div class="home home--login">
         <div class="wrap wrap--signup wrap--login">
-        <h2>Acceder</h2>
+        <h2>Accede a tu cuenta</h2>
+        <p class="description">Accede a tu cuenta de wofreedom y participa en los debates</p>
         <div class="login__container">
         ';
         echo $form;
-        echo "<div class='login__links'> <a class='button__links' href='/login?action=lostpassword'>Recuperar contraseña</a><br>";
+        echo "<div class='login__links'> <a class='button__links' href='/login?action=lostpassword'>Recuperar contraseña</a>";
         echo "<a class='button__links' href='/sign-up'>No tienes cuenta? Únete!</a><br></div>";
 
     }

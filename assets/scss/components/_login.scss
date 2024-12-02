@@ -1,0 +1,98 @@
+.home--login {
+  height: calc( 100vh - 70px );
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+}
+
+.wrap--signup,
+.wrap--login {
+  width: 400px;
+  max-width: 90%;
+  padding: 84px 16px;
+
+  .acf-required {
+    display: none;
+  }
+
+  h2 {
+    font-weight: bold;
+    padding-bottom: 4px;
+    font-size: 24px;
+  }
+
+  .acf-fields>.acf-field {
+    border: 0 !important; // Revise
+  }
+
+  h2,
+  p {
+    color: white;
+    text-align: left;
+  }
+  
+  .description {
+    opacity: .4;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .021);
+    border: 1.5px solid transparent;
+    color: white;
+    padding: 1rem !important;
+    font-size: 1rem;
+    transition: all .4s;
+
+    &:focus {
+      border-color: white;
+    }
+
+  }
+
+  input[type="submit"] {
+    margin-top: 12px;
+    background: white;
+    color: black !important;
+    margin: 16px 0;
+    padding: 18px 48px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.login__container {
+  width: 100%;
+}
+
+.login__links {
+  margin-top: 12px;
+
+  a {
+    display: block;
+    margin: 0 0 6px 0;
+    opacity: .6;
+    transition: .4s;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.acf-form {
+  .acf-field {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
