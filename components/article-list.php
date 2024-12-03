@@ -29,9 +29,9 @@
             $answer_to_permalink = get_permalink($answer_to);
             $answer_to_title = get_the_title($answer_to);
 
-            if ($answer_to_permalink && $answer_to_title) {
-                echo " Respuesta a <a class='answer__to' href='" . esc_url($answer_to_permalink) . "'>" . esc_html($answer_to_title) . "</a>";
-            }
+            //if ($answer_to_permalink && $answer_to_title) {
+            //    echo " Respuesta a <a class='answer__to' href='" . esc_url($answer_to_permalink) . "'>" . esc_html($answer_to_title) . "</a>";
+            //}
         }
         ?>
       </div>
