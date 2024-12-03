@@ -89,7 +89,7 @@
               ?>
             </div>
               
-             <div class="answers">
+             <div class="single-default__main answers">
             <?php     
               $posts = get_posts(array(
                   'numberposts'   => -1,
