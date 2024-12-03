@@ -119,48 +119,6 @@ $main-blockquote-font-family: 'Satoshi-Bold';
     }
   }
 
-  a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-
-    &:before {
-      content: '';
-      width: 100%;
-      position: absolute;
-      right: 0;
-      bottom: 2px;
-      height: 1px;
-      background: #ccc;
-      display: block;
-      transition: width .2s;
-    }
-
-    &:after {
-      content: '';
-      width: 0;
-      position: absolute;
-      left: 0;
-      bottom: 2px;
-      height: 1px;
-      background: $color-black;
-      display: block;
-      transition: all .2s;
-    }
-
-    &:hover {
-      color: black;
-      
-      &:after {
-        width: 100%;
-      }
-
-      &:before {
-        width: 0;
-      }
-    }
-  }
-
   blockquote {
     color: black;
     font-family: $main-blockquote-font-family;
