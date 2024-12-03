@@ -6,10 +6,12 @@ $main-blockquote-font-family: 'Satoshi-Bold';
 
 
 .main {
-  color: $color-black;
   font-family: $font-main;
-  font-size: 18px;
-  line-height: 30px;
+  font-style: normal;
+
+  color: #242424;
+  font-size: 22px;
+  line-height: 32px;
 
   img {
     @extend .flash;
@@ -46,42 +48,47 @@ $main-blockquote-font-family: 'Satoshi-Bold';
     background: #f0f0f0;
   }
 
+  p,
   h2,
   h3,
   h4,
-  h5,
-  h6 {
-    color: $color-black;
-    font-family: 'Satoshi-Bold';
-    padding: 1.5rem 0 1.25rem 0;
+  h5 {
+    padding-bottom: 16px;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
   }
 
   h3 {
-    font-size: 1.25rem;
-  }
+    font-size: 1.85rem;
+  } 
 
   h4 {
-    font-size: 1rem;
-  }
-
+    font-size: 1.5rem;
+  } 
+  
   h5 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+  } 
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $color-black;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 24px;
+    margin-bottom: 8px;
   }
 
-  h6 {
-    font-size: 1rem;
-  }
-
-  ol,
-  ul {
-    padding-left: 1.5rem;
+  ul,
+  ol {
+    padding: 16px 0 24px 1.25rem;
 
     li {
-      padding-bottom: .75rem;
+      padding: 0 0 8px 0;
     }
   }
 
@@ -90,7 +97,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   }
 
   ol {
-    list-style-type: upper-roman;
+    list-style-type: decimal;
   }
 
   b,
@@ -98,7 +105,8 @@ $main-blockquote-font-family: 'Satoshi-Bold';
     font-weight: bold;
   }
 
-  i {
+  i,
+  em {
     font-style: italic;
   }
 
@@ -110,7 +118,48 @@ $main-blockquote-font-family: 'Satoshi-Bold';
       text-decoration: underline;
     }
   }
+  
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 
+    &:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      height: 1px;
+      background: #ccc;
+      display: block;
+      transition: width .2s;
+    }
+
+    &:after {
+      content: '';
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      height: 1px;
+      background: $color-black;
+      display: block;
+      transition: all .2s;
+    }
+
+    &:hover {
+      color: black;
+      
+      &:after {
+        width: 100%;
+      }
+
+      &:before {
+        width: 0;
+      }
+    }
+  }
 
   blockquote {
     color: black;

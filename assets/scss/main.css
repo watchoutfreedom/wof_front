@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400&display=swap");
 @font-face {
@@ -962,10 +963,11 @@ header {
   }
 }
 .main {
-  color: #191919;
-  font-family: "Roboto Serif", serif;
-  font-size: 18px;
-  line-height: 30px;
+  font-family: "EB Garamond", serif;
+  font-style: normal;
+  color: #242424;
+  font-size: 22px;
+  line-height: 32px;
 }
 .main img {
   display: block;
@@ -994,49 +996,55 @@ header {
   height: 1px;
   background: #f0f0f0;
 }
+.main p,
 .main h2,
 .main h3,
 .main h4,
-.main h5,
-.main h6 {
-  color: #191919;
-  font-family: "Satoshi-Bold";
-  padding: 1.5rem 0 1.25rem 0;
+.main h5 {
+  padding-bottom: 16px;
 }
 .main h2 {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
 }
 .main h3 {
-  font-size: 1.25rem;
+  font-size: 1.85rem;
 }
 .main h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .main h5 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
-.main h6 {
-  font-size: 1rem;
+.main h2,
+.main h3,
+.main h4,
+.main h5 {
+  color: #191919;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 24px;
+  margin-bottom: 8px;
 }
-.main ol,
-.main ul {
-  padding-left: 1.5rem;
+.main ul,
+.main ol {
+  padding: 16px 0 24px 1.25rem;
 }
-.main ol li,
-.main ul li {
-  padding-bottom: 0.75rem;
+.main ul li,
+.main ol li {
+  padding: 0 0 8px 0;
 }
 .main ul {
   list-style-type: disc;
 }
 .main ol {
-  list-style-type: upper-roman;
+  list-style-type: decimal;
 }
 .main b,
 .main strong {
   font-weight: bold;
 }
-.main i {
+.main i,
+.main em {
   font-style: italic;
 }
 .main a {
@@ -1046,6 +1054,42 @@ header {
 }
 .main a:hover {
   text-decoration: underline;
+}
+.main a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.main a:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  height: 1px;
+  background: #ccc;
+  display: block;
+  transition: width 0.2s;
+}
+.main a:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  background: #191919;
+  display: block;
+  transition: all 0.2s;
+}
+.main a:hover {
+  color: black;
+}
+.main a:hover:after {
+  width: 100%;
+}
+.main a:hover:before {
+  width: 0;
 }
 .main blockquote {
   color: black;
@@ -1867,7 +1911,7 @@ header {
 .page-sidebar__cat-description {
   font-size: 0.85rem;
   line-height: 1.5rem;
-  font-family: "Roboto Serif", serif;
+  font-family: "EB Garamond", serif;
   color: #555555;
 }
 
