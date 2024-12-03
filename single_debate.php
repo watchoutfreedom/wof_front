@@ -79,7 +79,7 @@
 
     
             </div>
-              <div class="single-default__main">
+              <div class="single-default__main single-default__main--padding">
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
                 //|| current_user_can( 'edit_others_posts', $post->ID)
