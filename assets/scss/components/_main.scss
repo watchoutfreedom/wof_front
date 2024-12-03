@@ -207,23 +207,6 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   margin: 0 !important;
 }
 
-@media #{$breakpoints-medium} {
-    blockquote {
-      font-size: 1.5rem;
-      line-height: 2.25rem;
-    }
-
-    .wp-block-image {
-      transform: translateX(-16px);
-      width: calc( 100% + 16px * 2 );
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-}
 
 @media #{$breakpoints-large} {
   .main {
