@@ -55,7 +55,7 @@
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
-            <div class="meta">
+            <div class="single-default__main">
               <div class="meta__valorate">
               <div id="post-ratings-1425" class="post-ratings" itemscope="" itemtype="https://schema.org/Article" data-nonce="6660c12267">
                             
@@ -77,6 +77,9 @@
               </div>
 
 
+    
+            </div>
+              <div class="single-default__main">
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
                 //|| current_user_can( 'edit_others_posts', $post->ID)
@@ -87,8 +90,7 @@
                     echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
                 }
               ?>
-            </div>
-              
+              </div>
              <div class="single-default__main answers">
             <?php     
               $posts = get_posts(array(
