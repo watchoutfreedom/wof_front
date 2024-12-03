@@ -571,7 +571,6 @@ header {
   font-family: "Satoshi-Medium";
   display: flex;
   flex-flow: row wrap;
-  padding-bottom: 2rem;
 }
 
 .meta__valorate--btn {
