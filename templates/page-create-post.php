@@ -57,8 +57,8 @@ get_header(); ?>
             'post_id'       => 'new_post',
             'post_title'    => true,
             'post_content'  => false,
+            'fields'        => array_diff(acf_get_fields('new_post'), ['field_6751787c6ee27']), // Exclude co-author field
             'return' => '%post_url%',
-            'fields'        => array_diff(acf_get_fields($_GET['id']), ['field_6751787c6ee27']), // Exclude co-author field
             'submit_value' => __("Publicar", 'acf'),
             'new_post'      => array(
                 'post_type'     => 'post',
