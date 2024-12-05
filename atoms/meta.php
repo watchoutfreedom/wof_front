@@ -32,7 +32,7 @@ if (!empty($co_authors)) {
 }
 
 if (!empty($co_authors) && is_array($co_authors)): ?>
-  <span class="meta__coauthors">Co-authors: 
+  <span class="meta__coauthors">
     <?php 
     $co_authors_list = array_map(function($co_author_data) {
         // Ensure we extract the user ID correctly
