@@ -21,34 +21,65 @@
         <?php echo esc_html($organization_name); ?>
       <?php endif; ?>
       
-
-            <?php
+      <?php
       // Fetch and display co-authors
       $co_authors = get_field('field_6751787c6ee27', get_the_ID()); // Use the field key
 
+      // Debug: Output co-authors to the browser console
+      if (!empty($co_authors)) {
+          echo "<script>console.log('Co-authors found: " . json_encode($co_authors) . "');</script>";
+      } else {
+          echo "<script>console.log('No co-authors found');</script>";
+      }
+
       if (!empty($co_authors) && is_array($co_authors)): ?>
-        <span class="meta__coauthors">
+        <span class="meta__coauthors">Co-authors: 
           <?php 
           $co_authors_list = array_map(function($co_author_id) {
+              // Debug: Output current co-author ID
+              echo "<script>console.log('Processing co-author ID: $co_author_id');</script>";
+
               $user_info = get_user_by('id', $co_author_id); // Fetch user data by ID
 
               if ($user_info) {
-                  // Use display_name if available; fall back to other fields if not
+                  // Debug: Output retrieved user info
+                  echo "<script>console.log('User info retrieved: " . json_encode($user_info) . "');</script>";
+
+                  // Check for display_name
                   if (!empty($user_info->display_name)) {
-                      return esc_html($user_info->display_name); // Safely escape and return display name
+                      // Debug: Display name found
+                      echo "<script>console.log('Display name: " . esc_js($user_info->display_name) . "');</script>";
+                      return esc_html($user_info->display_name);
                   } elseif (!empty($user_info->first_name) || !empty($user_info->last_name)) {
-                      return esc_html(trim($user_info->first_name . ' ' . $user_info->last_name));
+                      // Debug: First and/or last name found
+                      $name = trim($user_info->first_name . ' ' . $user_info->last_name);
+                      echo "<script>console.log('First/Last name: " . esc_js($name) . "');</script>";
+                      return esc_html($name);
                   } else {
-                      return esc_html($user_info->user_login); // Use username as the last fallback
+                      // Debug: Fallback to user login
+                      echo "<script>console.log('Using user login: " . esc_js($user_info->user_login) . "');</script>";
+                      return esc_html($user_info->user_login);
                   }
+              } else {
+                  // Debug: User info not found
+                  echo "<script>console.log('User info not found for ID: $co_author_id');</script>";
               }
               return null;
           }, $co_authors);
           
+          // Debug: Final co-authors list
+          echo "<script>console.log('Final co-authors list: " . json_encode($co_authors_list) . "');</script>";
+
           echo implode(', ', array_filter($co_authors_list)); // Display the co-authors list as a comma-separated string
           ?>
         </span>
-      <?php endif; ?>
+    <?php else: ?>
+      <?php 
+      // Debug: No co-authors to display
+      echo "<script>console.log('No co-authors to display');</script>"; 
+      ?>
+    <?php endif; ?>
+
 
 
     </div>
