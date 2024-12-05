@@ -24,10 +24,6 @@
 // Fetch and display co-authors
 $co_authors = get_field('field_6751787c6ee27', get_the_ID()); // Use the field key
 
-// Debug: Print the $co_authors array
-echo '<pre>';
-print_r($co_authors);
-echo '</pre>';
 
 if (!empty($co_authors) && is_array($co_authors)): ?>
   <span class="meta__coauthors">Co-authors: 
