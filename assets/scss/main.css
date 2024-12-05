@@ -525,7 +525,6 @@ header {
   font-family: "Satoshi-Medium";
   display: flex;
   flex-direction: column;
-  background-color: red;
 }
 .meta__content p {
   padding: 16px 0;
