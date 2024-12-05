@@ -18,8 +18,6 @@ get_header();
         if ($organization_name && $organization_link): ?>
             <a href="<?php echo esc_url($organization_link); ?>" target="_blank"><?php echo esc_html($organization_name); ?></a>
       <?php endif; ?>
-
-      
     </div>
   </div>
 </div>
