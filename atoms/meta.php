@@ -27,7 +27,7 @@
       $co_authors = get_field('field_6751787c6ee27', get_the_ID()); // Use the field key
 
       if (!empty($co_authors) && is_array($co_authors)): ?>
-        <span class="meta__coauthors">Co-authors: 
+        <span class="meta__coauthors">
           <?php 
           $co_authors_list = array_map(function($co_author_id) {
               $user_info = get_user_by('id', $co_author_id); // Fetch user data by ID
