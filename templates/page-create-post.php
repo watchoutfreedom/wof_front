@@ -35,6 +35,7 @@ get_header(); ?>
             'post_id'       => $_GET['id'],
             'post_title'    => true,
             'post_content'  => false,
+            'fields'        => array_diff(acf_get_fields($_GET['id']), ['field_6751787c6ee27']), // Exclude co-author field
             'post_category' => array(28),
             'return' => '%post_url%',
             'submit_value' => __("Publicar", 'acf')
@@ -57,6 +58,7 @@ get_header(); ?>
             'post_title'    => true,
             'post_content'  => false,
             'return' => '%post_url%',
+            'fields'        => array_diff(acf_get_fields($_GET['id']), ['field_6751787c6ee27']), // Exclude co-author field
             'submit_value' => __("Publicar", 'acf'),
             'new_post'      => array(
                 'post_type'     => 'post',
