@@ -238,7 +238,7 @@ a {
   }
 }
 /* news */
-.flash, .main img, .answer img {
+.flash, .main img, .answers img {
   animation: flash 0.6s ease-in both;
 }
 
@@ -958,115 +958,115 @@ header {
     width: 80%;
   }
 }
-.main, .answer {
+.main, .answers {
   font-family: "EB Garamond", serif;
   font-style: normal;
   color: #242424;
   font-size: 22px;
   line-height: 32px;
 }
-.main img, .answer img {
+.main img, .answers img {
   display: block;
   margin: 32px 0;
   max-width: 100%;
   border-radius: 4px;
 }
-.main iframe, .answer iframe,
-.main embed,
-.answer embed {
+.main iframe,
+.main embed, .answers iframe,
+.answers embed {
   max-width: 100%;
   width: 100%;
   height: 480px;
 }
-.main div, .answer div,
+.main div,
 .main p,
-.answer p,
 .main ul,
-.answer ul,
-.main ol,
-.answer ol {
+.main ol, .answers div,
+.answers p,
+.answers ul,
+.answers ol {
   display: block;
   margin-bottom: 32px;
 }
-.main div, .answer div {
+.main div, .answers div {
   margin: 2rem 0;
 }
-.main hr, .answer hr {
+.main hr, .answers hr {
   border: 0;
   height: 1px;
   background: #f0f0f0;
 }
-.main p, .answer p,
+.main p,
 .main h2,
-.answer h2,
 .main h3,
-.answer h3,
 .main h4,
-.answer h4,
-.main h5,
-.answer h5 {
+.main h5, .answers p,
+.answers h2,
+.answers h3,
+.answers h4,
+.answers h5 {
   padding-bottom: 16px;
 }
-.main h2, .answer h2 {
+.main h2, .answers h2 {
   font-size: 2.25rem;
 }
-.main h3, .answer h3 {
+.main h3, .answers h3 {
   font-size: 1.85rem;
 }
-.main h4, .answer h4 {
+.main h4, .answers h4 {
   font-size: 1.5rem;
 }
-.main h5, .answer h5 {
+.main h5, .answers h5 {
   font-size: 1.25rem;
 }
-.main h2, .answer h2,
+.main h2,
 .main h3,
-.answer h3,
 .main h4,
-.answer h4,
-.main h5,
-.answer h5 {
+.main h5, .answers h2,
+.answers h3,
+.answers h4,
+.answers h5 {
   color: #191919;
   font-weight: bold;
   font-style: italic;
   padding-top: 24px;
   margin-bottom: 8px;
 }
-.main ul, .answer ul,
-.main ol,
-.answer ol {
+.main ul,
+.main ol, .answers ul,
+.answers ol {
   padding: 16px 0 24px 1.25rem;
 }
-.main ul li, .answer ul li,
-.main ol li,
-.answer ol li {
+.main ul li,
+.main ol li, .answers ul li,
+.answers ol li {
   padding: 0 0 8px 0;
 }
-.main ul, .answer ul {
+.main ul, .answers ul {
   list-style-type: disc;
 }
-.main ol, .answer ol {
+.main ol, .answers ol {
   list-style-type: decimal;
 }
-.main b, .answer b,
-.main strong,
-.answer strong {
+.main b,
+.main strong, .answers b,
+.answers strong {
   font-weight: bold;
 }
-.main i, .answer i,
-.main em,
-.answer em {
+.main i,
+.main em, .answers i,
+.answers em {
   font-style: italic;
 }
-.main a, .answer a {
+.main a, .answers a {
   color: #0F4BF1;
   text-decoration: none;
   position: relative;
 }
-.main a:hover, .answer a:hover {
+.main a:hover, .answers a:hover {
   text-decoration: underline;
 }
-.main blockquote, .answer blockquote {
+.main blockquote, .answers blockquote {
   color: black;
   font-family: "Satoshi-Bold";
   font-size: 1rem;
@@ -1075,7 +1075,7 @@ header {
   background: #fbfbfb;
   padding: 2rem 2rem;
 }
-.main .wp-caption-text, .answer .wp-caption-text {
+.main .wp-caption-text, .answers .wp-caption-text {
   font-family: "Satoshi-Medium", sans-serif;
   font-size: 0.85rem;
   font-style: italic;
@@ -1083,11 +1083,11 @@ header {
   margin: 0 0 1rem 0;
   text-align: center;
 }
-.main .wp-caption-text a, .answer .wp-caption-text a {
+.main .wp-caption-text a, .answers .wp-caption-text a {
   color: #555555;
   text-decoration: underline;
 }
-.main .wp-caption-text a:hover, .answer .wp-caption-text a:hover {
+.main .wp-caption-text a:hover, .answers .wp-caption-text a:hover {
   text-decoration: none;
 }
 
@@ -1109,14 +1109,14 @@ header {
 }
 
 @media only screen and (min-width: 1024px) {
-  .main img, .answer img {
+  .main img, .answers img {
     margin: 64px 0;
   }
-  .main .wp-block-image, .answer .wp-block-image {
+  .main .wp-block-image, .answers .wp-block-image {
     transform: translateX(-84px);
     width: calc(100% + 168px);
   }
-  .main .wp-block-image img, .answer .wp-block-image img {
+  .main .wp-block-image img, .answers .wp-block-image img {
     width: 100% !important;
     height: auto !important;
   }

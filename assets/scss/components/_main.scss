@@ -5,7 +5,7 @@ $main-a-color: $color-corporative;
 $main-blockquote-font-family: 'Satoshi-Bold';
 
 
-.main {
+.main, .answers {
   font-family: $font-main;
   font-style: normal;
 
@@ -193,7 +193,7 @@ $main-blockquote-font-family: 'Satoshi-Bold';
   padding: 0.5rem;
 }
 
-.answer {
+.answers {
 
   @extend .main;
 
