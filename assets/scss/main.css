@@ -1498,6 +1498,11 @@ header {
   opacity: 1;
 }
 
+.signup__links {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .acf-form .acf-field {
   padding: 0 !important;
   margin: 0 !important;
