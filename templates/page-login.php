@@ -91,7 +91,7 @@ if ( ! is_user_logged_in() ) {
 
     else if( isset($_GET['key']) && $_GET['action'] == 'rp'){?>
 
-        <div class="home home--login">
+    <div class="home home--login">
         <div class="wrap wrap--signup wrap--login">
         <?php
 
@@ -123,29 +123,6 @@ if ( ! is_user_logged_in() ) {
     </div>
     <?php
 
-    else if ( isset( $_POST['submit'] ) && $_GET['action'] == 'rp' ) {
-    $key = $_POST['key'];
-    $login = $_POST['login'];
-    $pass1 = $_POST['pass1'];
-    $pass2 = $_POST['pass2'];
-
-    // Get the user by login
-    $user = get_user_by( 'login', $login );
-
-    // If the user exists and the key is valid, update the user's password
-    if ( $user && wp_check_password( $key, get_user_meta( $user->ID, 'reset_key', true ) ) ) {
-      if ( $pass1 === $pass2 ) {
-        wp_set_password( $pass1, $user->ID );
-        delete_user_meta( $user->ID, 'reset_key' );
-        echo '<p>Password reset successfully.</p>';
-      } else {
-        echo '<p>Passwords do not match.</p>';
-      }
-    } else {
-      // Display an error message if the key is invalid or the user does not exist
-      echo '<p>Invalid password reset key.</p>';
-    }
-  }
 
     }
     else{
