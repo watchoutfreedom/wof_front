@@ -55,8 +55,8 @@
               <?php get_template_part('atoms/bio'); ?>
             </div>
 
-            <div class="meta">
-              <div class="meta__valorate">
+            <div class="single-default__main">
+              <!-- <div class="meta__valorate">
               <div id="post-ratings-1425" class="post-ratings" itemscope="" itemtype="https://schema.org/Article" data-nonce="6660c12267">
                             
               <div class="meta__valorate--btn" id="rating_1425_1" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
@@ -69,7 +69,7 @@
 
               <div class="meta__valorate--btn" id="rating_1425_3" onkeypress="rate_post();" onclick="rate_post();" draggable="false" >
                 <img role="img" class="emoji" alt="👍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f44e.svg"><span>Está equivocado</span>
-              </div>
+              </div> -->
             
             
             </div>         
@@ -77,6 +77,9 @@
               </div>
 
 
+    
+            </div>
+              <div class="single-default__main single-default__main--padding">
               <?php 
                 if(wp_get_current_user()->ID == $post->post_author 
                 //|| current_user_can( 'edit_others_posts', $post->ID)
@@ -87,9 +90,8 @@
                     echo "<a class='button debate__button' href='/create-post?action=create&id=".$post->ID."'>RESPONDER</a>";
                 }
               ?>
-            </div>
-              
-             <div class="answers">
+              </div>
+             <div class="single-default__main answers">
             <?php     
               $posts = get_posts(array(
                   'numberposts'   => -1,

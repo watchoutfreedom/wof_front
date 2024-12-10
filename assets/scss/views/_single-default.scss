@@ -210,6 +210,11 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
   margin: auto;
 }
 
+.single-default__main--padding {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .single__tags {
   margin: auto;
   text-align: center;
