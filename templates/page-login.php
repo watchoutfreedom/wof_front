@@ -33,6 +33,8 @@ if ( ! is_user_logged_in() ) {
         
         ?>
     
+    <div class="home home--login">
+        <div class="wrap wrap--signup wrap--login">
 
     <div id="password-lost-form">
     <h3><?php _e( 'Forgot Your Password?', 'personalize-login' ); ?></h3>
@@ -79,6 +81,8 @@ if ( ! is_user_logged_in() ) {
         }
     }
     ?>
+    </div>
+</div>
 </div>
 
     <?php 
