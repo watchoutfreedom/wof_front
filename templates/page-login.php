@@ -40,7 +40,7 @@ if ( ! is_user_logged_in() ) {
         <?php _e("Enter your email address and we'll send you a link you can use to pick a new password.",'personalize_login');?>
     </p>
 
-    <form id="lostpasswordform" action="<?php echo wp_lostpassword_url(); ?>" method="post">
+    <form id="lostpasswordform" action="/login/?action=lostpassword" method="post">
         <input type="text" name="user_login" id="user_login" placeholder="Email">
         <br>
         <input type="submit" name="submit" class="button" value="<?php _e( 'Reset Password', 'personalize-login' ); ?>"/>
