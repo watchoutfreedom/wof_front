@@ -4,7 +4,6 @@
 */
 ?>
 
-<?php get_header(); ?>
 
 <?php
 if ( is_user_logged_in() ) {
@@ -13,6 +12,8 @@ if ( is_user_logged_in() ) {
 
 }
 ?>
+
+<?php get_header(); ?>
 
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
