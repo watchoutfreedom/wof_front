@@ -149,7 +149,7 @@ if ( ! is_user_logged_in() ) {
                 delete_user_meta($user->ID, 'reset_key');
     
                 // Display a success message
-                    echo '<p>Password reset successfully. You will be redirected to the login page in 5 seconds.</p>';
+                echo '<p>Password reset successfully. Please <a href="' . site_url('/wp-login.php') . '">click here to log in again</a>.</p>';
 
                     // Redirect to login page after 5 seconds
                     header('Refresh: 5; URL=' . site_url('/login'));
