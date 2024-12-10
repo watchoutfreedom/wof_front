@@ -126,7 +126,12 @@ if ( ! is_user_logged_in() ) {
 
 
     }
-    else if ($_GET['action'] == 'rp' && isset($_POST['submit'])) {
+    else if ($_GET['action'] == 'rp' && isset($_POST['submit'])) {?>
+
+<div class="home home--login">
+        <div class="wrap wrap--signup wrap--login">
+
+    <?php 
         // Retrieve the form data
         $key = $_POST['key'];
         $login = $_POST['login'];
@@ -159,6 +164,8 @@ if ( ! is_user_logged_in() ) {
                 echo '<p>Invalid password reset key.</p>';
             }
         }
+
+        echo "</div></div>";
     }
     else{
 
