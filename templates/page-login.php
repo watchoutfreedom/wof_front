@@ -104,7 +104,7 @@ if ( ! is_user_logged_in() ) {
         // If the user exists and the key is valid, display the password reset form
         if ( $user &&  $key == get_user_meta( $user->ID, 'reset_key', true )) {
           ?>
-          <form name="resetpassform" id="resetpassform" action="<?php echo site_url( '/wp-login.php?action=rp' ); ?>" method="post">
+          <form name="resetpassform" id="resetpassform" action="<?php echo site_url( '/login?action=rp' ); ?>" method="post">
             <input type="hidden" name="key" value="<?php echo $key; ?>" />
             <input type="hidden" name="login" value="<?php echo $login; ?>" />
             <label for="pass1">New password:</label>
@@ -125,6 +125,41 @@ if ( ! is_user_logged_in() ) {
     <?php
 
 
+    }
+    else if ($_GET['action'] == 'rp' && isset($_POST['submit'])) {
+        // Retrieve the form data
+        $key = $_POST['key'];
+        $login = $_POST['login'];
+        $pass1 = $_POST['pass1'];
+        $pass2 = $_POST['pass2'];
+    
+        // Validate the form data
+        if ($pass1 !== $pass2) {
+            echo '<p>Passwords do not match.</p>';
+        } else {
+            // Get the user by login
+            $user = get_user_by('login', $login);
+    
+            // Check if the user exists and the key is valid
+            if ($user && $key == get_user_meta($user->ID, 'reset_key', true)) {
+                // Update the user's password
+                wp_update_user(array('ID' => $user->ID, 'user_pass' => $pass1));
+    
+                // Delete the reset key
+                delete_user_meta($user->ID, 'reset_key');
+    
+                // Display a success message
+                    echo '<p>Password reset successfully. You will be redirected to the login page in 5 seconds.</p>';
+
+                    // Redirect to login page after 5 seconds
+                    header('Refresh: 5; URL=' . site_url('/login'));
+                    exit;
+
+            } else {
+                // Display an error message
+                echo '<p>Invalid password reset key.</p>';
+            }
+        }
     }
     else{
 
