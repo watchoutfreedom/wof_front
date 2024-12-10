@@ -69,7 +69,7 @@ if ( ! is_user_logged_in() ) {
                     Username: ' . $user->user_login . '<br>
                     Email: ' . $user->user_email . '<br><br>
                     To reset your password, visit the following address:<br>
-                    <a href="' . site_url('/wp-login.php?action=rp&key=' . $reset_key . '&login=' . $user->user_login) . '">Reset Password</a><br><br>
+                    <a href="' . site_url('/login?action=rp&key=' . $reset_key . '&login=' . $user->user_login) . '">Reset Password</a><br><br>
                     Best regards,<br>
                     ' . get_bloginfo('name') . ' Team';
 
@@ -89,6 +89,42 @@ if ( ! is_user_logged_in() ) {
     
     }
 
+    else if( isset($_GET['key']) && $_GET['action'] == 'rp'){?>
+
+        <div class="home home--login">
+        <div class="wrap wrap--signup wrap--login">
+        <?php
+
+        $key = $_GET['key'];
+        $login = $_GET['login'];
+    
+        // Get the user by login
+        $user = get_user_by( 'login', $login );
+    
+        // If the user exists and the key is valid, display the password reset form
+        if ( $user && wp_check_password( $key, get_user_meta( $user->ID, 'reset_key', true ) ) ) {
+          ?>
+          <form name="resetpassform" id="resetpassform" action="<?php echo site_url( '/wp-login.php?action=rp' ); ?>" method="post">
+            <input type="hidden" name="key" value="<?php echo $key; ?>" />
+            <input type="hidden" name="login" value="<?php echo $login; ?>" />
+            <label for="pass1">New password:</label>
+            <input type="password" name="pass1" id="pass1" />
+            <label for="pass2">Repeat new password:</label>
+            <input type="password" name="pass2" id="pass2" />
+            <input type="submit" name="submit" value="Reset Password" />
+          </form>
+          <?php
+        } else {
+          // Display an error message if the key is invalid or the user does not exist
+          echo '<p>Invalid password reset key.</p>';
+        }
+    ?>
+        </div>
+    </div>
+    <?php
+
+
+    }
     else{
 
         if (get_transient('originalRegisterRefererURL') ){
