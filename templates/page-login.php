@@ -117,6 +117,7 @@ if ( ! is_user_logged_in() ) {
         } else {
           // Display an error message if the key is invalid or the user does not exist
           echo '<p>Invalid password reset key.</p>';
+          echo get_user_meta( $user->ID, 'reset_key', true );
         }
     ?>
         </div>
