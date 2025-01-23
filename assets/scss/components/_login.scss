@@ -88,11 +88,19 @@
     }
   }
 }
-.signup__links {
 
+.signup__links {
   font-size: 20px;
   font-weight: bold;
 
+  a {
+    margin-top: 8px;
+    opacity: 1; // Revise
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .acf-form {

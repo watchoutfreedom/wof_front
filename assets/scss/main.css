@@ -530,7 +530,7 @@ header {
   flex-direction: column;
 }
 .meta__content p {
-  padding: 16px 0;
+  padding: 8px 0 16px 0;
   font-size: 1rem;
   color: #191919;
   opacity: 0.75;
@@ -831,7 +831,7 @@ header {
   .wrap__box--debate .article-list:nth-child(6),
   .wrap__box--debate .article-list:nth-child(13) {
     flex: 0 1 50% !important;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
   .wrap__box--debate .article-list:first-child .article-list__excerpt,
   .wrap__box--debate .article-list:nth-child(6) .article-list__excerpt,
@@ -1507,6 +1507,13 @@ header {
 .signup__links {
   font-size: 20px;
   font-weight: bold;
+}
+.signup__links a {
+  margin-top: 8px;
+  opacity: 1;
+}
+.signup__links a:hover {
+  text-decoration: underline;
 }
 
 .acf-form .acf-field {
