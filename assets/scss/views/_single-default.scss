@@ -272,6 +272,11 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
 .a2a_kit {
   a {
     transition: all .04s;
+    opacity: 1;
+
+    &:hover {
+      opacity: .6;
+    }
   }
 }
 

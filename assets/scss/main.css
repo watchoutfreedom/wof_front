@@ -1764,6 +1764,10 @@ header {
 
 .a2a_kit a {
   transition: all 0.04s;
+  opacity: 1;
+}
+.a2a_kit a:hover {
+  opacity: 0.6;
 }
 
 @media only screen and (min-width: 768px) {
