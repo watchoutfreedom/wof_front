@@ -1762,8 +1762,8 @@ header {
   margin-bottom: 1rem;
 }
 
-.addtoany_share_save_container a {
-  transition: 0.4s;
+.a2a_kit a {
+  transition: all 0.04s;
 }
 
 @media only screen and (min-width: 768px) {

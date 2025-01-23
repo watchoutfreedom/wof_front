@@ -269,12 +269,12 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
 }
 
 // Share links
-
-.addtoany_share_save_container {
+.a2a_kit {
   a {
-    transition: .4s;
-  } 
+    transition: all .04s;
+  }
 }
+
 
 @media #{$breakpoints-medium} {
   .single-default {
