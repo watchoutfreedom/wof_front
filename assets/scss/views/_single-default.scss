@@ -268,6 +268,14 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
   margin-bottom: 1rem;
 }
 
+// Share links
+
+.addtoany_share_save_container {
+  a {
+    transition: .4s;
+  } 
+}
+
 @media #{$breakpoints-medium} {
   .single-default {
     padding: 2rem;
