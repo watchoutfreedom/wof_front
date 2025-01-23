@@ -268,19 +268,6 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
   margin-bottom: 1rem;
 }
 
-// Share links
-.a2a_kit {
-  a {
-    transition: all .04s;
-    opacity: 1;
-
-    &:hover {
-      opacity: .6;
-    }
-  }
-}
-
-
 @media #{$breakpoints-medium} {
   .single-default {
     padding: 2rem;
