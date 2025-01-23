@@ -21,9 +21,6 @@
   wp_reset_postdata();
   ?>
     
-    <?php $the_query = new WP_Query('showposts=4&category_name=noticias'); while ($the_query->have_posts()) : $the_query->the_post();?>
-    <?php get_template_part('components/article-list'); ?>
-    <?php endwhile; ?>
   </div>
 </section>
 
