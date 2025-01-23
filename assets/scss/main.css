@@ -831,6 +831,7 @@ header {
   .wrap__box--debate .article-list:nth-child(6),
   .wrap__box--debate .article-list:nth-child(13) {
     flex: 0 1 50% !important;
+    padding-bottom: 1rem;
   }
   .wrap__box--debate .article-list:first-child .article-list__excerpt,
   .wrap__box--debate .article-list:nth-child(6) .article-list__excerpt,

@@ -244,6 +244,7 @@
     .article-list:nth-child(6),
     .article-list:nth-child(13) {
       flex: 0 1 50% !important;
+      padding-bottom: 1rem;
 
       .article-list__excerpt {
         display: none;
