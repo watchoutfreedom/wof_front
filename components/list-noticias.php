@@ -9,7 +9,7 @@
       <?php
   $current_post_id = get_the_ID();
   $the_query = new WP_Query( array(
-      'showposts'   => 8,
+      'showposts'   => 4,
       'post__not_in' => array( $current_post_id ),
       'category_name' => 'noticias' 
   ) );
