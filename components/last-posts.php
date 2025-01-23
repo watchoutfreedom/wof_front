@@ -3,9 +3,22 @@
     <h3 class="page-sidebar__title">
       Últimos artículos publicados
     </h3>
-    <?php $the_query = new WP_Query('showposts=4'); while ($the_query->have_posts()) : $the_query->the_post();?>
-      <?php get_template_part('components/article-list'); ?>
-    <?php endwhile; ?>
+
+
+    <?php
+    $current_post_id = get_the_ID();
+    $the_query = new WP_Query( array(
+        'showposts'   => 8,
+        'post__not_in' => array( $current_post_id )
+    ) );
+
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+        get_template_part( 'components/article-list' );
+    endwhile;
+
+    wp_reset_postdata();
+    ?>
+
   </div>
 </section>
 
