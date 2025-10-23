@@ -7,7 +7,7 @@ get_header();
 <div class="home">
 <div class="hero">
     <h1 class="hero__title"><a class="" href="https://wofreedom.org/divulgacion/">Conoce.</a> <a href="https://wofreedom.org/debate/">Debate.</a> <a href="https://wofreedom.org/colabora">Colabora.</a></h1>
-    <div class="hero__description">La vida en sociedad necesita puntos de encuentro. Únete la comunidad Wof!.</div>
+    <div class="hero__description">La vida en sociedad necesita puntos de encuentro.</div>
   </div>
   <div class="wrap">
     <div class="wrap__box wrap__box--author">
