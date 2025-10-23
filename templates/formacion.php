@@ -6,7 +6,7 @@ get_header();
 ?>
 <div class="hero">
   <h1 class="hero__title">Divulgación y servicios</h1>
-  <div class="hero__description">Charlas y cursos que ofrecemos, junto a colaboradores de la asociación, a entidades interesadas. Pregúntanos sobre ellas.</div>
+  <div class="hero__description">Adquiere conocimiento en materias clave de nuestro tiempo.</div>
 </div>
 
 <div class="wrap">
