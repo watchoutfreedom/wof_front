@@ -24,8 +24,6 @@ $hero-padding: 2rem;
       text-decoration: none;
 
     &:hover {
-      text-decoration-color: $color-corporative;
-      text-decoration-thickness: 1px;
 
       &::after {
         transform: scale(1);
