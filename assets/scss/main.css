@@ -942,7 +942,6 @@ header {
   margin: auto;
   font-size: 3rem;
   font-weight: bold;
-  /* Scale from center */
 }
 .hero__title a {
   text-decoration-thickness: 1px;
@@ -951,7 +950,7 @@ header {
   padding: 0.2em 0;
 }
 .hero__title a:hover {
-  color: #0F4BF1;
+  text-decoration-color: #0F4BF1;
 }
 .hero__title a::after {
   opacity: 1;

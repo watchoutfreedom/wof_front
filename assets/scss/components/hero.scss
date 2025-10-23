@@ -23,13 +23,11 @@ $hero-padding: 2rem;
       padding: 0.2em 0;
 
     &:hover {
-      color: $color-corporative;
-
+      text-decoration-color: $color-corporative;
     }
 
   }
 
-    /* Scale from center */
   & a::after {
     opacity: 1;
     transform: scale(0);
