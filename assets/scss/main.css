@@ -951,7 +951,7 @@ header {
   padding: 0.2em 0;
 }
 .hero__title a:hover {
-  color: #555555;
+  color: #0F4BF1;
 }
 .hero__title a::after {
   opacity: 1;
