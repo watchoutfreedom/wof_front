@@ -22,8 +22,9 @@ $hero-padding: 2rem;
       position: relative;
       padding: 0.2em 0;
 
-    :hover {
+    &:hover {
       color: $color-dark-gray;
+
     }
 
   }
