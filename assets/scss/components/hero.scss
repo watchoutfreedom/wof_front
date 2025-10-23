@@ -34,13 +34,14 @@ $hero-padding: 2rem;
     } 
 
     a::after {
-      opacity 1;
+      opacity: 1;
       transform: translate3d(-100%, 0, 0);
     }
 
     &:hover {
-
-
+      transform: translate3d(0, 0.2em, 0);
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
 
     }
 
