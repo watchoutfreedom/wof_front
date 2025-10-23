@@ -952,13 +952,12 @@ header {
 .hero__title a:hover {
   text-decoration-color: #0F4BF1;
 }
-.hero__title a::after {
+.hero__title a:hover::after {
+  transform: scale(1);
+  text-decoration-color: #0F4BF1;
   opacity: 1;
   transform: scale(0);
   transform-origin: center;
-}
-.hero__title a:hover::after, .hero__title a:focus::after {
-  transform: scale(1);
 }
 
 .hero__description {

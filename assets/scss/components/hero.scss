@@ -33,11 +33,11 @@ $hero-padding: 2rem;
       }
 
     }
-    &:hover::after,
-    &:focus::after{
-    transform: scale(1);
-    text-decoration-color: $color-corporative;
-    }
+    // &:hover::after,
+    // &:focus::after{
+    // transform: scale(1);
+    // text-decoration-color: $color-corporative;
+    // }
 
   }
 
