@@ -25,14 +25,20 @@ $hero-padding: 2rem;
 
     &:hover {
 
-      &::after {
+
+
+    }
+
+    &::after {
+      &:hover {
+
         transform: scale(1);
        text-decoration-color: $color-corporative;
        opacity: 1;
         transform: scale(0);
         transform-origin: center;
-      }
 
+      }
     }
     // &:hover::after,
     // &:focus::after{

@@ -950,7 +950,7 @@ header {
   color: inherit;
   text-decoration: none;
 }
-.hero__title a:hover::after {
+.hero__title a::after:hover {
   transform: scale(1);
   text-decoration-color: #0F4BF1;
   opacity: 1;
