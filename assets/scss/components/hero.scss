@@ -17,7 +17,12 @@ $hero-padding: 2rem;
 
   & a {
 
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
+    text-decoration: none;
+
+    :hover {
+      color: $color-dark-gray;
+    }
 
   }
 
