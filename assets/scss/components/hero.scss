@@ -14,7 +14,16 @@ $hero-padding: 2rem;
   margin: auto;
   font-size: 3rem;
   font-weight: bold;
+
+  & a {
+
+    text-decoration-thickness: 2px;
+
+  }
+
 }
+
+
 
 .hero__description {
   font-family: 'Satoshi-Medium';
