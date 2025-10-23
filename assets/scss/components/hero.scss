@@ -27,6 +27,7 @@ $hero-padding: 2rem;
 
 
     &:hover {
+      transition: transform 600ms;
       transform: translate3d(0, -0.2em, 0);
       text-decoration: underline;
       text-decoration-thickness: 3px;
