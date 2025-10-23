@@ -6,8 +6,8 @@ get_header();
 ?>
 <div class="home">
 <div class="hero">
-    <h1 class="hero__title">Conoce. Debate. Colabora.</h1>
-    <div class="hero__description">WOF! fomenta la cooperación social, el debate y el conocimiento en materias afectadas por la desinformación o el desinterés del statu quo.</div>
+    <h1 class="hero__title"><a href="https://wofreedom.org/divulgacion/">Conoce.</a> <a href="https://wofreedom.org/debate/">Debate.</a> <a href="https://wofreedom.org/colabora">Colabora.</a></h1>
+    <div class="hero__description">La vida en sociedad necesita puntos de encuentro. Únete la comunidad Wof!.</div>
   </div>
   <div class="wrap">
     <div class="wrap__box wrap__box--author">
