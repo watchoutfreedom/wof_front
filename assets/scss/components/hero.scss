@@ -24,19 +24,21 @@ $hero-padding: 2rem;
 
     &:hover {
       text-decoration-color: $color-corporative;
+      &::after {
+        transform: scale(1);
+       text-decoration-color: $color-corporative;
+       opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+      }
+
+    }
+    &:hover::after,
+    &:focus::after{
+    transform: scale(1);
+    text-decoration-color: $color-corporative;
     }
 
-  }
-
-  & a::after {
-    opacity: 1;
-    transform: scale(0);
-    transform-origin: center;
-  }
-
-  & a:hover::after,
-  & a:focus::after{
-    transform: scale(1);
   }
 
 }
