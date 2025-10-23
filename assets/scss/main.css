@@ -946,6 +946,9 @@ header {
 }
 .hero__title a {
   text-decoration-thickness: 1px;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
 }
 .hero__title a :hover {
   color: #555555;
