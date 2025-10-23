@@ -39,7 +39,7 @@ $hero-padding: 2rem;
     }
 
     &:hover {
-      transform: translate3d(0, 0.2em, 0);
+      transform: translate3d(0, -0.2em, 0);
       text-decoration: underline;
       text-decoration-thickness: 3px;
 
@@ -52,6 +52,7 @@ $hero-padding: 2rem;
         opacity: 1;
         transform: scale(0);
         transform-origin: center;
+        transition: opacity 300ms, transform 300ms;
 
       }
     }
