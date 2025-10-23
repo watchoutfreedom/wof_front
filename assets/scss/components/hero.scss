@@ -17,13 +17,16 @@ $hero-padding: 2rem;
 
   & a {
 
-    text-decoration-thickness: 1px;
       display: block;
       position: relative;
       padding: 0.2em 0;
+      color: inherit;
+      text-decoration: none;
 
     &:hover {
       text-decoration-color: $color-corporative;
+      text-decoration-thickness: 1px;
+
       &::after {
         transform: scale(1);
        text-decoration-color: $color-corporative;
