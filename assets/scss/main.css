@@ -955,8 +955,7 @@ header {
   transform: scale(0);
   transform-origin: center;
 }
-.hero__title a:hover::after,
-.hero__title a:focus::after {
+.hero__title a:hover::after, .hero__title a:focus::after {
   transform: scale(1);
 }
 
