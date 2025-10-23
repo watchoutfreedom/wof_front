@@ -26,6 +26,18 @@ $hero-padding: 2rem;
 
   }
 
+    /* Scale from center */
+  a::after {
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  a:hover::after,
+  a:focus::after{
+    transform: scale(1);
+  }
+
 }
 
 
