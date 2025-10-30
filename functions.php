@@ -298,6 +298,20 @@ function excerpt( $limit ) {
 	return $content;
 	}
 
+
+	add_action('acf/pre_save_post', function($post_id) {
+		if (!is_user_logged_in() && $post_id === 'new_post') {
+			// Store the draft ID in the session so we can link it after login
+			session_start();
+			$_SESSION['guest_post_id'] = $post_id;
+	
+			// Redirect to login/registration page
+			wp_redirect(wp_login_url()); // or your custom registration page
+			exit;
+		}
+		return $post_id;
+	});
+	
 	
 	
 	?>
