@@ -10,7 +10,7 @@ $post = get_post($_GET['id']);
 
  
 if (!is_user_logged_in()) {
-    $user_id =  get_user_by('login', 'ghost')->ID;
+    $user =  get_user_by('login', 'ghost')->ID;
 }
 
 if (!(wp_get_current_user()->ID == $post->post_author)
@@ -62,13 +62,21 @@ get_header(); ?>
         if ($_GET['action'] == "create" && isset($_GET['id'])) {
             echo "User editing: $user_id";
             echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='" . get_permalink($_GET['id']) . "'>" . get_the_title($_GET['id']) . "</a></div>";
+
+            $status = "pending";
+
+            if (!is_user_logged_in()) 
+            echo "you're not logged in";
+
         }
 
-        $status = "pending";
 
         if (wp_get_current_user()->ID == $post->post_author || in_array('administrator', wp_get_current_user()->roles) || in_array('author', wp_get_current_user()->roles)) {
             $status = "publish";
         }
+
+     
+
 
         $fields = acf_get_fields('new_post');
         $filtered_fields = filter_acf_fields($fields, $exclude_field_key);
