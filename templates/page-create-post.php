@@ -8,12 +8,11 @@ $post = get_post($_GET['id']);
 
 //add redirect if user can't edit this post
 
-/** 
+ 
 if (!is_user_logged_in()) {
-    set_transient('originalRegisterRefererURL', $_SERVER['HTTP_REFERER'], 60 * 60 * 24);
-    wp_redirect(wp_login_url());
+    $user_id =  get_user_by('login', 'ghost')->ID;
 }
-*/
+
 if (!(wp_get_current_user()->ID == $post->post_author)
     && !current_user_can('edit_others_posts')
     && $_GET['action'] == 'edit') {
@@ -61,6 +60,7 @@ get_header(); ?>
         ));
     } else {
         if ($_GET['action'] == "create" && isset($_GET['id'])) {
+            echo "User editing: $user_id";
             echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='" . get_permalink($_GET['id']) . "'>" . get_the_title($_GET['id']) . "</a></div>";
         }
 
