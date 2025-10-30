@@ -301,7 +301,7 @@ function excerpt( $limit ) {
 
 	add_action('acf/save_post', function($post_id) {
 		// Only for new posts, not field updates
-		if ($post_id === 'new_post' && !is_user_logged_in()) {
+		if (!is_user_logged_in()) {
 			// Store the draft ID in the session
 			if(!session_id()) { session_start(); }
 			$_SESSION['guest_post_id'] = $post_id;
