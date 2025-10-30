@@ -190,8 +190,8 @@ if ( ! is_user_logged_in() ) {
 
         if(!session_id()) { session_start(); }
 
-        if(isset($_SESSION['guest_post_id'])) {
-            $guest_post_id = intval($_SESSION['guest_post_id']);
+        if(isset($_GET['draft'])) {
+            $guest_post_id = intval(url_to_postid($_GET['draft']));
             $guest_post = get_post($guest_post_id);
 
         if($guest_post) {
