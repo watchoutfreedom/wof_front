@@ -16,9 +16,9 @@ get_header();?>
 <p class="description">Crear una cuenta es muy fácil y podrás publicar y contestar en nuestos debates</p>
     <?php 
     
-    if (get_transient('originalRegisterRefererURL') ){
-        $redirect = home_url()."/create-post/?action=create&id=".url_to_postid(get_transient('originalRegisterRefererURL'));
-        delete_transient('originalRegisterRefererURL');
+    if (isset($_GET['guest_key'])) {
+        $guest_key = sanitize_text_field($_GET['guest_key']);
+        $redirect = get_transient($guest_key);
     }
     else
         $redirect = home_url();

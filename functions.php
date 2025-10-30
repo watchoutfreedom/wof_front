@@ -127,7 +127,32 @@ function register_user($post_id,$form){
 	  wp_set_auth_cookie( $user_id );
 	  do_action( 'wp_login', $user_fields['user_email'], get_user_by('id',$user_id) );
   
-  
+		// ✅ Check if there’s a guest key in the URL
+		if (isset($_GET['guest_key'])) {
+			$guest_key = sanitize_text_field($_GET['guest_key']);
+			$draft_url = get_transient($guest_key);
+	
+			if ($draft_url) {
+				// Extract the post ID from the URL
+				$draft_id = url_to_postid($draft_url);
+	
+				if ($draft_id) {
+					// Assign draft post to the new user
+					wp_update_post([
+						'ID' => $draft_id,
+						'post_author' => $user_id,
+						'post_status' => 'pending' // or 'publish', 'draft', etc.
+					]);
+	
+					// Clean up the transient
+					delete_transient($guest_key);
+	
+				}
+			}
+		}
+
+
+	
 		  // Set the 'post_id' to the newly created user_id, including the 'user_' ACF uses to target a user
 		  return 'user_' . $user_id;
 		}
