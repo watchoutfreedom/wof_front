@@ -8,9 +8,9 @@ $post = get_post($_GET['id']);
 
 //add redirect if user can't edit this post
 
- 
+ $author_id = wp_get_current_user()->ID;
 if (!is_user_logged_in()) {
-    $user =  get_user_by('login', 'ghost')->ID;
+    $author_id =  get_user_by('login', 'ghost')->ID;
 }
 
 if (!(wp_get_current_user()->ID == $post->post_author)
@@ -22,6 +22,7 @@ if (!(wp_get_current_user()->ID == $post->post_author)
 if (wp_get_current_user()->ID == $post->post_author && $_GET['action'] == 'create') {
     wp_redirect(get_permalink($_GET['id']));
 }
+
 
 acf_form_head();
 
@@ -60,13 +61,12 @@ get_header(); ?>
         ));
     } else {
         if ($_GET['action'] == "create" && isset($_GET['id'])) {
-            echo "User editing: $user_id";
             echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='" . get_permalink($_GET['id']) . "'>" . get_the_title($_GET['id']) . "</a></div>";
 
             $status = "pending";
 
-            if (!is_user_logged_in()) 
-            echo "you're not logged in";
+            if (!is_user_logged_in())
+            $status = "draft";
 
         }
 
@@ -92,6 +92,7 @@ get_header(); ?>
                 'post_type'     => 'post',
                 'post_category' => array(28),
                 'post_status'   => $status,
+                'post_author' => $author_id
             ),
         ));
     }
