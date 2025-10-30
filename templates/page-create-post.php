@@ -64,10 +64,7 @@ $status = 'pending';
 if (!is_user_logged_in()) {
     $status = 'draft';
     // Create a unique key for this visitor (based on IP or random hash)
-    $key = 'guest_post_' . wp_generate_password(12, false);
-
-    // Store the post ID in the transient for 1 hour
-    set_transient($key, %post_url%, HOUR_IN_SECONDS);
+    $guest_key = 'guest_post_' . wp_generate_password(12, false);
 
 } elseif ($current_user_id === $post->post_author || in_array('administrator', wp_get_current_user()->roles) || in_array('author', wp_get_current_user()->roles)) {
     $status = 'publish';
@@ -98,7 +95,7 @@ if ($action === 'edit' && $post) {
         echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='" . get_permalink($post_id) . "'>" . get_the_title($post_id) . "</a></div>";
     }
 
-    $return_url = is_user_logged_in() ? '%post_url%' : wp_login_url()."?guest_key=".$key;
+    $return_url = is_user_logged_in() ? '%post_url%' : wp_login_url()."?guest_key=".$guest_key;
 
     acf_form(array(
         'post_id'       => 'new_post',

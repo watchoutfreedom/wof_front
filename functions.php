@@ -324,6 +324,19 @@ function excerpt( $limit ) {
 	}
 	
 
+	add_action('acf/save_post', function($post_id) {
+		if ($post_id === 'new_post' && !is_user_logged_in()) {
+			if (!empty($_GET['guest_key'])) {
+				$guest_key = sanitize_text_field($_GET['guest_key']);
+				$post_url = get_permalink($post_id);
+				set_transient($guest_key, $post_url, HOUR_IN_SECONDS);
+	
+				// Optional: redirect to login immediately
+				wp_redirect(wp_login_url() . "?guest_key=" . $guest_key);
+				exit;
+			}
+		}
+	}, 20);
 	
 	
 	
