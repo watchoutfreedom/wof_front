@@ -205,8 +205,10 @@ if ( ! is_user_logged_in() ) {
         //add the placeholders
         $form = str_replace('name="log"', 'name="log" placeholder="Username"', $form);
         $form = str_replace('name="pwd"', 'name="pwd" placeholder="Password"', $form);
+        
+        
         echo '
-        <div class="home home--login">
+        <div class="home home--login">'.$thank_you.'
         <div class="wrap wrap--signup wrap--login">
         <h2>Accede a tu cuenta</h2>
         <p class="description">Accede a tu cuenta de wofreedom y participa en los debates</p>
