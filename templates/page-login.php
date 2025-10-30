@@ -193,9 +193,10 @@ if ( ! is_user_logged_in() ) {
         if(isset($_GET['draft'])) {
             $guest_post_id = intval(url_to_postid($_GET['draft']));
             $guest_post = get_post($guest_post_id);
-
+        $draft = "";
         if($guest_post) {
-            $thank_you = '<div class="guest-thankyou-message"><p>Gracias! Tu publicación ha sido guardada como borrador. Por favor, inicia sesión o regístrate para reclamarla.</p><p><strong>Título del borrador:</strong> ' . esc_html($guest_post->post_title) . '</p></div>';
+            $thank_you = '<div class="guest-thankyou-message"><p>Gracias! Tu publicación ha sido guardada como draft. Por favor, inicia sesión o regístrate para reclamarla.</p><p><strong>Título del draft:</strong> ' . esc_html($guest_post->post_title) . '</p></div>';
+            $draft = '?draft=' . $guest_post_id;
         }
      }
 
@@ -216,7 +217,7 @@ if ( ! is_user_logged_in() ) {
         ';
         echo $form;
         echo "<div class='login__links'> <a class='button__links' href='/login?action=lostpassword'>Recuperar contraseña</a>";
-        echo "<a class='button__links signup__links' href='/sign-up'>¿No tienes cuenta? Únete aquí!</a><br></div>";
+        echo "<a class='button__links signup__links' href='/sign-up".$draft."'>¿No tienes cuenta? Únete aquí!</a><br></div>";
 
     }
 
