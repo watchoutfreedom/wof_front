@@ -188,6 +188,18 @@ if ( ! is_user_logged_in() ) {
             'echo' => false
         );
 
+        if(!session_id()) { session_start(); }
+
+        if(isset($_SESSION['guest_post_id'])) {
+            $guest_post_id = intval($_SESSION['guest_post_id']);
+            $guest_post = get_post($guest_post_id);
+
+        if($guest_post) {
+            $thank_you = '<div class="guest-thankyou-message"><p>Gracias! Tu publicación ha sido guardada como borrador. Por favor, inicia sesión o regístrate para reclamarla.</p><p><strong>Título del borrador:</strong> ' . esc_html($guest_post->post_title) . '</p></div>';
+        }
+     }
+
+
         $form = wp_login_form( $args );
 
         //add the placeholders
