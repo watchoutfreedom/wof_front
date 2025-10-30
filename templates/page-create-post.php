@@ -6,6 +6,11 @@
 acf_form_head();
 get_header(); 
 
+
+if(!session_id()) {
+    session_start();
+}
+
 // --- Helper: ensure ghost user exists
 function get_guest_user_id() {
     $ghost_user = get_user_by('login', 'ghost');
