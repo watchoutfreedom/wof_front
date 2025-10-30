@@ -87,12 +87,14 @@ if ($action === 'edit' && $post) {
         echo "<div class='excerp excerp--response'>Responder a <a class='answer__to' href='" . get_permalink($post_id) . "'>" . get_the_title($post_id) . "</a></div>";
     }
 
+    $return_url = is_user_logged_in() ? '%post_url%' : wp_login_url();
+
     acf_form(array(
         'post_id'       => 'new_post',
         'post_title'    => true,
         'post_content'  => false,
         'fields'        => $field_keys,
-        'return'        => '%post_url%',
+        'return'        =>  $return_url,
         'submit_value'  => __("Publicar", 'acf'),
         'new_post'      => array(
             'post_type'     => 'post',
