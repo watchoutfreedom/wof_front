@@ -26,22 +26,7 @@ if ( is_user_logged_in() ) {
 	<?php wp_head(); ?>
 </head>
 
-
-
 <?php 
-
-if(!session_id()) { session_start(); }
-
-if(isset($_SESSION['guest_post_id'])) {
-    $guest_post_id = intval($_SESSION['guest_post_id']);
-    $guest_post = get_post($guest_post_id);
-
-    if($guest_post) {
-        echo '<div class="guest-thankyou-message">';
-        echo '<p>Gracias! Tu publicación ha sido guardada como borrador. Por favor, inicia sesión o regístrate para reclamarla.</p>';
-        echo '<p><strong>Título del borrador:</strong> ' . esc_html($guest_post->post_title) . '</p>';
-        echo '</div>';
-    }
 
 if ( ! is_user_logged_in() ) {
 
@@ -116,10 +101,7 @@ if ( ! is_user_logged_in() ) {
     
         // Get the user by login
         $user = get_user_by( 'login', $login );
-
-       
-            }
-                
+    
         // If the user exists and the key is valid, display the password reset form
         if ( $user &&  $key == get_user_meta( $user->ID, 'reset_key', true )) {
           ?>
