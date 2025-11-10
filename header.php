@@ -1,10 +1,12 @@
 <?php get_template_part('components/head'); ?>
 
 <?php
-// This is the corrected conditional for a Custom Post Type
-// 1. is_singular('noticia'): Checks if it's a single page of the 'noticia' CPT.
-// 2. has_term('helpbuttons', 'category'): Checks if this 'noticia' is in the 'helpbuttons' category.
-if ( is_singular('noticia') && has_term('helpbuttons', 'category') ) {
+// This condition is now more flexible.
+// It triggers if EITHER of these two situations is true:
+// 1. You are on a single 'noticia' post that has BOTH categories.
+// OR
+// 2. You are on the category archive page for 'noticias' or 'helpbuttons'.
+if ( is_category( array('noticias', 'helpbuttons') ) ) {
   echo "
   <style>
     .header__logo-link {
