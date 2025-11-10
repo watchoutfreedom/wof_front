@@ -1612,6 +1612,9 @@ header {
   background: transparent url("../img/logo/white.svg") center no-repeat;
   background-size: 100% auto;
 }
+.debate .header__logo-link--big {
+  width: 200px;
+}
 .debate .header__nav {
   display: none;
 }

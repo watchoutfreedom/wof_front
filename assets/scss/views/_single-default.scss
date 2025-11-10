@@ -40,6 +40,10 @@ $single-default-width-desktop: calc( 100% - #{$single-default-margin-left} );
     background-size: 100% auto;
   }
 
+  .header__logo-link--big {
+    width: 200px;
+  }
+
   .header__nav {
     display: none;
   }
