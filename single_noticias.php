@@ -9,9 +9,24 @@
             <header class="header">
                 <div class="header__wrap">
                   <div class="header__logo">
-                    <a href="<?php bloginfo('url'); ?>" class="header__logo-link">
-                      WOF
-                    </a>
+                    <?php
+                    // Check if this post has 'helpbuttons' category
+                    $is_helpbuttons_post = false;
+                    $categories = get_the_category();
+                    
+                    foreach ($categories as $category) {
+                        if ($category->slug === 'helpbuttons') {
+                            $is_helpbuttons_post = true;
+                            break;
+                        }
+                    }
+                    
+                    if ($is_helpbuttons_post) {
+                        echo '<a href="' . get_bloginfo('url') . '" class="header__logo-link" style="background-image: url(https://wofreedom.org/wp-content/uploads/sites/8/2025/11/hb_logo_hor_00-1.png); background-size: contain; background-repeat: no-repeat; background-position: center; text-indent: -9999px; overflow: hidden; font-size: 0; display: block; width: 80px; height: 40px;">WOF</a>';
+                    } else {
+                        echo '<a href="' . get_bloginfo('url') . '" class="header__logo-link">WOF</a>';
+                    }
+                    ?>
                   </div>
                   <div class="header__btn">
                     <a href="/colabora">Colabora con WOF</a>
