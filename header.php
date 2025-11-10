@@ -1,5 +1,28 @@
 <?php get_template_part('components/head'); ?>
 
+<?php
+// Conditionally add CSS for the 'helpbuttons' category page
+if ( is_category('helpbuttons') ) {
+  echo "
+  <style>
+    .header__logo-link {
+      background-image: url('https://wofreedom.org/wp-content/uploads/sites/8/2025/11/bitmap_Página-1-16.19.22.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* These next lines hide the original 'WOF' text and make the link a block to hold the background image */
+      font-size: 0;
+      text-indent: -9999px;
+      overflow: hidden;
+      display: block;
+      width: 80px; /* Adjust width as needed for your logo */
+      height: 40px; /* Adjust height as needed for your logo */
+    }
+  </style>
+  ";
+}
+?>
+
 <header class="header">
   <div class="header__wrap">
     <div class="header__logo">
