@@ -22,7 +22,7 @@
                     }
                     
                     if ($is_helpbuttons_post) {
-                        echo '<a href="' . get_bloginfo('url') . '" class="header__logo-link header__logo-link--big">WOF</a>';
+                        echo '<a href="' . get_bloginfo('url') . '" class="header__logo-link header__logo-link--big" style="background-image: url(https://wofreedom.org/wp-content/uploads/sites/8/2025/11/hb_logo_hor_00-1.png); ">WOF</a>';
                     } else {
                         echo '<a href="' . get_bloginfo('url') . '" class="header__logo-link">WOF</a>';
                     }
