@@ -6,7 +6,7 @@ if ( is_category('helpbuttons') ) {
   echo "
   <style>
     .header__logo-link {
-      background-image: url('https://wofreedom.org/wp-content/uploads/sites/8/2025/11/bitmap_Página-1-16.19.22.png');
+      background-image: url('https://wofreedom.org/wp-content/uploads/sites/8/2025/11/bitmap_Página-1-16.19.22.png');
     }
 
   </style>
