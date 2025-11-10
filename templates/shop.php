@@ -5,8 +5,8 @@ Template Name: shop
 get_header();
 ?>
 <div class="hero">
-  <h1 class="hero__title">Tienda online</h1>
-  <div class="hero__description">Impulsa las iniciativas.</div>
+  <h1 class="hero__title">Tienda</h1>
+  <div class="hero__description">Llévate un recuerdo y colabora con nosotros.</div>
 </div>
 
 <div class="wrap">
