@@ -192,6 +192,12 @@ header {
   align-items: center;
 }
 
+.category-title-image {
+
+  max-width: 200px;
+
+}
+
 @media #{$breakpoints-medium} {
   .header__nav {
     width: auto;
