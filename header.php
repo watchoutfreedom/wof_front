@@ -1,10 +1,12 @@
 <?php get_template_part('components/head'); ?>
 
 <?php
-// Check if it's a single post with 'helpbuttons' category
+// Check if it's a single post with 'helpbuttons' category but URL doesn't contain helpbuttons
 $is_helpbuttons_post = false;
+$current_url = $_SERVER['REQUEST_URI'];
+$url_has_helpbuttons = (strpos($current_url, 'helpbuttons') !== false);
 
-// Get the current post ID and check if we're on a single post
+// Get the current post and check categories
 global $post;
 if (isset($post) && $post->post_type == 'post') {
     $categories = get_the_category($post->ID);
@@ -16,8 +18,8 @@ if (isset($post) && $post->post_type == 'post') {
     }
 }
 
-// Only apply for helpbuttons posts
-if ($is_helpbuttons_post) {
+// Apply only if: post has helpbuttons category BUT URL doesn't contain helpbuttons
+if ($is_helpbuttons_post && !$url_has_helpbuttons) {
   echo "
   <style>
     .header__logo-link {
