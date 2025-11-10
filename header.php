@@ -16,9 +16,7 @@ if (is_single()) {
 // This condition is now more flexible.
 // It triggers if EITHER of these two situations is true:
 // 1. You are on a single post that has 'helpbuttons' category.
-// OR
-// 2. You are on the category archive page for 'noticias' or 'helpbuttons'.
-if ( $is_helpbuttons_post || is_category(array('noticias', 'helpbuttons')) ) {
+if ( $is_helpbuttons_post ) {
   echo "
   <style>
     .header__logo-link {
