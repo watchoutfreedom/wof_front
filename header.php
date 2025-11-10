@@ -1,12 +1,24 @@
 <?php get_template_part('components/head'); ?>
 
 <?php
+// Check if it's a single post with 'helpbuttons' category
+$is_helpbuttons_post = false;
+if (is_single()) {
+    $categories = get_the_category();
+    foreach ($categories as $category) {
+        if ($category->slug === 'helpbuttons') {
+            $is_helpbuttons_post = true;
+            break;
+        }
+    }
+}
+
 // This condition is now more flexible.
 // It triggers if EITHER of these two situations is true:
-// 1. You are on a single 'noticia' post that has BOTH categories.
+// 1. You are on a single post that has 'helpbuttons' category.
 // OR
 // 2. You are on the category archive page for 'noticias' or 'helpbuttons'.
-if ( is_category( array('noticias', 'helpbuttons') ) ) {
+if ( $is_helpbuttons_post || is_category(array('noticias', 'helpbuttons')) ) {
   echo "
   <style>
     .header__logo-link {
