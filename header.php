@@ -1,5 +1,31 @@
 <?php get_template_part('components/head'); ?>
 
+<?php
+// Conditionally add CSS to change the logo
+// This checks if it's a single post AND if that post is in the 'helpbuttons' category.
+if ( is_single() && has_category('helpbuttons') ) {
+  echo "
+  <style>
+    .header__logo-link {
+      /* Set the new background image */
+      background-image: url('https://wofreedom.org/wp-content/uploads/sites/8/2025/11/hb_logo_hor_00-1.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      /* These next lines hide the original 'WOF' text and give the link dimensions */
+      text-indent: -9999px;
+      overflow: hidden;
+      font-size: 0;
+      display: block;
+      width: 80px;  /* <-- Adjust width as needed for your logo */
+      height: 40px; /* <-- Adjust height as needed for your logo */
+    }
+  </style>
+  ";
+}
+?>
+
 <header class="header">
   <div class="header__wrap">
     <div class="header__logo">
@@ -11,7 +37,7 @@
     <ul>
       <?php 
        $args = array(
-        'exclude' => get_page_by_path("create-post")->ID.",".get_page_by_path("php-info")->ID.",".get_page_by_path("login")->ID.",".get_page_by_path("sign-up")->ID, // Replace 5 with the parent page ID
+        'exclude' => get_page_by_path("create-post")->ID.",".get_page_by_path("php-info")->ID.",".get_page_by_path("login")->ID.",".get_page_by_path("sign-up")->ID,
         'title_li' => ''
         );
       wp_list_pages($args); 
