@@ -1,9 +1,10 @@
 <?php get_template_part('components/head'); ?>
 
 <?php
-// Conditionally add CSS to change the logo
-// This checks if it's a single post AND if that post is in the 'helpbuttons' category.
-if ( is_single() && has_category('helpbuttons') ) {
+// This is the corrected conditional for a Custom Post Type
+// 1. is_singular('noticia'): Checks if it's a single page of the 'noticia' CPT.
+// 2. has_term('helpbuttons', 'category'): Checks if this 'noticia' is in the 'helpbuttons' category.
+if ( is_singular('noticia') && has_term('helpbuttons', 'category') ) {
   echo "
   <style>
     .header__logo-link {
