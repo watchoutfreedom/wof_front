@@ -1,19 +1,5 @@
 <?php get_template_part('components/head'); ?>
 
-<?php
-// Conditionally add CSS for the 'helpbuttons' category page
-if ( is_category('helpbuttons') ) {
-  echo "
-  <style>
-    .header__logo-link {
-      background-image: url('https://wofreedom.org/wp-content/uploads/sites/8/2025/11/bitmap_Página-1-16.19.22.png');
-    }
-
-  </style>
-  ";
-}
-?>
-
 <header class="header">
   <div class="header__wrap">
     <div class="header__logo">
@@ -21,6 +7,18 @@ if ( is_category('helpbuttons') ) {
         WOF
       </a>
     </div>
+
+    <?php
+    // If it's the 'helpbuttons' category page, add the secondary logo
+    if ( is_category('helpbuttons') ) {
+      echo '
+        <div class="header__secondary-logo">
+          <img src="https://wofreedom.org/wp-content/uploads/sites/8/2025/11/bitmap_Página-1-16.19.22.png" alt="Help Buttons Section Logo">
+        </div>
+      ';
+    }
+    ?>
+
     <nav class="header__nav">
     <ul>
       <?php 
