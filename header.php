@@ -1,28 +1,15 @@
 <?php get_template_part('components/head'); ?>
 
 <?php
-// Debug: Check what we're working with
-if (is_single()) {
-    $current_post_id = get_the_ID();
-    $categories = get_the_category($current_post_id);
-    $category_slugs = array();
-    
-    foreach ($categories as $category) {
-        $category_slugs[] = $category->slug;
-    }
-    
-    // Debug output (remove this after testing)
-    echo "<!-- Debug: Current post ID: " . $current_post_id . " -->";
-    echo "<!-- Debug: Category slugs: " . implode(', ', $category_slugs) . " -->";
-}
-
 // Check if it's a single post with 'helpbuttons' category
 $is_helpbuttons_post = false;
-if (is_single()) {
-    $categories = get_the_category();
+
+// Get the current post ID and check if we're on a single post
+global $post;
+if (isset($post) && $post->post_type == 'post') {
+    $categories = get_the_category($post->ID);
     foreach ($categories as $category) {
-        // Check both slug and name to be safe
-        if ($category->slug === 'helpbuttons' || strtolower($category->name) === 'helpbuttons') {
+        if ($category->slug === 'helpbuttons') {
             $is_helpbuttons_post = true;
             break;
         }
