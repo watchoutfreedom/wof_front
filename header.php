@@ -89,7 +89,7 @@ if ($is_helpbuttons_post) {
             </ul>
         </nav>
         <div class="header__btn">
-            <a href="/colabora">Colabora con WOF</a>
+            <a href="/colabora">Colaboras con WOF</a>
         </div>
     </div>
 </header>
