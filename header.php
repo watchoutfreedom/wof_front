@@ -1,22 +1,36 @@
 <?php get_template_part('components/head'); ?>
 
 <?php
+// Debug: Check what we're working with
+if (is_single()) {
+    $current_post_id = get_the_ID();
+    $categories = get_the_category($current_post_id);
+    $category_slugs = array();
+    
+    foreach ($categories as $category) {
+        $category_slugs[] = $category->slug;
+    }
+    
+    // Debug output (remove this after testing)
+    echo "<!-- Debug: Current post ID: " . $current_post_id . " -->";
+    echo "<!-- Debug: Category slugs: " . implode(', ', $category_slugs) . " -->";
+}
+
 // Check if it's a single post with 'helpbuttons' category
 $is_helpbuttons_post = false;
 if (is_single()) {
     $categories = get_the_category();
     foreach ($categories as $category) {
-        if ($category->slug === 'helpbuttons') {
+        // Check both slug and name to be safe
+        if ($category->slug === 'helpbuttons' || strtolower($category->name) === 'helpbuttons') {
             $is_helpbuttons_post = true;
             break;
         }
     }
 }
 
-// This condition is now more flexible.
-// It triggers if EITHER of these two situations is true:
-// 1. You are on a single post that has 'helpbuttons' category.
-if ( $is_helpbuttons_post ) {
+// Only apply for helpbuttons posts
+if ($is_helpbuttons_post) {
   echo "
   <style>
     .header__logo-link {
