@@ -171,6 +171,33 @@ header {
   }
 }
 
+/* Styling for the conditional secondary logo in the header */
+.header__secondary-logo {
+  /* Adjust the height to match your header's design */
+  max-height: 40px; 
+  /* Add some space between the logos */
+  margin-left: 20px; 
+}
+
+.header__secondary-logo img {
+  /* This ensures the image scales correctly within the container */
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* Optional: If your header uses Flexbox, this helps center everything vertically */
+.header__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.category-title-image {
+
+  max-width: 200px;
+
+}
+
 @media #{$breakpoints-medium} {
   .header__nav {
     width: auto;
