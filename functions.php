@@ -338,7 +338,24 @@ function excerpt( $limit ) {
 		}
 	}, 20);
 	
+
 	
+	function disable_upload_sizes( $sizes, $metadata ) {
+
+		// Get filetype data.
+		$filetype = wp_check_filetype($metadata['file']);
+	
+		// Check if is gif. 
+		if($filetype['type'] == 'image/gif') {
+			// Unset sizes if file is gif.
+			$sizes = array();
+		}
+	
+		// Return sizes you want to create from image (None if image is gif.)
+		return $sizes;
+	}   
+	add_filter('intermediate_image_sizes_advanced', 'disable_upload_sizes', 10, 2); 
+
 	
 	?>
 
