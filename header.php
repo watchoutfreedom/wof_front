@@ -3,7 +3,7 @@
 <header class="header">
   <div class="header__wrap">
     <div class="header__logo">
-      <a href="<?php bloginfo('url'); ?>" class="header__logo-link">
+      <a href="<?php echo is_category('helpbuttons') ? 'https://helpbuttons.org' : get_bloginfo('url'); ?>" class="header__logo-link">
         WOF
       </a>
     </div>
